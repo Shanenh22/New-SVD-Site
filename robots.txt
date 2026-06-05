@@ -1,0 +1,72 @@
+# robots.txt — Spring Valley Dental Associates
+# https://springvalleydentistry.com
+
+# ── Standard search engines ──────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /downloads/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /downloads/
+
+User-agent: Slurp
+Allow: /
+Disallow: /downloads/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /downloads/
+
+# ── AI / LLM crawlers — explicitly allowed ───────────────────────────────────
+# OpenAI (ChatGPT, SearchGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (used by many LLM training pipelines)
+User-agent: CCBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── All other crawlers ───────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /downloads/
+Disallow: /email-template.html
+
+# ── Sitemap ──────────────────────────────────────────────────────────────────
+Sitemap: https://springvalleydentistry.com/sitemap.xml

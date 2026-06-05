@@ -1,0 +1,127 @@
+# Spring Valley Dental Associates — llms.txt
+# This file helps AI language models understand the structure and content of this site.
+# Format follows the llms.txt convention: https://llmstxt.org
+
+# Spring Valley Dental Associates
+> Gentle, modern dental care for the whole family in North Dallas, Texas. General, cosmetic, sedation, and emergency dentistry since 1994. Two female dentists — Dr. Shokooh Aletaha (DDS, Baylor) and Dr. Nicole Houshmand (DDS, Texas A&M). 5-star rated with 214+ reviews.
+
+## Practice Information
+- Address: 14228 Midway Rd, Suite 100, Dallas, TX 75244
+- Phone: (972) 852-2222
+- Email: info@springvalleydentistry.com
+- Hours: Mon 10am–7pm | Tue 8:30am–4pm | Wed 10am–7pm | Fri 8am–3pm | Sat by appt
+- Languages: English and Spanish
+- Serving: Dallas, North Dallas, Addison, Farmers Branch, Carrollton, Irving, Richardson
+
+## Key Pages
+
+### Core
+- [Home](https://springvalleydentistry.com/): Overview of practice, services, and patient experience
+- [About](https://springvalleydentistry.com/about.html): Doctors, staff, and practice philosophy
+- [Contact / Book](https://springvalleydentistry.com/contact.html): Appointment booking and office info
+- [FAQ](https://springvalleydentistry.com/faq.html): Common patient questions answered
+
+### Services
+- [All Services](https://springvalleydentistry.com/services.html): Complete list of treatments offered
+- [Emergency Dentistry](https://springvalleydentistry.com/emergency.html): Same-day urgent dental care
+- [Dental Implants](https://springvalleydentistry.com/dental-implants.html): Permanent tooth replacement
+- [Invisalign](https://springvalleydentistry.com/invisalign.html): Clear aligner orthodontics
+- [Porcelain Veneers](https://springvalleydentistry.com/porcelain-veneers.html): Smile makeover veneers
+- [Teeth Whitening](https://springvalleydentistry.com/teeth-whitening.html): Professional whitening
+- [Sedation Dentistry](https://springvalleydentistry.com/sedation.html): Anxiety-free dental care
+- [Crowns & Bridges](https://springvalleydentistry.com/crowns-bridges.html): Restorative crowns and bridges
+- [Dental Bonding](https://springvalleydentistry.com/dental-bonding.html): Composite bonding repairs
+- [Root Canal Therapy](https://springvalleydentistry.com/root-canal-therapy.html): Pain-free root canals
+- [Gum Disease Treatment](https://springvalleydentistry.com/gum-disease-treatment.html): Periodontal care
+- [Dental Fillings](https://springvalleydentistry.com/dental-fillings.html): Tooth-colored fillings
+- [Wisdom Teeth Removal](https://springvalleydentistry.com/wisdom-teeth-removal.html): Extractions
+- [Dental Anxiety](https://springvalleydentistry.com/dental-anxiety.html): Options for anxious patients
+- [Cracked Tooth](https://springvalleydentistry.com/cracked-tooth.html): Cracked tooth treatment
+- [Toothache](https://springvalleydentistry.com/toothache.html): Toothache relief and diagnosis
+
+### Patient Resources
+- [New Patient Info](https://springvalleydentistry.com/patient-info.html): What to expect, forms, insurance
+- [Membership Plan](https://springvalleydentistry.com/membership.html): In-house savings plan for uninsured patients. Child Complete $250/yr, Adult Complete $325/yr, Perio $600/yr. Includes cleanings, exams, x-rays, fluoride, and 20% off all procedures.
+- [Financing](https://springvalleydentistry.com/financing.html): CareCredit, Cherry Financing options
+- [Smile Gallery](https://springvalleydentistry.com/smile-gallery.html): Before & after patient photos
+- [Patient Reviews](https://springvalleydentistry.com/reviews.html): 5-star patient testimonials
+- [Dental Costs Guide](https://springvalleydentistry.com/dental-costs-dallas.html): Pricing transparency guide
+
+### Local Area Pages
+- [Dentist Addison TX](https://springvalleydentistry.com/dentist-addison-tx.html)
+- [Dentist Carrollton TX](https://springvalleydentistry.com/dentist-carrollton-tx.html)
+- [Dentist Farmers Branch TX](https://springvalleydentistry.com/dentist-farmers-branch-tx.html)
+- [Dentist Irving TX](https://springvalleydentistry.com/dentist-irving-tx.html): Serving Irving and Las Colinas
+- [Dentist Richardson TX](https://springvalleydentistry.com/dentist-richardson-tx.html): Serving Richardson and the Telecom Corridor
+
+### Guides & Articles
+- [Dental Implant Cost in Dallas (2026 Guide)](https://springvalleydentistry.com/dental-implant-cost-dallas.html): Transparent implant pricing, what affects cost, insurance, and financing. A single implant typically costs $3,000–$5,000.
+- [What Happens During a Root Canal](https://springvalleydentistry.com/patient-guide-root-canal.html): Step-by-step patient guide; modern root canals are comfortable and relieve pain.
+- [Invisalign vs Braces for Adults in Dallas](https://springvalleydentistry.com/invisalign-vs-braces-dallas.html): Honest comparison of cost, lifestyle, and candidacy.
+
+### Spanish Language
+- [Español — Inicio](https://springvalleydentistry.com/es/index.html): Spanish homepage
+- [Español — Servicios](https://springvalleydentistry.com/es/servicios.html)
+- [Español — Emergencia](https://springvalleydentistry.com/es/emergencia.html)
+- [Español — Información para Pacientes](https://springvalleydentistry.com/es/informacion-paciente.html)
+- [Español — Contacto](https://springvalleydentistry.com/es/contacto.html)
+- [Español — Implantes Dentales](https://springvalleydentistry.com/es/implantes-dentales.html): Dental implants in Spanish
+- [Español — Invisalign](https://springvalleydentistry.com/es/invisalign.html): Invisalign in Spanish
+- [Español — Sedación Dental](https://springvalleydentistry.com/es/sedacion.html): Sedation dentistry in Spanish
+- [Español — Dentista en Addison](https://springvalleydentistry.com/es/dentista-en-addison-tx.html)
+- [Español — Dentista en Carrollton](https://springvalleydentistry.com/es/dentista-en-carrollton-tx.html)
+- [Español — Dentista en Farmers Branch](https://springvalleydentistry.com/es/dentista-en-farmers-branch-tx.html)
+- [Español — Dentista en Irving](https://springvalleydentistry.com/es/dentista-en-irving-tx.html)
+- [Español — Dentista en Richardson](https://springvalleydentistry.com/es/dentista-en-richardson-tx.html)
+
+## Doctors
+
+### Dr. Shokooh Aletaha, DDS
+- Graduated from Baylor College of Dentistry
+- ADA Member, Texas Dental Association Member
+- Specialty interests: cosmetic dentistry, veneers, smile design
+
+### Dr. Nicole Houshmand, DDS
+- Graduated from Texas A&M College of Dentistry
+- Certified Conscious Sedation
+- ADA Member
+- Specialty interests: sedation dentistry, implants, anxiety-free care
+
+## Membership Plan Details
+Spring Valley Dental offers an in-house membership plan for patients without dental insurance. Not insurance — a direct savings program.
+- **Child Complete** (age 13 and under): $250/yr — 2 cleanings, 2 exams, 1 fluoride, routine x-rays, 1 emergency exam
+- **Adult Complete** (age 14+): $325/yr — 2 cleanings, 2 exams & screenings, 1 fluoride, routine x-rays, 1 emergency exam
+- **Perio** (age 14+): $600/yr — 4 perio maintenance visits, 2 exams & screenings, 1 fluoride, routine x-rays, 1 emergency exam
+- All plans include 20% savings on dental procedures at this office
+- Benefits start immediately, no deductibles, no pre-authorization, 30-day money-back guarantee
+- Enroll: call (972) 852-2222 or email info@springvalleydentistry.com
+
+## Insurance & Financing
+- Accepts 30+ PPO insurance plans
+- CareCredit financing (apply same day)
+- Cherry Financing (flexible payment plans)
+- No insurance needed — membership plan available
+
+## Emergency Dental Care
+Spring Valley Dental accepts same-day emergency appointments. For dental emergencies: call (972) 852-2222. Common emergencies treated: severe toothache, broken or chipped teeth, knocked-out teeth, lost fillings or crowns, dental abscess, cracked tooth.
+
+
+### Recent Updates (June 2026)
+- All service pages updated with location-specific H1 headings (North Dallas, TX)
+- Definition-style clinical summaries added to 15 service pages for AI citation
+- Doctor authorship attribution added to all patient guides (Dr. Aletaha, Dr. Houshmand)
+- HowTo schema added to root canal patient guide
+- ImageGallery schema added to smile gallery (10 before/after pairs)
+- Dental implants page: full comparison table (implants vs. bridge vs. dentures)
+- Gum disease page: stages of gum disease diagram and explainer
+- Membership plan: FAQ section added (5 questions)
+- Standalone Person schemas added for Dr. Aletaha and Dr. Houshmand with @id
+
+### Schema Entity Graph Summary
+- Primary entity: Dentist @id https://springvalleydentistry.com/#dentist
+- Dr. Aletaha: Person @id https://springvalleydentistry.com/#dr-aletaha
+- Dr. Houshmand: Person @id https://springvalleydentistry.com/#dr-houshmand
+- All service pages: MedicalProcedure + Service + FAQPage schemas
+- Patient guides: Article + FAQPage + HowTo (root canal) schemas
+- Smile gallery: CollectionPage + ImageGallery schemas
+- About page: AboutPage schema with doctor entity mentions
