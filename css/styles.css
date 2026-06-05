@@ -3673,17 +3673,6 @@ textarea:focus-visible,
   }
 }
 
-/* ── SERVICE DEFINITION PARAGRAPHS (GEO/AI optimization) ── */
-.service-definition {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--gray);
-  margin: 0 0 28px;
-  max-width: 720px;
-  padding: 0;
-  border: none;
-  background: none;
-}
 
 /* ── ARTICLE BYLINE (E-E-A-T) ── */
 .article-byline {
