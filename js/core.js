@@ -492,6 +492,32 @@ btn.addEventListener('click', function () {
     document.body.style.paddingBottom = shown ? (bar.offsetHeight + 'px') : '';
   }
 
+
+  /* ── SERVICES EXPAND BUTTON ─────────────────────────────────────────────── */
+  function initServiceExpand() {
+    var btn   = document.getElementById('svc-expand-btn');
+    var extra = document.getElementById('svc-extra');
+    if (!btn || !extra) return;
+
+    btn.addEventListener('click', function () {
+      var isOpen = extra.style.display !== 'none';
+
+      if (isOpen) {
+        extra.style.display = 'none';
+        extra.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = 'View all 3 more services <i class="ti ti-chevron-down" aria-hidden="true"></i>';
+      } else {
+        extra.style.display = 'grid';
+        extra.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.innerHTML = 'Show fewer services <i class="ti ti-chevron-up" aria-hidden="true"></i>';
+        var first = extra.querySelector('article');
+        if (first) { first.setAttribute('tabindex', '-1'); first.focus(); }
+      }
+    });
+  }
+
   function init() {
     syncReviewCounts();
     initNav();
@@ -507,6 +533,7 @@ btn.addEventListener('click', function () {
     initLazyMaps();
     initAnchorScroll();
     initMoreDropdown();
+    initServiceExpand();
     fitMobileBar();
     // Re-measure after late layout/ribbon paint, and on viewport changes.
     setTimeout(fitMobileBar, 250);

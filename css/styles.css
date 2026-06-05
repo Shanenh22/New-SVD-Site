@@ -425,20 +425,8 @@ strong { font-weight: 600; color: var(--ink); }
 .ic-arrow i { font-size: 13px; }
 
 /* ── REASSURANCE STRIP ───────────────────────────────────────────────────── */
-.reassure {
-  background: var(--mint-pale);
-  border-top: 1px solid rgba(143,214,200,.2);
-  border-bottom: 1px solid rgba(143,214,200,.2);
-  padding: 16px var(--pad-x);
-  display: flex; flex-wrap: wrap; gap: 8px 24px;
-  align-items: center; justify-content: center;
-}
-.re-item {
-  display: flex; align-items: center; gap: 7px;
-  font-size: 15px; font-weight: 500; color: var(--navy);
-}
+
 .re-item i { font-size: 16px; color: var(--mint-dk); }
-.re-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--sand); }
 
 /* ── STATS BAR ───────────────────────────────────────────────────────────── */
 .stats-bar { background: var(--navy); }
@@ -1114,8 +1102,6 @@ body { font-family: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystem
   background: var(--white); border-color: var(--blue); color: var(--blue);
 }
 
-
-
 /* ── COOKIE CONSENT BANNER ────────────────────────────────────────────────── */
 .cookie-banner {
   position: fixed;
@@ -1213,7 +1199,6 @@ body { font-family: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystem
 .page-hero::before { display: none !important; }
 .page-hero h1 { color: var(--white) !important; position: relative; margin-bottom: 14px; font-size: clamp(24px,3.5vw,42px); }
 .page-hero p { color: rgba(255,255,255,.82) !important; max-width: 600px; margin: 0 auto; position: relative; font-size: 16px; }
-
 
 /* BREADCRUMB — white text on hero */
 .breadcrumb { background: var(--cloud); padding: 10px var(--pad-x); border-bottom: 1px solid var(--border); }
@@ -1611,7 +1596,6 @@ img { max-width: 100%; height: auto; }
 .why-visual img,
 .blog-card-img img { height: 100%; max-width: 100%; }
 
-
 /* ── TARGETED CLASS FIXES FOR ABOUT PAGE ─────────────────────────────────── */
 @media (max-width: 768px) {
   .doctor-panel {
@@ -1793,7 +1777,6 @@ img { max-width: 100%; height: auto; }
   .nav-inner { height: 54px !important; }
   :root { --nav-h: 54px; }
 }
-
 
 /* Pricing table mobile */
 @media (max-width: 768px) {
@@ -2093,7 +2076,6 @@ img { max-width: 100%; height: auto; }
     min-width: 128px !important;
   }
 }
-
 
 /* ── FORM SPINNER ──────────────────────────────────────────────────────── */
 .spinner {
@@ -2666,7 +2648,6 @@ main { padding-bottom: calc(56px + env(safe-area-inset-bottom) + 4px); }
   #svc-expand-btn { display: none !important; }
 }
 
-
 /* ═══════════════════════════════════════════════════════════════════════
    CONCEPT D FIXES + ADDITIONS v4.6
    ═══════════════════════════════════════════════════════════════════════ */
@@ -2781,7 +2762,6 @@ html { scroll-behavior: smooth; }
   outline-offset: 2px;
   border-radius: 3px;
 }
-
 
 /* ── AUDIT FIXES 2026 ────────────────────────────────────────────────────── */
 
@@ -3054,7 +3034,6 @@ html { scroll-behavior: smooth; }
   color: var(--navy); margin-bottom: 5px;
 }
 .form-required { color: var(--coral); }
-
 
 /* ═══════════════════════════════════════════════════════════════════════════
    AUDIT FIXES — May 2026
@@ -3333,7 +3312,6 @@ textarea:focus-visible,
   margin-right: 8px;
 }
 
-
 /* ═══════════════════════════════════════════════════════════════════════════
    MOBILE UX PASS — May 2026
    10 targeted improvements — mobile-first, zero desktop regressions
@@ -3374,9 +3352,7 @@ textarea:focus-visible,
    signals already shown in hero chips and stats bar
    ────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
-  .reassure {
-    display: none !important;
-  }
+  
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -3509,7 +3485,6 @@ textarea:focus-visible,
     border-color: var(--navy);
   }
 }
-
 
 /* ═══════════════════════════════════════════════════════════════════════════
    SITE-WIDE MOBILE PASS — May 2026
@@ -3672,7 +3647,6 @@ textarea:focus-visible,
     padding-bottom: calc(44px + 56px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
-
 
 /* ── ARTICLE BYLINE (E-E-A-T) ── */
 .article-byline {
