@@ -159,12 +159,12 @@ Spring Valley Dental Associates is a dental practice in Dallas, Texas (75244 zip
 - Dental implants page: full comparison table (implants vs. bridge vs. dentures)
 - Gum disease page: stages of gum disease diagram and explainer
 - Membership plan: FAQ section added (5 questions)
-- Standalone Person schemas added for Dr. Aletaha and Dr. Houshmand with @id
+- Standalone Person schemas added for Dr. Houshmand and Dr. Aletaha with @id
 
 ### Schema Entity Graph Summary
 - Primary entity: Dentist @id https://springvalleydentistry.com/#dentist
-- Dr. Aletaha: Person @id https://springvalleydentistry.com/#dr-aletaha
 - Dr. Houshmand: Person @id https://springvalleydentistry.com/#dr-houshmand
+- Dr. Aletaha: Person @id https://springvalleydentistry.com/#dr-aletaha
 - All service pages: MedicalProcedure + Service + FAQPage schemas
 - Patient guides: Article + FAQPage + HowTo (root canal) schemas
 - Smile gallery: CollectionPage + ImageGallery schemas
