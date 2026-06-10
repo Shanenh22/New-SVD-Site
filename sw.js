@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v3'; /* Bumped June 2026 — schema, H1, definition, content updates */
+const CACHE_VERSION = 'svd-v4'; /* Bumped June 2026 — Houshmand primary, audit fixes (initStats, trapFocus, hreflang, FAQ IDs, gallery CLS, scroll-margin, SW version) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

@@ -2736,6 +2736,10 @@ html { scroll-behavior: smooth; }
 #new-patient,
 #our-services { scroll-margin-top: calc(var(--nav-h, 68px) + 16px); }
 
+/* Doctor profile anchor deep-links — offset for fixed nav */
+#dr-houshmand,
+#dr-aletaha { scroll-margin-top: calc(var(--nav-h, 68px) + 24px); }
+
 /* hover states now in base hero CSS above */
 
 /* ── AUDIT FIXES: Focus-visible, carousel tap target ─────── */

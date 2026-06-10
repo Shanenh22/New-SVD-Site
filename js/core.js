@@ -8,7 +8,7 @@
   'use strict';
 
   /* ── HOURS CONFIG ───────────────────────────────────────────────────────── */
-  var HOURS = {
+  var HOURS = window.SVD_HOURS = {
     0: { label: 'Sunday',    open: null,  close: null  }, // closed
     1: { label: 'Monday',    open: 600,   close: 1140  }, // 10am–7pm
     2: { label: 'Tuesday',   open: 510,   close: 960   }, // 8:30am–4pm
@@ -113,17 +113,17 @@
   }
 
   function initFAQ() {
-    document.querySelectorAll('.faq-item').forEach(function (item) {
+    document.querySelectorAll('.faq-item').forEach(function (item, idx) {
       var btn    = item.querySelector('.faq-btn');
       var answer = item.querySelector('.faq-answer');
       if (!btn || !answer) return;
 
-      
-        /* A2: aria-labelledby for answer regions */
-        var btnId = 'faq-btn-' + Math.random().toString(36).slice(2,7);
-        btn.setAttribute('id', btnId);
-        answer.setAttribute('aria-labelledby', btnId);
-btn.addEventListener('click', function () {
+      /* Stable index-based ID so aria-labelledby is consistent across loads */
+      var btnId = 'faq-btn-' + idx;
+      btn.setAttribute('id', btnId);
+      answer.setAttribute('aria-labelledby', btnId);
+
+      btn.addEventListener('click', function () {
         var isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
         // close all others in same list
@@ -225,40 +225,6 @@ btn.addEventListener('click', function () {
     });
   }
 
-  /* ── STATS COUNTER ──────────────────────────────────────────────────────── */
-  function countUp(el, target, duration) {
-    var start = 0;
-    var step  = Math.ceil(target / (duration / 30));
-    var timer = setInterval(function () {
-      start = Math.min(start + step, target);
-      el.textContent = start;
-      if (start >= target) clearInterval(timer);
-    }, 30);
-  }
-
-  function initCounters() {
-    if (!window.IntersectionObserver) return;
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        var el     = e.target;
-        var target = parseInt(el.getAttribute('data-count'), 10);
-        if (!isNaN(target)) countUp(el, target, 800);
-        // stats bar accent lines
-        var sb = el.closest('.sb');
-        if (sb) sb.classList.add('in');
-        obs.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('[data-count]').forEach(function (el) {
-      obs.observe(el);
-    });
-    // also trigger sb accent for non-counter stats
-    document.querySelectorAll('.sb').forEach(function (sb) {
-      obs.observe(sb);
-    });
-  }
 
   /* ── GALLERY FILTER ─────────────────────────────────────────────────────── */
   function initGalleryFilter() {
@@ -266,10 +232,19 @@ btn.addEventListener('click', function () {
     var items = document.querySelectorAll('.gallery-item');
     if (!btns.length) return;
 
+    // Set initial aria-pressed state
+    btns.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    });
+
     btns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        btns.forEach(function (b) { b.classList.remove('active'); });
+        btns.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         var filter = btn.getAttribute('data-filter');
         items.forEach(function (item) {
           if (filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -320,21 +295,6 @@ btn.addEventListener('click', function () {
     });
   }
 
-
-  /* ── GALLERY FILTER ARIA-PRESSED ─────────────────────────────────────── */
-  function initGalleryAria() {
-    document.querySelectorAll('.gf-btn').forEach(function(btn) {
-      if (!btn.hasAttribute('aria-pressed')) {
-        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
-      }
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.gf-btn').forEach(function(b) {
-          b.setAttribute('aria-pressed', 'false');
-        });
-        btn.setAttribute('aria-pressed', 'true');
-      });
-    });
-  }
 
 
   /* ── STATS COUNTER — IntersectionObserver so it fires on scroll ─────── */
@@ -499,6 +459,12 @@ btn.addEventListener('click', function () {
     var extra = document.getElementById('svc-extra');
     if (!btn || !extra) return;
 
+    // Count hidden service cards dynamically so label stays accurate if cards change
+    var hiddenCount = extra.querySelectorAll('article').length;
+    var moreLabel  = hiddenCount === 1 ? '1 more service' : hiddenCount + ' more services';
+
+    btn.innerHTML = 'View all ' + moreLabel + ' <i class="ti ti-chevron-down" aria-hidden="true"></i>';
+
     btn.addEventListener('click', function () {
       var isOpen = extra.style.display !== 'none';
 
@@ -506,7 +472,7 @@ btn.addEventListener('click', function () {
         extra.style.display = 'none';
         extra.setAttribute('aria-hidden', 'true');
         btn.setAttribute('aria-expanded', 'false');
-        btn.innerHTML = 'View all 3 more services <i class="ti ti-chevron-down" aria-hidden="true"></i>';
+        btn.innerHTML = 'View all ' + moreLabel + ' <i class="ti ti-chevron-down" aria-hidden="true"></i>';
       } else {
         extra.style.display = 'grid';
         extra.setAttribute('aria-hidden', 'false');
@@ -522,14 +488,18 @@ btn.addEventListener('click', function () {
     syncReviewCounts();
     initNav();
     initDrawer();
+    // Activate focus trap on mobile drawer (WCAG 2.1 SC 2.1.2)
+    var drawer = document.getElementById('mobile-drawer');
+    if (drawer) trapFocus(drawer);
     initFAQ();
     initHours();
     initReveal();
-    initCounters();
+    // initStats supersedes initCounters: respects prefers-reduced-motion,
+    // uses 16ms rAF-aligned intervals, and handles data-suffix correctly.
+    initStats();
     initGalleryFilter();
     setYear();
     setCurrentPage();
-    initGalleryAria();
     initLazyMaps();
     initAnchorScroll();
     initMoreDropdown();

@@ -1077,33 +1077,31 @@
   <div class="mb-status-ribbon" id="mb-status-ribbon" aria-live="polite" aria-label="Office open status"></div>
 </nav>
 <script>
-/* Status ribbon — hours kept in sync with core.js HOURS config */
+/* Status ribbon — reads from window.SVD_HOURS set by core.js.
+   Falls back to inline config if core.js hasn't loaded yet (first paint). */
 (function(){
-  /* minutes since midnight for each open day */
-  var HOURS = {
-    1: {o: 600,  c: 1140}, /* Mon 10am-7pm */
-    2: {o: 510,  c: 960 }, /* Tue 8:30am-4pm */
-    3: {o: 600,  c: 1140}, /* Wed 10am-7pm */
-    4: null,               /* Thu closed */
-    5: {o: 480,  c: 900 }, /* Fri 8am-3pm */
-    6: null,               /* Sat by appt */
-    0: null                /* Sun closed */
+  var H = window.SVD_HOURS || {
+    1: {open:600,  close:1140},
+    2: {open:510,  close:960 },
+    3: {open:600,  close:1140},
+    5: {open:480,  close:900 }
   };
   var OPEN_LABELS = {1:'Monday',2:'Tuesday',3:'Wednesday',4:'Thursday',5:'Friday',6:'Saturday',0:'Sunday'};
   var OPEN_TIMES  = {1:'10:00 AM',2:'8:30 AM',3:'10:00 AM',5:'8:00 AM'};
   function isOpen(){
-    var now = new Date();
-    var day = now.getDay();
-    var h = HOURS[day];
+    var now = new Date(), day = now.getDay(), h = H[day];
     if (!h) return false;
+    var o = h.open  != null ? h.open  : (h.o != null ? h.o : null);
+    var c = h.close != null ? h.close : (h.c != null ? h.c : null);
+    if (o == null) return false;
     var cur = now.getHours() * 60 + now.getMinutes();
-    return cur >= h.o && cur < h.c;
+    return cur >= o && cur < c;
   }
   function nextOpen(){
     var day = new Date().getDay();
     for(var i=1;i<=7;i++){
-      var d = (day + i) % 7;
-      if(HOURS[d]) return OPEN_LABELS[d] + ' at ' + (OPEN_TIMES[d] || 'opening time');
+      var d = (day + i) % 7, h = H[d];
+      if(h && (h.open != null || h.o != null)) return OPEN_LABELS[d] + ' at ' + (OPEN_TIMES[d] || 'opening time');
     }
     return 'Monday';
   }
