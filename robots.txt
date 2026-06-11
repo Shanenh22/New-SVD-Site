@@ -1,22 +1,10 @@
 # robots.txt — Spring Valley Dental Associates
 # https://springvalleydentistry.com
+# Cleaned June 2026 (v5): removed phantom paths, deduped bots, reorganized blocks.
 
-# ── Standard search engines ──────────────────────────────────────────────────
-User-agent: Googlebot
+# ── All standard crawlers ────────────────────────────────────────────────────
+User-agent: *
 Allow: /
-Disallow: /downloads/
-
-User-agent: Bingbot
-Allow: /
-Disallow: /downloads/
-
-User-agent: Slurp
-Allow: /
-Disallow: /downloads/
-
-User-agent: DuckDuckBot
-Allow: /
-Disallow: /downloads/
 
 # ── AI / LLM crawlers — explicitly allowed ───────────────────────────────────
 # OpenAI (ChatGPT, SearchGPT)
@@ -51,10 +39,6 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-# Common Crawl (used by many LLM training pipelines)
-User-agent: CCBot
-Allow: /
-
 # Apple
 User-agent: Applebot
 Allow: /
@@ -62,16 +46,10 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# ── All other crawlers ───────────────────────────────────────────────────────
-User-agent: *
+# Common Crawl and other AI pipelines
+User-agent: CCBot
 Allow: /
-Disallow: /downloads/
-Disallow: /email-template.html
 
-# ── Sitemap ──────────────────────────────────────────────────────────────────
-Sitemap: https://springvalleydentistry.com/sitemap.xml
-
-# Additional AI crawlers
 User-agent: cohere-ai
 Allow: /
 
@@ -87,8 +65,8 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
-User-agent: FacebookBot
-Allow: /
-
 User-agent: YouBot
 Allow: /
+
+# ── Sitemap ──────────────────────────────────────────────────────────────────
+Sitemap: https://springvalleydentistry.com/sitemap.xml

@@ -370,7 +370,7 @@
       trigger.setAttribute('aria-expanded', 'true');
       menu.classList.add('is-open');
       // focus first item
-      var first = menu.querySelector('a[role="menuitem"]');
+      var first = menu.querySelector('a');
       if (first) setTimeout(function() { first.focus(); }, 50);
     }
 
@@ -402,7 +402,7 @@
     // Close on blur (tab away from last item)
     menu.addEventListener('keydown', function(e) {
       if (e.key !== 'Tab') return;
-      var items = Array.from(menu.querySelectorAll('a[role="menuitem"]'));
+      var items = Array.from(menu.querySelectorAll('a'));
       var last  = items[items.length - 1];
       if (!e.shiftKey && document.activeElement === last) {
         closeMenu();
@@ -418,11 +418,11 @@
     var countEls  = document.querySelectorAll('[data-review-count]');
     var ratingEls = document.querySelectorAll('[data-review-rating]');
     if (!countEls.length && !ratingEls.length) return;
-    // Root-relative so it resolves the same from / and /es/ pages in production.
+    // Relative path resolves from / and /es/; service worker serves it
+    // stale-while-revalidate, so no cache-busting needed.
     var url = (location.pathname.indexOf('/es/') !== -1 ? '../' : '') + 'data/reviews.json';
-    fetch('/data/reviews.json', { cache: 'no-cache' })
+    fetch(url)
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .catch(function () { return fetch(url, { cache: 'no-cache' }).then(function (r) { return r.json(); }); })
       .then(function (data) {
         var agg = (data && data.aggregate) || {};
         var count = agg.reviewCount, rating = agg.ratingValue;
@@ -463,7 +463,7 @@
     var hiddenCount = extra.querySelectorAll('article').length;
     var moreLabel  = hiddenCount === 1 ? '1 more service' : hiddenCount + ' more services';
 
-    btn.innerHTML = 'View all ' + moreLabel + ' <i class="ti ti-chevron-down" aria-hidden="true"></i>';
+    btn.innerHTML = 'View all ' + moreLabel + ' <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>';
 
     btn.addEventListener('click', function () {
       var isOpen = extra.style.display !== 'none';
@@ -472,12 +472,12 @@
         extra.style.display = 'none';
         extra.setAttribute('aria-hidden', 'true');
         btn.setAttribute('aria-expanded', 'false');
-        btn.innerHTML = 'View all ' + moreLabel + ' <i class="ti ti-chevron-down" aria-hidden="true"></i>';
+        btn.innerHTML = 'View all ' + moreLabel + ' <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>';
       } else {
         extra.style.display = 'grid';
         extra.setAttribute('aria-hidden', 'false');
         btn.setAttribute('aria-expanded', 'true');
-        btn.innerHTML = 'Show fewer services <i class="ti ti-chevron-up" aria-hidden="true"></i>';
+        btn.innerHTML = 'Show fewer services <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-up"/></svg>';
         var first = extra.querySelector('article');
         if (first) { first.setAttribute('tabindex', '-1'); first.focus(); }
       }

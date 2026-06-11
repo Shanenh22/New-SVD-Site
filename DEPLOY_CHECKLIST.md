@@ -1,3 +1,38 @@
+# v5 — June 2026 audit implementation (prepend; older checklist below)
+
+## What changed in this release
+- **Icons**: Tabler CDN webfont removed site-wide. Icons now served from
+  /images/icons-sprite.svg (self-hosted, 81 symbols). Fixed 3 icons that were
+  silently rendering blank on v4 (ti-tooth / ti-implant / ti-injection never
+  existed in the Tabler font).
+- **Hero LCP**: slide 1 is now a responsive <img> (640/960/1408w). Slides 2–4
+  remain CSS backgrounds, preloaded only after window load by js/hero-carousel.js.
+- **New JS files** (precached by SW): hero-carousel.js, contact-form.js,
+  page-extras.js. No inline <script> blocks remain on index/contact/gallery (CSP prep).
+- **Schema**: aggregateRating + third-party review markup removed everywhere
+  (Google self-serving review policy); duplicate Dentist entities merged.
+- **hreflang**: corrected on ~25 pages; 5 new EN↔ES pairs added.
+- **New pages (6)**: dental-cleanings-exams.html, es/carillas-de-porcelana.html,
+  es/blanqueamiento-dental.html, es/financiamiento.html, es/plan-de-membresia.html,
+  es/limpieza-dental.html — all in sitemap.xml and llms.txt.
+- **City pages (10)**: differentiated with unique directions + city FAQs (visible + schema).
+- **Review count single source**: every visible count/rating carries
+  data-review-count / data-review-rating and syncs from data/reviews.json.
+  → To update the review number: edit data/reviews.json aggregate block ONLY.
+- **SW**: CACHE_VERSION bumped to svd-v5; new assets precached.
+- robots.txt rewritten (phantom paths removed); 404.html noindexed.
+
+## Deploy steps (additions)
+1. Upload the whole bundle (deleted ~20 unused images — sync with --delete).
+2. Apply deploy-config/cloudfront-response-headers-policy.json (security headers; CSP report-only).
+3. Apply deploy-config/redirect-informacion-paciente.md (real 301 + verify 404 status code).
+4. After deploy: PageSpeed/CrUX check (expect LCP improvement, esp. mobile),
+   GA4 DebugView consent-flow re-test, Search Console: resubmit sitemap.
+5. OPEN ITEM (unchanged): resolve Web3Forms BAA or migrate the form to
+   API Gateway + SES per the stub in js/site-config.js.
+
+---
+
 # Spring Valley Dental — Deployment Checklist
 
 Run this before every deployment. Takes < 10 minutes.

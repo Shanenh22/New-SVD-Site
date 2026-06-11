@@ -10,6 +10,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
 <meta property="og:title" content="Book a Dental Appointment | Spring Valley Dental Dallas TX"/>
 <meta property="og:description" content="Book your appointment online, complete new patient forms, or call (972) 852-2222. Same-day emergency slots available every day we are open."/>
 <meta property="og:url" content="https://springvalleydentistry.com/contact.html"/>
@@ -45,9 +46,6 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" onload="this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/></noscript>
 
-<!-- Tabler Icons -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" as="style" crossorigin="anonymous" onload="this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" crossorigin="anonymous"/></noscript>
 
 <!-- Styles -->
 <link rel="stylesheet" href="css/styles.min.css"/>
@@ -183,7 +181,7 @@
         <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
       </picture>
     </a>
-    <div class="nav-links" role="list">
+    <div class="nav-links">
       <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
@@ -191,18 +189,18 @@
 <a href="patient-info.html">New Patients</a>
 <div class="nav-more-wrap">
   <button class="nav-more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more-menu" id="nav-more-trigger">
-    More <i class="ti ti-chevron-down nav-more-chevron" aria-hidden="true"></i>
+    More <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>
   </button>
-  <ul class="nav-more-menu" id="nav-more-menu" role="menu" aria-labelledby="nav-more-trigger">
-    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="financing.html" role="menuitem">Financing</a></li>
-    <li role="none"><a href="smile-gallery.html" role="menuitem">Smile Gallery</a></li>
-    <li role="none"><a href="reviews.html" role="menuitem">Patient Reviews</a></li>
+  <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="financing.html">Financing</a></li>
+    <li><a href="smile-gallery.html">Smile Gallery</a></li>
+    <li><a href="reviews.html">Patient Reviews</a></li>
   </ul>
 </div>
-<a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><i class="ti ti-language" aria-hidden="true"></i><span class="lt-label">Espa&ntilde;ol</span></a>
+<a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
       <a href="contact.html" class="nav-cta" aria-label="Book an appointment">
-        <i class="ti ti-calendar" aria-hidden="true"></i> Book Online
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -219,43 +217,43 @@
   </div>
   <div class="drawer-quick">
     <a href="tel:+19728522222" class="drawer-quick-btn">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="drawer-quick-btn book">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
     </a>
     <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Map
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
     </a>
     <a href="emergency.html" class="drawer-quick-btn">
-      <i class="ti ti-alert-circle" aria-hidden="true"></i>Urgent
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent
     </a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Quick links</div>
-      <a href="index.html" class="drawer-nav-link">Home <i class="ti ti-chevron-right"></i></a>
-      <a href="about.html" class="drawer-nav-link">About us <i class="ti ti-chevron-right"></i></a>
-      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <i class="ti ti-chevron-right"></i></a>
+      <a href="index.html" class="drawer-nav-link">Home <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="about.html" class="drawer-nav-link">About us <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Services</div>
-      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <i class="ti ti-chevron-right"></i></a>
-      <a href="invisalign.html" class="drawer-nav-link">Invisalign <i class="ti ti-chevron-right"></i></a>
-      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <i class="ti ti-chevron-right"></i></a>
-      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <i class="ti ti-chevron-right"></i></a>
-      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <i class="ti ti-chevron-right"></i></a>
-      <a href="services.html" class="drawer-nav-link">All services <i class="ti ti-chevron-right"></i></a>
+      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="invisalign.html" class="drawer-nav-link">Invisalign <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="services.html" class="drawer-nav-link">All services <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">For patients</div>
-      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <i class="ti ti-chevron-right"></i></a>
-      <a href="financing.html" class="drawer-nav-link">Financing options <i class="ti ti-chevron-right"></i></a>
-      <a href="membership.html" class="drawer-nav-link">Membership plan <i class="ti ti-chevron-right"></i></a>
-      <a href="faq.html" class="drawer-nav-link">FAQ <i class="ti ti-chevron-right"></i></a>
-      <a href="reviews.html" class="drawer-nav-link">Patient reviews <i class="ti ti-chevron-right"></i></a>
-      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <i class="ti ti-chevron-right"></i></a>
-      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><i class="ti ti-language"></i> Ver en Espa&ntilde;ol</a>
+      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="financing.html" class="drawer-nav-link">Financing options <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="membership.html" class="drawer-nav-link">Membership plan <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Office hours</div>
@@ -291,48 +289,48 @@
     <div class="patient-forms-grid" style="margin-top:32px">
       <!-- New Patient -->
       <div class="patient-form-card new-patient">
-        <span class="pfc-badge new"><i class="ti ti-user-plus" aria-hidden="true"></i> New patient</span>
-        <i class="ti ti-clipboard-list pfc-icon coral" style="font-size:36px" aria-hidden="true"></i>
+        <span class="pfc-badge new"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-plus"/></svg> New patient</span>
+        <svg class="svgi pfc-icon coral" style="font-size:36px" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clipboard-list"/></svg>
         <h3>New Patient Registration</h3>
         <p>First visit? Complete your comprehensive intake forms including medical history, insurance information, and consent before you arrive.</p>
         <div class="pfc-meta">
-          <span><i class="ti ti-clock" aria-hidden="true"></i> 8&ndash;10 minutes</span>
-          <span><i class="ti ti-files" aria-hidden="true"></i> 3 forms</span>
-          <span><i class="ti ti-lock" aria-hidden="true"></i> HIPAA-secure</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg> 8&ndash;10 minutes</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-files"/></svg> 3 forms</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-lock"/></svg> HIPAA-secure</span>
         </div>
         <a href="https://patientviewer.com/WebFormsGWT/GWT/WebForms/WebForms.html?DOID=20379&RKID=5353&WSDID=180392&NFID=180395&NFID=180398&NFID=180401&NFID=180404&NFID=180407" target="_blank" rel="noopener noreferrer"
-           class="btn btn-primary" style="margin-top:8px"
+           class="btn btn-primary form-hint" 
            aria-label="Start new patient registration forms — opens in new tab">
-          <i class="ti ti-external-link" aria-hidden="true"></i> Start New Patient Forms
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-external-link"/></svg> Start New Patient Forms
         </a>
       </div>
 
       <!-- Existing Patient -->
       <div class="patient-form-card existing-patient">
-        <span class="pfc-badge exist"><i class="ti ti-user-check" aria-hidden="true"></i> Returning patient</span>
-        <i class="ti ti-user-circle pfc-icon" style="font-size:36px" aria-hidden="true"></i>
+        <span class="pfc-badge exist"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-check"/></svg> Returning patient</span>
+        <svg class="svgi pfc-icon" style="font-size:36px" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-circle"/></svg>
         <h3>Existing Patient Update</h3>
         <p>Update your information, request an appointment, or complete forms for an upcoming visit. Quick and easy — usually 3&ndash;5 minutes.</p>
         <div class="pfc-meta">
-          <span><i class="ti ti-clock" aria-hidden="true"></i> 3&ndash;5 minutes</span>
-          <span><i class="ti ti-files" aria-hidden="true"></i> 1&ndash;2 forms</span>
-          <span><i class="ti ti-lock" aria-hidden="true"></i> HIPAA-secure</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg> 3&ndash;5 minutes</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-files"/></svg> 1&ndash;2 forms</span>
+          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-lock"/></svg> HIPAA-secure</span>
         </div>
         <a href="https://patientviewer.com/WebFormsGWT/GWT/WebForms/WebForms.html?DOID=20379&RKID=5353&WSDID=180389&NFID=180392" target="_blank" rel="noopener noreferrer"
-           class="btn btn-outline" style="margin-top:8px"
+           class="btn btn-outline form-hint" 
            aria-label="Update existing patient information — opens in new tab">
-          <i class="ti ti-external-link" aria-hidden="true"></i> Update Existing Info
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-external-link"/></svg> Update Existing Info
         </a>
       </div>
     </div>
 
     <div class="what-next-notice" style="margin-top:0">
-      <i class="ti ti-check" aria-hidden="true"></i>
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg>
       <p style="margin:0;font-size:15px"><strong>After you submit:</strong> Our team will contact you within 1 business hour to confirm your appointment time. If you need same-day care, call us directly at <a href="tel:+19728522222" style="color:var(--blue);font-weight:600">(972) 852-2222</a>.</p>
     </div>
 
     <div class="security-notice" style="margin-top:12px">
-      <i class="ti ti-shield-check" aria-hidden="true"></i>
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg>
       <div><strong>Your information is secure.</strong> All forms are encrypted and HIPAA-compliant. Your personal health information is protected with the highest security standards.</div>
     </div>
   </div>
@@ -348,69 +346,69 @@
         <p style="margin-bottom:24px;font-size:16px;color:var(--gray)">Prefer to type? Fill this out and we'll call or email you back within one hour during office hours.</p>
 
         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate style="display:flex;flex-direction:column;gap:16px" aria-label="Contact and appointment request form">
-          <div id="form-validation-summary" class="form-validation-summary" role="alert" aria-live="assertive" aria-atomic="true" style="display:none" tabindex="-1">
-            <strong><i class="ti ti-alert-circle" aria-hidden="true"></i> Please fix the following before submitting:</strong>
+          <div id="form-validation-summary" class="form-validation-summary is-hidden" role="alert" aria-live="assertive" aria-atomic="true"  tabindex="-1">
+            <strong><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> Please fix the following before submitting:</strong>
             <ul id="form-summary-list"></ul>
           </div>
           
           <input type="hidden" name="access_key" value="8d79e7dd-b685-4d6c-bcd4-cd9dfdd07321"/>
           <input type="hidden" name="subject" value="New appointment request — Spring Valley Dental"/>
           <input type="hidden" name="from_name" value="Spring Valley Dental Website"/>
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1"/>
+          <input type="checkbox" name="botcheck" class="is-hidden" tabindex="-1"/>
 <div class="form-field-row">
             <div>
-              <label for="fname" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
-                First name <span aria-label="required" style="color:var(--coral)">*</span>
+              <label for="fname" class="form-label">
+                First name <span aria-label="required" class="form-required">*</span>
               </label>
               <input type="text" id="fname" name="first_name" required autocomplete="given-name"
                 style="width:100%;padding:11px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:16px;font-family:var(--sans);color:var(--ink);background:var(--white);transition:border-color .18s"
                 aria-required="true" aria-describedby="fname-err"/>
-              <div id="fname-err" class="form-error-msg" role="alert" aria-live="polite" style="display:none">
-                <i class="ti ti-alert-circle" aria-hidden="true"></i> First name is required
+              <div id="fname-err" class="form-error-msg is-hidden" role="alert" aria-live="polite" >
+                <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> First name is required
               </div>
             </div>
             <div>
-              <label for="lname" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
-                Last name <span aria-label="required" style="color:var(--coral)">*</span>
+              <label for="lname" class="form-label">
+                Last name <span aria-label="required" class="form-required">*</span>
               </label>
               <input type="text" id="lname" name="last_name" required autocomplete="family-name"
                 style="width:100%;padding:11px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:16px;font-family:var(--sans);color:var(--ink);background:var(--white);transition:border-color .18s"
                 aria-required="true" aria-describedby="lname-err"/>
-              <div id="lname-err" class="form-error-msg" role="alert" aria-live="polite" style="display:none">
-                <i class="ti ti-alert-circle" aria-hidden="true"></i> Last name is required
+              <div id="lname-err" class="form-error-msg is-hidden" role="alert" aria-live="polite" >
+                <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> Last name is required
               </div>
             </div>
           </div>
 
           <div>
-            <label for="phone" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
-              Phone number <span aria-label="required" style="color:var(--coral)">*</span>
+            <label for="phone" class="form-label">
+              Phone number <span aria-label="required" class="form-required">*</span>
             </label>
             <input type="tel" id="phone" name="phone" required autocomplete="tel"
               placeholder="(214) 555-0100"
               style="width:100%;padding:11px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:16px;font-family:var(--sans);color:var(--ink);background:var(--white);transition:border-color .18s"
               aria-required="true" aria-describedby="phone-err"/>
-            <div id="phone-err" class="form-error-msg" role="alert" aria-live="polite" style="display:none">
-              <i class="ti ti-alert-circle" aria-hidden="true"></i> Phone number is required
+            <div id="phone-err" class="form-error-msg is-hidden" role="alert" aria-live="polite" >
+              <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> Phone number is required
             </div>
           </div>
 
           <div>
-            <label for="email" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
-              Email address <span aria-label="required" style="color:var(--coral)">*</span>
+            <label for="email" class="form-label">
+              Email address <span aria-label="required" class="form-required">*</span>
             </label>
             <input type="email" id="email" name="email" required autocomplete="email"
               placeholder="you@example.com"
               style="width:100%;padding:11px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:16px;font-family:var(--sans);color:var(--ink);background:var(--white);transition:border-color .18s"
               aria-required="true" aria-describedby="email-err"/>
-            <div id="email-err" class="form-error-msg" role="alert" aria-live="polite" style="display:none">
-              <i class="ti ti-alert-circle" aria-hidden="true"></i> A valid email address is required
+            <div id="email-err" class="form-error-msg is-hidden" role="alert" aria-live="polite" >
+              <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> A valid email address is required
             </div>
           </div>
 
           <div>
-            <label for="service" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
-              How can we help? <span aria-label="required" style="color:var(--coral)">*</span>
+            <label for="service" class="form-label">
+              How can we help? <span aria-label="required" class="form-required">*</span>
             </label>
             <select id="service" name="service" required
               style="width:100%;padding:11px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:16px;font-family:var(--sans);color:var(--ink);background:var(--white)"
@@ -425,13 +423,13 @@
               <option value="sedation">Sedation dentistry</option>
               <option value="other">Other &mdash; I'll describe below</option>
             </select>
-            <div id="service-err" class="form-error-msg" role="alert" aria-live="polite" style="display:none">
-              <i class="ti ti-alert-circle" aria-hidden="true"></i> Please select a reason for your visit
+            <div id="service-err" class="form-error-msg is-hidden" role="alert" aria-live="polite" >
+              <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg> Please select a reason for your visit
             </div>
           </div>
 
           <div>
-            <label for="insurance" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
+            <label for="insurance" class="form-label">
               Insurance plan <span style="color:var(--mist);font-weight:400">(optional — helps us prepare)</span>
             </label>
             <select id="insurance" name="insurance"
@@ -451,20 +449,20 @@
               <option value="membership">I'd like to join your membership plan</option>
             </select>
             <div id="insurance-hint" style="font-size:12px;color:var(--gray);margin-top:4px">
-              <i class="ti ti-info-circle" aria-hidden="true"></i> We'll verify your benefits before your visit — no surprises.
+              <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-info-circle"/></svg> We'll verify your benefits before your visit — no surprises.
             </div>
           </div>
 
 
           <div class="phi-warning" role="alert">
-            <i class="ti ti-shield-exclamation" aria-hidden="true"></i>
+            <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-exclamation"/></svg>
             <div>
               <strong>Privacy notice:</strong> Do not include sensitive medical details, diagnoses, or treatment history in this form. This form is for scheduling requests only. For urgent pain or a dental emergency, <a href="tel:+19728522222">(972) 852-2222</a>.
             </div>
           </div>
 
           <div>
-            <label for="message" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
+            <label for="message" class="form-label">
               Message <span style="color:var(--mist);font-weight:400">(optional)</span>
             </label>
             <textarea id="message" name="message" rows="3"
@@ -474,7 +472,7 @@
 <span id="message-error" class="field-error" role="alert" hidden></span>
 
           <div style="font-size:13px;color:var(--mist);line-height:1.6;display:flex;align-items:flex-start;gap:7px">
-            <i class="ti ti-shield-check" style="color:var(--blue);font-size:16px;flex-shrink:0;margin-top:2px" aria-hidden="true"></i>
+            <svg class="svgi" style="color:var(--blue);font-size:16px;flex-shrink:0;margin-top:2px" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg>
             Your information is secure and confidential. We comply with HIPAA requirements and never share your information without consent.
           </div>
 
@@ -484,29 +482,29 @@
       <input type="hidden" name="utm_campaign" id="utm_campaign" aria-hidden="true"/>
       <input type="hidden" name="utm_content" id="utm_content" aria-hidden="true"/>
           <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray);padding:8px 12px;background:var(--cloud);border-radius:var(--r);border:1px solid var(--border)">
-            <i class="ti ti-clock" style="color:var(--mint-dk);flex-shrink:0" aria-hidden="true"></i>
+            <svg class="svgi" style="color:var(--mint-dk);flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg>
             <span>We confirm within <strong style="color:var(--navy)">1 business hour</strong> during office hours &mdash; usually much faster.</span>
           </div>
       <button type="submit" class="btn btn-primary" id="cta-form-submit" data-track="appointment" data-track-location="contact-form" style="align-self:flex-start;font-size:17px">
-            <i class="ti ti-send" aria-hidden="true"></i> Send appointment request
+            <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-send"/></svg> Send appointment request
           </button>
 
           <div id="form-server-error" role="alert" aria-live="assertive" style="display:none;padding:13px 16px;border-radius:var(--r);background:#FEE8D6;border-left:4px solid var(--coral);font-size:15px;color:#5C1E00;align-items:center;gap:10px;margin-top:8px">
-            <i class="ti ti-alert-triangle" style="font-size:18px;flex-shrink:0" aria-hidden="true"></i>
+            <svg class="svgi" style="font-size:18px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-triangle"/></svg>
             <span></span>
           </div>
         </form>
 
         <div class="form-next-steps">
           <div class="fns-heading">What happens after you send this?</div>
-          <div class="fns-item"><i class="ti ti-clock" aria-hidden="true"></i><span>We respond within 1 business hour during office hours.</span></div>
-          <div class="fns-item"><i class="ti ti-phone" aria-hidden="true"></i><span>Dental emergency or severe pain? Call instead &mdash; <a href="tel:+19728522222">(972) 852-2222</a>.</span></div>
-          <div class="fns-item"><i class="ti ti-shield-check" aria-hidden="true"></i><span>We verify your insurance before treatment &mdash; no surprise bills.</span></div>
+          <div class="fns-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg><span>We respond within 1 business hour during office hours.</span></div>
+          <div class="fns-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg><span>Dental emergency or severe pain? Call instead &mdash; <a href="tel:+19728522222">(972) 852-2222</a>.</span></div>
+          <div class="fns-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg><span>We verify your insurance before treatment &mdash; no surprise bills.</span></div>
         </div>
         <div id="form-success" role="alert" aria-live="polite" aria-atomic="true" style="display:none;opacity:0;transition:opacity .4s ease;padding:0">
             <div style="background:linear-gradient(135deg,var(--navy) 0%,#1a5276 100%);border-radius:var(--rl);padding:36px 28px;text-align:center">
               <div style="width:64px;height:64px;border-radius:50%;background:rgba(143,214,200,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px">
-                <i class="ti ti-check" style="font-size:32px;color:var(--mint)" aria-hidden="true"></i>
+                <svg class="svgi" style="font-size:32px;color:var(--mint)" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg>
               </div>
               <h3 style="font-family:var(--serif);font-size:26px;color:var(--white);margin-bottom:10px">Request received!</h3>
               <p style="color:rgba(255,255,255,.82);font-size:17px;line-height:1.65;margin-bottom:20px">
@@ -518,136 +516,13 @@
                   <strong style="color:var(--white)">Need same-day care?</strong> Don&rsquo;t wait for our reply.
                 </p>
                 <a href="tel:+19728522222" class="btn btn-primary" style="font-size:17px">
-                  <i class="ti ti-phone" aria-hidden="true"></i> Call now: (972) 852-2222
+                  <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg> Call now: (972) 852-2222
                 </a>
               </div>
             </div>
           </div>
 
-        <script>
-        (function() {
-          'use strict';
-
-          var form    = document.getElementById('contact-form');
-          var success = document.getElementById('form-success');
-          var submit  = document.getElementById('cta-form-submit');
-          if (!form) return;
-
-          function showErr(id, show) {
-            var el    = document.getElementById(id + '-err');
-            var input = document.querySelector('[aria-describedby="' + id + '-err"]');
-            if (el) {
-              el.style.display = show ? 'flex' : 'none';
-              el.setAttribute('aria-live', 'assertive');
-            }
-            if (input) {
-              if (show) input.classList.add('form-field-error');
-              else      input.classList.remove('form-field-error');
-            }
-          }
-
-          function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
-          function validatePhone(v) { return v.replace(/\D/g, '').length >= 10; }
-
-          function setLoading(loading) {
-            if (submit) {
-              submit.disabled = loading;
-              submit.innerHTML = loading
-                ? '<span class="spinner" aria-hidden="true"></span> Sending…'
-                : '<i class="ti ti-send" aria-hidden="true"></i> Send appointment request';
-            }
-          }
-
-          function showSuccess(data) {
-            // Hide the form (overrides its inline display:flex)
-            form.style.display = 'none';
-            // Stop the spinner
-            setLoading(false);
-            // Show the success div — it lives OUTSIDE the form so hiding the form
-            // doesn't affect it. Use display:block then rAF for the fade-in.
-            success.style.display = 'block';
-            success.style.opacity = '0';
-            requestAnimationFrame(function() {
-              requestAnimationFrame(function() {
-                success.style.opacity = '1';
-                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              });
-            });
-          }
-
-          function showError(msg) {
-            var el = document.getElementById('form-server-error');
-            if (el) {
-              el.textContent = msg || 'Something went wrong. Please call us at (972) 852-2222.';
-              el.style.display = 'flex';
-              el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-          }
-
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var fields = {
-              fname:   { el: document.getElementById('fname'),   req: function(v){ return !!v.trim(); } },
-              lname:   { el: document.getElementById('lname'),   req: function(v){ return !!v.trim(); } },
-              phone:   { el: document.getElementById('phone'),   req: validatePhone },
-              email:   { el: document.getElementById('email'),   req: validateEmail },
-              service: { el: document.getElementById('service'), req: function(v){ return !!v; } }
-            };
-
-            var valid = true;
-            var firstBad = null;
-            Object.keys(fields).forEach(function(id) {
-              var val = fields[id].el ? fields[id].el.value : '';
-              var ok  = fields[id].req(val);
-              showErr(id, !ok);
-              if (!ok && !firstBad) firstBad = fields[id].el;
-              if (!ok) valid = false;
-            });
-
-            if (!valid) {
-              if (firstBad) firstBad.focus();
-              return;
-            }
-
-            setLoading(true);
-            document.getElementById('form-server-error') &&
-              (document.getElementById('form-server-error').style.display = 'none');
-
-            var formData = new FormData(form);
-
-            fetch(form.getAttribute('action'), {
-              method: 'POST',
-              body: formData,
-              headers: { 'Accept': 'application/json' }
-            })
-            .then(function(res) { return res.json(); })
-            .then(function(data) {
-              if (data.success) {
-                form.dataset.successHandled = 'true';
-                showSuccess({ fname: document.getElementById('fname').value.trim() });
-                /* Fire conversion analytics via the shared hook in analytics.js
-                   (Plausible "Form Success" + GA4 form_submission_success). */
-                if (typeof window.svdFormSuccess === 'function') {
-                  window.svdFormSuccess();
-                }
-              } else {
-                setLoading(false);
-                showError(data.message || null);
-              }
-            })
-            .catch(function() {
-              setLoading(false);
-              showError('Network error. Please check your connection and try again.');
-            });
-          });
-
-          Object.keys({ fname:1, lname:1, phone:1, email:1, service:1 }).forEach(function(id) {
-            var el = document.getElementById(id);
-            if (el) el.addEventListener('input', function() { showErr(id, false); });
-          });
-        })();
-        </script>
+        <script src="js/contact-form.js" defer></script>
 
       </div>
 
@@ -680,7 +555,7 @@
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mint);margin-bottom:6px">Dental emergency?</div>
           <p style="color:rgba(255,255,255,.82);font-size:15px;margin-bottom:14px">Don't wait — call now. We hold same-day slots open every day.</p>
           <a href="tel:+19728522222" class="btn btn-primary" style="width:100%;justify-content:center">
-            <i class="ti ti-phone" aria-hidden="true"></i> (972) 852-2222
+            <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222
           </a>
         </div>
       </div>
@@ -697,9 +572,9 @@
       <p class="footer-about">Gentle, modern dentistry for the whole family since 1994. Serving North Dallas, Addison, Farmers Branch, Carrollton, and Irving.</p>
       <div class="footer-socials">
         <a href="https://www.instagram.com/springvalleydental_dallas" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-instagram"/></svg></a>
         <a href="https://www.facebook.com/share/16xP4Vjixk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-facebook"/></svg></a>
       </div>
       <div class="footer-map">
         <iframe
@@ -768,13 +643,13 @@
 <nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions">
   <div class="mobile-bar-inner">
     <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book Now
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
     </a>
     <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Directions
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
     </a>
   </div>
 </nav>

@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v4'; /* Bumped June 2026 — Houshmand primary, audit fixes (initStats, trapFocus, hreflang, FAQ IDs, gallery CLS, scroll-margin, SW version) */
+const CACHE_VERSION = 'svd-v5'; /* Bumped June 2026 — v5 audit implementation: SVG icon sprite (Tabler CDN retired), responsive hero LCP img, externalized hero/contact/page-extras scripts, schema cleanup, city-page differentiation, 6 new pages (EN cleanings + 5 ES) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
@@ -14,8 +14,13 @@ const PRECACHE_ASSETS = [
   '/js/core.js',
   '/js/analytics.js',
   '/js/site-config.js',
+  '/js/hero-carousel.js',
+  '/js/contact-form.js',
+  '/js/page-extras.js',
+  '/images/icons-sprite.svg',
   '/images/spring-valley-logo-desktop.svg',
   '/images/favicon.svg',
+  '/data/reviews.json',
   '/offline.html'
 ];
 

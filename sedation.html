@@ -10,6 +10,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
 <meta property="og:title" content="Sedation Dentistry Dallas TX | Spring Valley Dental"/>
 <meta property="og:description" content="Sedation dentistry in North Dallas. Dr. Houshmand is certified in conscious sedation — helping anxious patients get comfortable care at Spring Valley Dental."/>
 <meta property="og:url" content="https://springvalleydentistry.com/sedation.html"/>
@@ -45,9 +46,6 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" onload="this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/></noscript>
 
-<!-- Tabler Icons -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" as="style" crossorigin="anonymous" onload="this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" crossorigin="anonymous"/></noscript>
 
 <!-- Styles -->
 <link rel="stylesheet" href="css/styles.min.css"/>
@@ -240,7 +238,7 @@
         <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
       </picture>
     </a>
-    <div class="nav-links" role="list">
+    <div class="nav-links">
       <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
@@ -248,18 +246,18 @@
 <a href="patient-info.html">New Patients</a>
 <div class="nav-more-wrap">
   <button class="nav-more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more-menu" id="nav-more-trigger">
-    More <i class="ti ti-chevron-down nav-more-chevron" aria-hidden="true"></i>
+    More <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>
   </button>
-  <ul class="nav-more-menu" id="nav-more-menu" role="menu" aria-labelledby="nav-more-trigger">
-    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="financing.html" role="menuitem">Financing</a></li>
-    <li role="none"><a href="smile-gallery.html" role="menuitem">Smile Gallery</a></li>
-    <li role="none"><a href="reviews.html" role="menuitem">Patient Reviews</a></li>
+  <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="financing.html">Financing</a></li>
+    <li><a href="smile-gallery.html">Smile Gallery</a></li>
+    <li><a href="reviews.html">Patient Reviews</a></li>
   </ul>
 </div>
-<a href="es/sedacion.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><i class="ti ti-language" aria-hidden="true"></i><span class="lt-label">Espa&ntilde;ol</span></a>
+<a href="es/sedacion.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
       <a href="contact.html" class="nav-cta" aria-label="Book an appointment">
-        <i class="ti ti-calendar" aria-hidden="true"></i> Book Online
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -276,43 +274,43 @@
   </div>
   <div class="drawer-quick">
     <a href="tel:+19728522222" class="drawer-quick-btn">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="drawer-quick-btn book">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
     </a>
     <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Map
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
     </a>
     <a href="emergency.html" class="drawer-quick-btn">
-      <i class="ti ti-alert-circle" aria-hidden="true"></i>Urgent
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent
     </a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Quick links</div>
-      <a href="index.html" class="drawer-nav-link">Home <i class="ti ti-chevron-right"></i></a>
-      <a href="about.html" class="drawer-nav-link">About us <i class="ti ti-chevron-right"></i></a>
-      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <i class="ti ti-chevron-right"></i></a>
+      <a href="index.html" class="drawer-nav-link">Home <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="about.html" class="drawer-nav-link">About us <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Services</div>
-      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <i class="ti ti-chevron-right"></i></a>
-      <a href="invisalign.html" class="drawer-nav-link">Invisalign <i class="ti ti-chevron-right"></i></a>
-      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <i class="ti ti-chevron-right"></i></a>
-      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <i class="ti ti-chevron-right"></i></a>
-      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <i class="ti ti-chevron-right"></i></a>
-      <a href="services.html" class="drawer-nav-link">All services <i class="ti ti-chevron-right"></i></a>
+      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="invisalign.html" class="drawer-nav-link">Invisalign <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="services.html" class="drawer-nav-link">All services <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">For patients</div>
-      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <i class="ti ti-chevron-right"></i></a>
-      <a href="financing.html" class="drawer-nav-link">Financing options <i class="ti ti-chevron-right"></i></a>
-      <a href="membership.html" class="drawer-nav-link">Membership plan <i class="ti ti-chevron-right"></i></a>
-      <a href="faq.html" class="drawer-nav-link">FAQ <i class="ti ti-chevron-right"></i></a>
-      <a href="reviews.html" class="drawer-nav-link">Patient reviews <i class="ti ti-chevron-right"></i></a>
-      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <i class="ti ti-chevron-right"></i></a>
-      <a href="es/sedacion.html" class="drawer-lang-row" lang="es" hreflang="es"><i class="ti ti-language"></i> Ver en Espa&ntilde;ol</a>
+      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="financing.html" class="drawer-nav-link">Financing options <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="membership.html" class="drawer-nav-link">Membership plan <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/sedacion.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Office hours</div>
@@ -335,6 +333,11 @@
   <p>For patients who have been putting off care because of anxiety — we have safe, effective options that make the dentist genuinely comfortable.</p>
 </div>
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">&rsaquo;</span> <a href="services.html">Services</a> <span aria-hidden="true">&rsaquo;</span> <span aria-current="page">Sedation Dentistry Dallas TX</span></nav>
+<div class="proof-strip" aria-label="Practice highlights">
+  <span class="proof-strip-item"><svg class="svgi star" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-star-filled"/></svg><strong><span data-review-rating>5.0</span></strong>&nbsp;&middot;&nbsp;<span data-review-count>214</span>&nbsp;Google reviews</span>
+  <span class="proof-strip-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-heart"/></svg>Caring for North Dallas since <strong>1994</strong></span>
+  <span class="proof-strip-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg>Most PPO plans accepted</span>
+</div>
 <section class="section" style="background:var(--white)"><div class="section-inner"><div class="service-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start"><div><img src="images/sedation.webp" alt="Sedation dentistry consultation at Spring Valley Dental in Dallas TX" style="border-radius:var(--rl);width:100%;height:280px;object-fit:cover;margin-bottom:28px" width="680" height="280" loading="eager"/>
 <h2 style="font-family:var(--serif);font-size:26px;color:var(--navy);margin-bottom:14px">
   Finally get the care you need — comfortably, safely, on your terms.
@@ -346,18 +349,18 @@
 </div>
 <h3 style="font-family:var(--sans);font-size:17px;font-weight:600;color:var(--navy);margin:28px 0 12px">What is conscious sedation?</h3>
 <p>Conscious sedation uses safe, medically supervised medication to help you feel deeply relaxed during your appointment. You remain awake and can respond to the dentist, but most patients remember very little about the procedure afterward. It's not general anesthesia — you breathe on your own throughout, and the effects wear off within a few hours.</p>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>Certified and supervised by Dr. Houshmand throughout the entire appointment</div>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>Excellent for moderate-to-severe dental anxiety or phobia</div>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>Useful for sensitive gag reflexes, PTSD, or past traumatic dental experiences</div>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>Allows multiple procedures to be completed in fewer visits</div>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>You'll need a driver to take you home — please arrange this in advance</div>
-<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><i class="ti ti-point-filled" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true"></i>Available for most general and restorative dental procedures</div><h3 style="font-family:var(--sans);font-size:17px;font-weight:600;color:var(--navy);margin:28px 0 12px">What to expect</h3><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">1</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Medical history review</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">We review your complete medical and medication history to confirm which sedation option is safest and most effective for you.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">2</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Pre-appointment instructions</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">You receive clear written instructions for before your appointment — what to eat, what to avoid (typically nothing by mouth 6 hours before oral sedation), and what to arrange for your ride home. We call to confirm these details the day before your appointment.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">3</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Sedation administration</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">Nitrous is administered in-office. Oral sedation is taken at home before you arrive. Dr. Houshmand monitors your comfort and safety throughout.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">4</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Treatment & recovery</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">Your dental work is completed while you are comfortably relaxed. We ensure you are awake and oriented before you leave with your driver.</p></div></div></div><div><div class="sidebar-widget" style="background:var(--porcelain);border-radius:var(--rl);padding:24px;border:1px solid var(--border);position:sticky;top:calc(var(--nav-h)+16px)"><h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:6px">Book your sedation consultation</h3><p style="font-size:17px;color:var(--gray);margin-bottom:16px">Same-day appointments for emergencies. New patients always welcome.</p><a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px"><i class="ti ti-calendar" aria-hidden="true"></i> Book online</a><a href="tel:+19728522222" class="btn btn-outline" style="width:100%;justify-content:center"><i class="ti ti-phone" aria-hidden="true"></i> (972) 852-2222</a><div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)"><div style="font-size:17px;color:var(--gray);line-height:1.8"><div><i class="ti ti-check" style="color:var(--mint-dk)" aria-hidden="true"></i> Most PPO insurance plans accepted</div><div><i class="ti ti-check" style="color:var(--mint-dk)" aria-hidden="true"></i> Costs explained before we start</div><div><i class="ti ti-check" style="color:var(--mint-dk)" aria-hidden="true"></i> Sedation available for anxious patients</div></div></div></div></div></div></div></section><section class="section reveal" style="background:var(--cloud)" aria-labelledby="svc-faq-heading"><div class="section-inner"><div class="section-header centered"><div class="section-label">Common questions</div><h2 class="section-h2 serif" id="svc-faq-heading">Frequently asked questions</h2></div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Certified and supervised by Dr. Houshmand throughout the entire appointment</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Excellent for moderate-to-severe dental anxiety or phobia</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Useful for sensitive gag reflexes, PTSD, or past traumatic dental experiences</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Allows multiple procedures to be completed in fewer visits</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>You'll need a driver to take you home — please arrange this in advance</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:17.5px;color:var(--ink);padding:4px 0"><svg class="svgi" style="color:var(--mint);font-size:11px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Available for most general and restorative dental procedures</div><h3 style="font-family:var(--sans);font-size:17px;font-weight:600;color:var(--navy);margin:28px 0 12px">What to expect</h3><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">1</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Medical history review</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">We review your complete medical and medication history to confirm which sedation option is safest and most effective for you.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">2</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Pre-appointment instructions</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">You receive clear written instructions for before your appointment — what to eat, what to avoid (typically nothing by mouth 6 hours before oral sedation), and what to arrange for your ride home. We call to confirm these details the day before your appointment.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">3</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Sedation administration</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">Nitrous is administered in-office. Oral sedation is taken at home before you arrive. Dr. Houshmand monitors your comfort and safety throughout.</p></div></div><div style="display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)"><div style="width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;flex-shrink:0">4</div><div><h4 style="font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:4px">Treatment & recovery</h4><p style="font-size:17px;color:var(--gray);line-height:1.65">Your dental work is completed while you are comfortably relaxed. We ensure you are awake and oriented before you leave with your driver.</p></div></div></div><div><div class="sidebar-widget" style="background:var(--porcelain);border-radius:var(--rl);padding:24px;border:1px solid var(--border);position:sticky;top:calc(var(--nav-h)+16px)"><h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:6px">Book your sedation consultation</h3><p style="font-size:17px;color:var(--gray);margin-bottom:16px">Same-day appointments for emergencies. New patients always welcome.</p><a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book online</a><a href="tel:+19728522222" class="btn btn-outline" style="width:100%;justify-content:center"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222</a><div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)"><div style="font-size:17px;color:var(--gray);line-height:1.8"><div><svg class="svgi" style="color:var(--mint-dk)" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg> Most PPO insurance plans accepted</div><div><svg class="svgi" style="color:var(--mint-dk)" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg> Costs explained before we start</div><div><svg class="svgi" style="color:var(--mint-dk)" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg> Sedation available for anxious patients</div></div></div></div></div></div></div></section><section class="section reveal" style="background:var(--cloud)" aria-labelledby="svc-faq-heading"><div class="section-inner"><div class="section-header centered"><div class="section-label">Common questions</div><h2 class="section-h2 serif" id="svc-faq-heading">Frequently asked questions</h2></div>
     <div class="faq-list" role="list">
       
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s0">
           What types of sedation do you offer?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s0" role="region">
           <p>We offer nitrous oxide (laughing gas) for mild anxiety — you remain fully alert and can drive afterward. For moderate-to-severe anxiety, we offer oral conscious sedation — a prescription medication taken before your appointment that produces deep relaxation. Dr. Houshmand is certified in conscious sedation and monitors you throughout.</p>
@@ -367,7 +370,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s1">
           Is sedation dentistry safe?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s1" role="region">
           <p>Yes, when administered by a properly trained and certified provider. Dr. Houshmand has specialized training in conscious sedation and follows all safety protocols. We review your full medical history and medication list before recommending any sedation option.</p>
@@ -377,7 +380,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s2">
           Will I be unconscious?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s2" role="region">
           <p>No. Conscious sedation means you remain conscious and can follow simple instructions. You're deeply relaxed — most patients describe it as a dream-like state. General anesthesia (full unconsciousness) is not something we offer and is rarely needed for routine or restorative dental work.</p>
@@ -387,7 +390,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s3">
           How long do the sedation effects last?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s3" role="region">
           <p>Nitrous oxide wears off within minutes once removed. Oral conscious sedation typically produces grogginess for 4–6 hours after the appointment. You'll need a responsible adult to drive you home and stay with you for a few hours. Plan to rest for the remainder of the day.</p>
@@ -397,13 +400,13 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s4">
           Can sedation be used for major dental work?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s4" role="region">
           <p>Absolutely — in fact, this is one of the best uses of sedation. A patient who previously needed 6 appointments to complete restorative work can often complete the same treatment in 1–2 visits under sedation, because they're relaxed and the dentist can work more efficiently.</p>
         </div>
       </div>
-    </div><div style="text-align:center;margin-top:32px"><a href="contact.html" class="btn btn-primary"><i class="ti ti-calendar" aria-hidden="true"></i> Book your sedation consultation</a></div></div></section>
+    </div><div style="text-align:center;margin-top:32px"><a href="contact.html" class="btn btn-primary"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book your sedation consultation</a></div></div></section>
 
 <section class="section reveal" style="background:var(--porcelain)" aria-labelledby="sedation-why-heading">
   <div class="section-inner">
@@ -413,17 +416,17 @@
     </div>
     <div class="why-grid">
       <div class="why-item">
-        <i class="ti ti-certificate" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-certificate"/></svg>
         <h3>Board-certified sedation provider</h3>
         <p>Dr. Houshmand is certified in conscious sedation dentistry. Your safety is monitored throughout your appointment.</p>
       </div>
       <div class="why-item">
-        <i class="ti ti-heart" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-heart"/></svg>
         <h3>No judgment, ever</h3>
         <p>Many of our sedation patients have avoided dentistry for years due to fear. We've heard it before. We don't judge. We just help.</p>
       </div>
       <div class="why-item">
-        <i class="ti ti-clock" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg>
         <h3>More done in fewer visits</h3>
         <p>Sedation often lets us complete more work in a single appointment, reducing the total number of visits you need.</p>
       </div>
@@ -433,7 +436,7 @@
       <p>Most healthy adults with dental anxiety, a strong gag reflex, or complex treatment needs are good candidates. We review your medical history and discuss sedation options at your consultation. Sedation is not appropriate for all patients &mdash; we determine this together before any appointment.</p>
     </div>
     <div style="text-align:center;margin-top:32px">
-      <a href="contact.html" class="btn btn-primary"><i class="ti ti-calendar" aria-hidden="true"></i> Book a sedation consultation</a>
+      <a href="contact.html" class="btn btn-primary"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book a sedation consultation</a>
     </div>
   </div>
 </section>
@@ -443,10 +446,10 @@
     <div class="section-label">Related services</div>
     <h2 class="section-h2 serif" id="sedation-related-heading">Services where sedation is commonly used</h2>
     <div class="related-links-grid">
-      <a href="dental-anxiety.html" class="related-link-card"><i class="ti ti-heart" aria-hidden="true"></i><span>Dental anxiety</span></a>
-      <a href="wisdom-teeth-removal.html" class="related-link-card"><i class="ti ti-face-id" aria-hidden="true"></i><span>Tooth extractions</span></a>
-      <a href="root-canal-therapy.html" class="related-link-card"><i class="ti ti-activity" aria-hidden="true"></i><span>Root canal therapy</span></a>
-      <a href="dental-implants.html" class="related-link-card"><i class="ti ti-implant" aria-hidden="true"></i><span>Dental implants</span></a>
+      <a href="dental-anxiety.html" class="related-link-card"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-heart"/></svg><span>Dental anxiety</span></a>
+      <a href="wisdom-teeth-removal.html" class="related-link-card"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-face-id"/></svg><span>Tooth extractions</span></a>
+      <a href="root-canal-therapy.html" class="related-link-card"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-activity"/></svg><span>Root canal therapy</span></a>
+      <a href="dental-implants.html" class="related-link-card"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-implant"/></svg><span>Dental implants</span></a>
     </div>
   </div>
 </section>
@@ -464,9 +467,9 @@
       <p class="footer-about">Gentle, modern dentistry for the whole family since 1994. Serving North Dallas, Addison, Farmers Branch, Carrollton, and Irving.</p>
       <div class="footer-socials">
         <a href="https://www.instagram.com/springvalleydental_dallas" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-instagram"/></svg></a>
         <a href="https://www.facebook.com/share/16xP4Vjixk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-facebook"/></svg></a>
       </div>
       <div class="footer-map">
         <iframe
@@ -535,13 +538,13 @@
 <nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions">
   <div class="mobile-bar-inner">
     <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book Now
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
     </a>
     <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Directions
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
     </a>
   </div>
 </nav>

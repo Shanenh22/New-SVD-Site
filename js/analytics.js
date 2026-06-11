@@ -244,19 +244,9 @@
     ga('appointment_click', { event_category: 'conversion', event_label: label, value: 1 });
   });
 
-  // ── Scroll depth (engagement signal) ──────────────────────────────────────
-  var scrollFired = {};
-  window.addEventListener('scroll', function () {
-    var h   = document.documentElement;
-    var pct = Math.round((window.scrollY / (h.scrollHeight - h.clientHeight)) * 100);
-    [25, 50, 75, 90].forEach(function (m) {
-      if (!scrollFired[m] && pct >= m) {
-        scrollFired[m] = true;
-        plausible('Scroll Depth', { depth: m + '%' });
-        ga('scroll', { percent_scrolled: m });
-      }
-    });
-  }, { passive: true });
+  /* Scroll depth removed June 2026 (v5): GA4 Enhanced Measurement already
+     fires a 90% scroll event; the custom 25/50/75/90 tracker double-counted
+     engagement. Re-add only if finer granularity is genuinely needed. */
 
   // ── Financing / membership interest ───────────────────────────────────────
   document.addEventListener('click', function (e) {

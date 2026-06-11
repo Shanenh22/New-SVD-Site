@@ -31,8 +31,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" onload="this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/></noscript>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" as="style" crossorigin="anonymous" onload="this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" crossorigin="anonymous"/></noscript>
 <link rel="stylesheet" href="../css/styles.min.css"/>
 <style>
 .legal-hero{background:var(--navy);padding:56px var(--pad-x) 40px;text-align:center}
@@ -86,14 +84,14 @@
         <img src="../images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
       </picture>
     </a>
-    <div class="nav-links" role="list">
+    <div class="nav-links">
       <a href="index.html">Inicio</a>
 <a href="servicios.html">Servicios</a>
 <a href="emergencia.html">Emergencias</a>
 <a href="informacion-paciente.html">Pacientes</a>
 <a href="contacto.html">Contacto</a>
-<a href="../index.html" class="lang-toggle" lang="en" hreflang="en" aria-label="Switch to English"><i class="ti ti-language" aria-hidden="true"></i><span class="lt-label">English</span></a>
-      <a href="contacto.html" class="nav-cta" aria-label="Hacer una cita"><i class="ti ti-calendar" aria-hidden="true"></i> Hacer una cita</a>
+<a href="../index.html" class="lang-toggle" lang="en" hreflang="en" aria-label="Switch to English"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-language"/></svg><span class="lt-label">English</span></a>
+      <a href="contacto.html" class="nav-cta" aria-label="Hacer una cita"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg> Hacer una cita</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span><span></span></button>
   </div>
@@ -102,22 +100,22 @@
 <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú" hidden>
   <div class="drawer-head"><span class="drawer-brand">Spring Valley Dental</span><button class="drawer-close" id="drawer-close" aria-label="Cerrar menú">&#x2715;</button></div>
   <div class="drawer-quick">
-    <a href="tel:+19728522222" class="drawer-quick-btn"><i class="ti ti-phone" aria-hidden="true"></i>Llamar</a>
-    <a href="contacto.html" class="drawer-quick-btn book"><i class="ti ti-calendar" aria-hidden="true"></i>Cita</a>
-    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn"><i class="ti ti-map-pin" aria-hidden="true"></i>Mapa</a>
-    <a href="emergencia.html" class="drawer-quick-btn"><i class="ti ti-alert-circle" aria-hidden="true"></i>Urgencia</a>
+    <a href="tel:+19728522222" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg>Llamar</a>
+    <a href="contacto.html" class="drawer-quick-btn book"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg>Cita</a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-map-pin"/></svg>Mapa</a>
+    <a href="emergencia.html" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-alert-circle"/></svg>Urgencia</a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Páginas</div>
-      <a href="index.html" class="drawer-nav-link">Inicio <i class="ti ti-chevron-right"></i></a>
-      <a href="servicios.html" class="drawer-nav-link">Servicios <i class="ti ti-chevron-right"></i></a>
-      <a href="emergencia.html" class="drawer-nav-link">Emergencias <i class="ti ti-chevron-right"></i></a>
-      <a href="informacion-paciente.html" class="drawer-nav-link">Información del paciente <i class="ti ti-chevron-right"></i></a>
-      <a href="contacto.html" class="drawer-nav-link">Hacer una cita <i class="ti ti-chevron-right"></i></a>
-      <a href="privacidad.html" class="drawer-nav-link" aria-current="page">Política de privacidad <i class="ti ti-chevron-right"></i></a>
-      <a href="aviso-hipaa.html" class="drawer-nav-link">Aviso HIPAA <i class="ti ti-chevron-right"></i></a>
-      <a href="../index.html" class="drawer-lang-row" lang="en" hreflang="en"><i class="ti ti-language"></i> Switch to English</a>
+      <a href="index.html" class="drawer-nav-link">Inicio <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="servicios.html" class="drawer-nav-link">Servicios <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="emergencia.html" class="drawer-nav-link">Emergencias <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="informacion-paciente.html" class="drawer-nav-link">Información del paciente <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="contacto.html" class="drawer-nav-link">Hacer una cita <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="privacidad.html" class="drawer-nav-link" aria-current="page">Política de privacidad <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="aviso-hipaa.html" class="drawer-nav-link">Aviso HIPAA <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="../index.html" class="drawer-lang-row" lang="en" hreflang="en"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-language"/></svg> Switch to English</a>
     </div>
   </div>
 </div>
@@ -130,15 +128,15 @@
   <nav class="legal-toc" aria-label="Secciones de esta página">
     <p>En esta página</p>
     <ul>
-      <li><a href="#privacidad"><i class="ti ti-shield-lock" aria-hidden="true"></i> Política de Privacidad</a></li>
-      <li><a href="#terminos"><i class="ti ti-file-text" aria-hidden="true"></i> Términos de Servicio</a></li>
-      <li><a href="#cookies"><i class="ti ti-cookie" aria-hidden="true"></i> Cookies y Seguimiento</a></li>
-      <li><a href="#hipaa"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i> Aviso HIPAA</a></li>
+      <li><a href="#privacidad"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-shield-lock"/></svg> Política de Privacidad</a></li>
+      <li><a href="#terminos"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-file-text"/></svg> Términos de Servicio</a></li>
+      <li><a href="#cookies"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-cookie"/></svg> Cookies y Seguimiento</a></li>
+      <li><a href="#hipaa"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-heart-rate-monitor"/></svg> Aviso HIPAA</a></li>
     </ul>
   </nav>
 
   <section class="legal-section" id="privacidad" aria-labelledby="priv-heading">
-    <h2 id="priv-heading"><i class="ti ti-shield-lock" aria-hidden="true"></i> Política de Privacidad</h2>
+    <h2 id="priv-heading"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-shield-lock"/></svg> Política de Privacidad</h2>
     <p class="legal-updated"><strong>Última actualización: 13 de septiembre de 2025</strong></p>
     <p>Esta página explica cómo Spring Valley Dental Associates ("nosotros", "nuestro") recopila, usa y comparte información en nuestro sitio web.</p>
     <h3>Información que recopilamos</h3>
@@ -168,7 +166,7 @@
   </section>
 
   <section class="legal-section" id="terminos" aria-labelledby="terms-heading-es">
-    <h2 id="terms-heading-es"><i class="ti ti-file-text" aria-hidden="true"></i> Términos de Servicio</h2>
+    <h2 id="terms-heading-es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-file-text"/></svg> Términos de Servicio</h2>
     <h3>Uso de este sitio web</h3>
     <p>Al usar este sitio web, acepta estos Términos. Si no está de acuerdo, no use el sitio.</p>
     <h3>Sin consejo médico</h3>
@@ -180,7 +178,7 @@
   </section>
 
   <section class="legal-section" id="cookies" aria-labelledby="cookies-heading-es">
-    <h2 id="cookies-heading-es"><i class="ti ti-cookie" aria-hidden="true"></i> Cookies y Seguimiento</h2>
+    <h2 id="cookies-heading-es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-cookie"/></svg> Cookies y Seguimiento</h2>
     <h3>Qué usamos</h3>
     <ul>
       <li><strong>Cookies estrictamente necesarias:</strong> Requeridas para la funcionalidad principal (seguridad, navegación).</li>
@@ -191,22 +189,22 @@
       <li>Use la configuración de su navegador para bloquear o eliminar cookies.</li>
       <li>Use el banner de consentimiento en este sitio para rechazar el análisis en cualquier momento.</li>
     </ul>
-    <p style="margin-top:12px"><button onclick="window.svdRevokeConsent && window.svdRevokeConsent()" class="btn btn-outline btn-sm" style="font-size:14px"><i class="ti ti-x" aria-hidden="true"></i> Desactivar seguimiento de análisis</button></p>
+    <p style="margin-top:12px"><button onclick="window.svdRevokeConsent && window.svdRevokeConsent()" class="btn btn-outline btn-sm" style="font-size:14px"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-x"/></svg> Desactivar seguimiento de análisis</button></p>
   </section>
 
   <section class="legal-section" id="hipaa" aria-labelledby="hipaa-heading-es">
-    <h2 id="hipaa-heading-es"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i> Aviso HIPAA de Prácticas de Privacidad</h2>
+    <h2 id="hipaa-heading-es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-heart-rate-monitor"/></svg> Aviso HIPAA de Prácticas de Privacidad</h2>
     <p>Si usted es paciente, nuestras prácticas de privacidad clínica están descritas en nuestro Aviso completo de Prácticas de Privacidad HIPAA. Este documento explica cómo puede usarse y divulgarse su información de salud protegida (PHI) y sus derechos como paciente.</p>
     <p>Los formularios de contacto del sitio web no están destinados a información médica confidencial — llámenos directamente para asuntos urgentes o confidenciales: <a href="tel:+19728522222">(972) 852-2222</a>.</p>
     <div class="hipaa-download-box">
-      <div class="hdb-icon"><i class="ti ti-file-description" aria-hidden="true"></i></div>
+      <div class="hdb-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-file-description"/></svg></div>
       <div class="hdb-text">
         <div class="hdb-title">Aviso HIPAA de Prácticas de Privacidad</div>
         <div class="hdb-desc">Spring Valley Dental Associates Inc. &nbsp;&middot;&nbsp; Vigente desde el 16 de febrero de 2026 &nbsp;&middot;&nbsp; Se abre en una nueva pestaña para imprimir o guardar como PDF.</div>
       </div>
       <div class="hdb-btn">
         <a href="aviso-hipaa.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Ver Aviso HIPAA — se abre en una nueva pestaña">
-          <i class="ti ti-external-link" aria-hidden="true"></i> Ver y Descargar
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-external-link"/></svg> Ver y Descargar
         </a>
       </div>
     </div>
@@ -216,8 +214,8 @@
     <h2>¿Preguntas sobre su privacidad?</h2>
     <p>Con gusto le ayudamos. Contáctenos y nuestro equipo responderá dentro de una hora hábil.</p>
     <div class="legal-cta-btns">
-      <a href="contacto.html" class="btn btn-primary"><i class="ti ti-calendar" aria-hidden="true"></i> Contáctenos</a>
-      <a href="tel:+19728522222" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff"><i class="ti ti-phone" aria-hidden="true"></i> (972) 852-2222</a>
+      <a href="contacto.html" class="btn btn-primary"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg> Contáctenos</a>
+      <a href="tel:+19728522222" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222</a>
     </div>
   </div>
 </div>
@@ -228,8 +226,8 @@
       <span class="footer-name">Spring Valley<br>Dental Associates</span>
       <p class="footer-about">Odontología moderna y sin juicios para toda la familia desde 1994. Atendemos el norte de Dallas, Addison, Farmers Branch, Carrollton e Irving. Se habla español.</p>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/springvalleydental_dallas" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/share/16xP4Vjixk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/springvalleydental_dallas" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-brand-instagram"/></svg></a>
+        <a href="https://www.facebook.com/share/16xP4Vjixk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-brand-facebook"/></svg></a>
       </div>
       <div class="footer-map">
         <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.9654320123!2d-96.8403!3d32.9437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c212923401a27%3A0xe46880f7a6da507c!2s14228%20Midway%20Rd%20Suite%20100%2C%20Dallas%2C%20TX%2075244!5e0!3m2!1sen!2sus!4v1715900000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Spring Valley Dental Associates en Google Maps" aria-label="Mapa de Spring Valley Dental"></iframe>
@@ -239,11 +237,11 @@
       <div class="footer-col-heading">Servicios</div>
       <ul>
         <li><a href="emergencia.html">Odontología de emergencia</a></li>
-        <li><a href="servicios.html">Implantes dentales</a></li>
-        <li><a href="servicios.html">Invisalign</a></li>
-        <li><a href="servicios.html">Carillas de porcelana</a></li>
-        <li><a href="servicios.html">Blanqueamiento dental</a></li>
-        <li><a href="servicios.html">Sedación dental</a></li>
+        <li><a href="implantes-dentales.html">Implantes dentales</a></li>
+        <li><a href="invisalign.html">Invisalign</a></li>
+        <li><a href="carillas-de-porcelana.html">Carillas de porcelana</a></li>
+        <li><a href="blanqueamiento-dental.html">Blanqueamiento dental</a></li>
+        <li><a href="sedacion.html">Sedación dental</a></li>
         <li><a href="servicios.html">Ver todos &rarr;</a></li>
       </ul>
     </div>
@@ -251,7 +249,9 @@
       <div class="footer-col-heading">Pacientes</div>
       <ul>
         <li><a href="informacion-paciente.html">Información del paciente</a></li>
-        <li><a href="informacion-paciente.html#financiamiento">Financiamiento</a></li>
+        <li><a href="financiamiento.html">Financiamiento</a></li>
+      <li><a href="plan-de-membresia.html">Plan de membresía</a></li>
+      <li><a href="limpieza-dental.html">Limpieza dental</a></li>
         <li><a href="informacion-paciente.html#documentos">Formularios y documentos</a></li>
         <li><a href="contacto.html">Hacer una cita</a></li>
         <li><a href="privacidad.html">Política de privacidad</a></li>
@@ -288,9 +288,9 @@
 </footer>
 <nav class="mobile-bar" role="navigation" aria-label="Acciones rápidas móvil">
   <div class="mobile-bar-inner">
-    <a href="tel:+19728522222" class="mb-btn"><i class="ti ti-phone" aria-hidden="true"></i>Llamar</a>
-    <a href="contacto.html" class="mb-btn book"><i class="ti ti-calendar" aria-hidden="true"></i>Cita</a>
-    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn"><i class="ti ti-map-pin" aria-hidden="true"></i>Cómo llegar</a>
+    <a href="tel:+19728522222" class="mb-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg>Llamar</a>
+    <a href="contacto.html" class="mb-btn book"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg>Cita</a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-map-pin"/></svg>Cómo llegar</a>
   </div>
 </nav>
 <script src="../js/site-config.js" defer></script>

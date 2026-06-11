@@ -22,6 +22,7 @@
 - [FAQ](https://springvalleydentistry.com/faq.html): Common patient questions answered
 
 ### Services
+- [Dental Cleanings & Exams](https://springvalleydentistry.com/dental-cleanings-exams.html): Professional cleanings, comprehensive exams, judgment-free preventive care
 - [All Services](https://springvalleydentistry.com/services.html): Complete list of treatments offered
 - [Emergency Dentistry](https://springvalleydentistry.com/emergency.html): Same-day urgent dental care
 - [Dental Implants](https://springvalleydentistry.com/dental-implants.html): Permanent tooth replacement
@@ -66,6 +67,11 @@
 - [Español — Información para Pacientes](https://springvalleydentistry.com/es/informacion-paciente.html)
 - [Español — Contacto](https://springvalleydentistry.com/es/contacto.html)
 - [Español — Implantes Dentales](https://springvalleydentistry.com/es/implantes-dentales.html): Dental implants in Spanish
+- [Español — Carillas de Porcelana](https://springvalleydentistry.com/es/carillas-de-porcelana.html): Porcelain veneers in Spanish
+- [Español — Blanqueamiento Dental](https://springvalleydentistry.com/es/blanqueamiento-dental.html): Teeth whitening in Spanish
+- [Español — Financiamiento](https://springvalleydentistry.com/es/financiamiento.html): Dental financing options in Spanish
+- [Español — Plan de Membresía](https://springvalleydentistry.com/es/plan-de-membresia.html): In-house membership plan in Spanish
+- [Español — Limpieza Dental](https://springvalleydentistry.com/es/limpieza-dental.html): Cleanings and exams in Spanish
 - [Español — Invisalign](https://springvalleydentistry.com/es/invisalign.html): Invisalign in Spanish
 - [Español — Sedación Dental](https://springvalleydentistry.com/es/sedacion.html): Sedation dentistry in Spanish
 - [Español — Dentista en Addison](https://springvalleydentistry.com/es/dentista-en-addison-tx.html)

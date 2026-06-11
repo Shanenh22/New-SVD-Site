@@ -10,6 +10,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
 <meta property="og:title" content="Emergency Dentist Dallas TX | Spring Valley Dental"/>
 <meta property="og:description" content="Dental emergency in Dallas? We hold same-day slots every day. Toothache, broken tooth, lost crown -- call (972) 852-2222 for immediate care."/>
 <meta property="og:url" content="https://springvalleydentistry.com/emergency.html"/>
@@ -45,9 +46,6 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" onload="this.rel='stylesheet'"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/></noscript>
 
-<!-- Tabler Icons -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" as="style" crossorigin="anonymous" onload="this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" crossorigin="anonymous"/></noscript>
 
 <!-- Styles -->
 <link rel="stylesheet" href="css/styles.min.css"/>
@@ -236,7 +234,7 @@
         <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
       </picture>
     </a>
-    <div class="nav-links" role="list">
+    <div class="nav-links">
       <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
@@ -244,18 +242,18 @@
 <a href="patient-info.html">New Patients</a>
 <div class="nav-more-wrap">
   <button class="nav-more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more-menu" id="nav-more-trigger">
-    More <i class="ti ti-chevron-down nav-more-chevron" aria-hidden="true"></i>
+    More <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>
   </button>
-  <ul class="nav-more-menu" id="nav-more-menu" role="menu" aria-labelledby="nav-more-trigger">
-    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="financing.html" role="menuitem">Financing</a></li>
-    <li role="none"><a href="smile-gallery.html" role="menuitem">Smile Gallery</a></li>
-    <li role="none"><a href="reviews.html" role="menuitem">Patient Reviews</a></li>
+  <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="financing.html">Financing</a></li>
+    <li><a href="smile-gallery.html">Smile Gallery</a></li>
+    <li><a href="reviews.html">Patient Reviews</a></li>
   </ul>
 </div>
-<a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><i class="ti ti-language" aria-hidden="true"></i><span class="lt-label">Espa&ntilde;ol</span></a>
+<a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
       <a href="contact.html" class="nav-cta" aria-label="Book an appointment">
-        <i class="ti ti-calendar" aria-hidden="true"></i> Book Online
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -272,43 +270,43 @@
   </div>
   <div class="drawer-quick">
     <a href="tel:+19728522222" class="drawer-quick-btn">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="drawer-quick-btn book">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
     </a>
     <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Map
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
     </a>
     <a href="emergency.html" class="drawer-quick-btn">
-      <i class="ti ti-alert-circle" aria-hidden="true"></i>Urgent
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent
     </a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Quick links</div>
-      <a href="index.html" class="drawer-nav-link">Home <i class="ti ti-chevron-right"></i></a>
-      <a href="about.html" class="drawer-nav-link">About us <i class="ti ti-chevron-right"></i></a>
-      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <i class="ti ti-chevron-right"></i></a>
+      <a href="index.html" class="drawer-nav-link">Home <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="about.html" class="drawer-nav-link">About us <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="emergency.html" class="drawer-nav-link drawer-nav-link-urgent">&#9888; Emergency <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Services</div>
-      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <i class="ti ti-chevron-right"></i></a>
-      <a href="invisalign.html" class="drawer-nav-link">Invisalign <i class="ti ti-chevron-right"></i></a>
-      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <i class="ti ti-chevron-right"></i></a>
-      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <i class="ti ti-chevron-right"></i></a>
-      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <i class="ti ti-chevron-right"></i></a>
-      <a href="services.html" class="drawer-nav-link">All services <i class="ti ti-chevron-right"></i></a>
+      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="invisalign.html" class="drawer-nav-link">Invisalign <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="services.html" class="drawer-nav-link">All services <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">For patients</div>
-      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <i class="ti ti-chevron-right"></i></a>
-      <a href="financing.html" class="drawer-nav-link">Financing options <i class="ti ti-chevron-right"></i></a>
-      <a href="membership.html" class="drawer-nav-link">Membership plan <i class="ti ti-chevron-right"></i></a>
-      <a href="faq.html" class="drawer-nav-link">FAQ <i class="ti ti-chevron-right"></i></a>
-      <a href="reviews.html" class="drawer-nav-link">Patient reviews <i class="ti ti-chevron-right"></i></a>
-      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <i class="ti ti-chevron-right"></i></a>
-      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><i class="ti ti-language"></i> Ver en Espa&ntilde;ol</a>
+      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="financing.html" class="drawer-nav-link">Financing options <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="membership.html" class="drawer-nav-link">Membership plan <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Office hours</div>
@@ -326,7 +324,7 @@
 </div>
 <main id="main">
 <div class="emergency-911-notice" role="alert">
-  <i class="ti ti-ambulance" aria-hidden="true"></i>
+  <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-ambulance"/></svg>
   <div><strong>Life-threatening emergency?</strong> If you are experiencing difficulty breathing, uncontrolled bleeding, facial trauma, or any life-threatening situation, <strong>call 911</strong> or go to the nearest emergency room immediately. We treat dental emergencies &mdash; not medical emergencies.</div>
 </div>
 <div class="page-hero">
@@ -336,6 +334,11 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Emergency</span>
 </nav>
+<div class="proof-strip" aria-label="Practice highlights">
+  <span class="proof-strip-item"><svg class="svgi star" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-star-filled"/></svg><strong><span data-review-rating>5.0</span></strong>&nbsp;&middot;&nbsp;<span data-review-count>214</span>&nbsp;Google reviews</span>
+  <span class="proof-strip-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-heart"/></svg>Caring for North Dallas since <strong>1994</strong></span>
+  <span class="proof-strip-item"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg>Most PPO plans accepted</span>
+</div>
 
 
 <section class="section" style="background:var(--white)">
@@ -349,19 +352,19 @@
         <p>Dental pain is not something you should have to manage alone or push through until your next available appointment weeks away. At Spring Valley Dental, we intentionally hold slots open every day for patients who need urgent care. Dr. Houshmand has personally met patients outside normal hours when the situation required it. That is simply the kind of care we provide.</p>
         <h3 style="font-family:var(--sans);font-size:18px;font-weight:600;color:var(--navy);margin:24px 0 12px">We treat all dental emergencies, including:</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Severe toothache</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Knocked-out tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Broken or chipped tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Lost crown or filling</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Dental abscess or infection</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Cracked tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Swollen jaw or face</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Injured gums or soft tissue</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Broken denture or bridge</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><i class="ti ti-point-filled" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true"></i>Post-procedure pain or complications</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Severe toothache</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Knocked-out tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Broken or chipped tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Lost crown or filling</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Dental abscess or infection</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Cracked tooth</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Swollen jaw or face</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Injured gums or soft tissue</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Broken denture or bridge</div><div style="display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink)"><svg class="svgi" style="color:var(--coral);font-size:12px;flex-shrink:0" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-point-filled"/></svg>Post-procedure pain or complications</div>
         </div>
         <h3 style="font-family:var(--sans);font-size:18px;font-weight:600;color:var(--navy);margin:24px 0 12px">If a tooth gets knocked out — act fast</h3>
         <p>Time is critical. Pick the tooth up by the crown — never the root. Rinse gently with water. Reinsert it into the socket if you can, or keep it in milk or your own saliva. Call us immediately. The sooner we see you, the greater the chance of saving the tooth.</p>
         <a href="contact.html" class="btn btn-primary" style="margin-top:24px">
-          <i class="ti ti-calendar" aria-hidden="true"></i> Book emergency appointment
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book emergency appointment
         </a>
       </div>
       <div>
         <div class="sidebar-widget" style="background:var(--porcelain);border-radius:var(--rl);padding:24px;border:1px solid var(--border);position:sticky;top:calc(var(--nav-h)+16px)">
           <h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:16px">Contact us now</h3>
           <a href="tel:+19728522222" class="btn btn-primary" id="cta-emergency-call" data-track="call-emergency" data-track-location="emergency-page" style="width:100%;justify-content:center;margin-bottom:10px">
-            <i class="ti ti-phone" aria-hidden="true"></i> (972) 852-2222
+            <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222
           </a>
           <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center">
             Book online
@@ -400,27 +403,27 @@
     <h2 class="section-h2 serif" id="em-related-heading">Common emergency treatments we provide</h2>
     <div class="related-links-grid">
       <a href="toothache.html" class="related-link-card">
-        <i class="ti ti-tooth" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-tooth"/></svg>
         <span>Toothache &amp; pain relief</span>
       </a>
       <a href="cracked-tooth.html" class="related-link-card">
-        <i class="ti ti-bolt" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-bolt"/></svg>
         <span>Cracked &amp; broken tooth</span>
       </a>
       <a href="root-canal-therapy.html" class="related-link-card">
-        <i class="ti ti-activity" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-activity"/></svg>
         <span>Root canal therapy</span>
       </a>
       <a href="wisdom-teeth-removal.html" class="related-link-card">
-        <i class="ti ti-face-id" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-face-id"/></svg>
         <span>Tooth extractions</span>
       </a>
       <a href="dental-fillings.html" class="related-link-card">
-        <i class="ti ti-square-rounded" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-square-rounded"/></svg>
         <span>Dental fillings</span>
       </a>
       <a href="crowns-bridges.html" class="related-link-card">
-        <i class="ti ti-crown" aria-hidden="true"></i>
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-crown"/></svg>
         <span>Crowns &amp; bridges</span>
       </a>
     </div>
@@ -439,7 +442,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s0">
           What counts as a dental emergency?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s0" role="region">
           <p>Any situation causing severe pain, significant bleeding, a knocked-out or broken tooth, lost crown or filling, dental abscess, or swelling in the jaw or face. When in doubt — call us. We'd rather you call and not need us than wait when something is serious.</p>
@@ -449,7 +452,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s1">
           How quickly can I get a same-day appointment?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s1" role="region">
           <p>We reserve emergency slots every day we're open. Most patients are seen within 2–4 hours of calling. Call (972) 852-2222 as early in the day as possible to secure a slot.</p>
@@ -459,7 +462,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s2">
           What should I do if a tooth gets knocked out?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s2" role="region">
           <p>Pick it up by the crown (not the root), rinse gently with water, and try to place it back in the socket or keep it moist in a cup of milk or your own saliva. Call us immediately — the sooner we see you, the better the chance of saving the tooth.</p>
@@ -469,7 +472,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s3">
           Do you treat dental emergencies on weekdays only?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s3" role="region">
           <p>We're open Monday and Wednesday 10am-7pm, Tuesday 8:30am-4pm, and Friday 8am-3pm. Thursday we're closed. If you call outside office hours and it's a true emergency, please go to an emergency room for initial assessment.</p>
@@ -479,7 +482,7 @@
       <div class="faq-item">
         <button class="faq-btn" aria-expanded="false" aria-controls="faq-s4">
           Will you work with my insurance for emergency care?
-          <span class="faq-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+          <span class="faq-icon"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg></span>
         </button>
         <div class="faq-answer" id="faq-s4" role="region">
           <p>Yes. We work with most PPO plans and will verify your benefits before treatment. If you don't have insurance, we offer flexible payment options and our in-house membership plan. We'll always discuss costs before proceeding.</p>
@@ -502,9 +505,9 @@
       <p class="footer-about">Gentle, modern dentistry for the whole family since 1994. Serving North Dallas, Addison, Farmers Branch, Carrollton, and Irving.</p>
       <div class="footer-socials">
         <a href="https://www.instagram.com/springvalleydental_dallas" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-instagram"/></svg></a>
         <a href="https://www.facebook.com/share/16xP4Vjixk/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-brand-facebook"/></svg></a>
       </div>
       <div class="footer-map">
         <iframe
@@ -573,13 +576,13 @@
 <nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions">
   <div class="mobile-bar-inner">
     <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office">
-      <i class="ti ti-phone" aria-hidden="true"></i>Call
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
-      <i class="ti ti-calendar" aria-hidden="true"></i>Book Now
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
     </a>
     <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
-      <i class="ti ti-map-pin" aria-hidden="true"></i>Directions
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
     </a>
   </div>
 </nav>
@@ -613,9 +616,9 @@
 
 <!-- Emergency sticky CTA — emergency page only -->
 <div class="emergency-sticky-bar" role="complementary" aria-label="Emergency contact">
-  <span class="esb-text"><i class="ti ti-tooth" aria-hidden="true"></i> Dental emergency?</span>
+  <span class="esb-text"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-tooth"/></svg> Dental emergency?</span>
   <a href="tel:+19728522222" class="esb-call" id="cta-emergency-sticky" data-track="call-emergency" data-track-location="emergency-sticky">
-    <i class="ti ti-phone" aria-hidden="true"></i> Call now &mdash; (972) 852-2222
+    <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg> Call now &mdash; (972) 852-2222
   </a>
 </div>
 </body>
