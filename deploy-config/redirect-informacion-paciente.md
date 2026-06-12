@@ -8,12 +8,16 @@ Create a CloudFront Function (viewer-request) and attach it to the default behav
 ```js
 function handler(event) {
   var request = event.request;
-  if (request.uri === '/informacion-paciente.html') {
+  var redirects = {
+    '/informacion-paciente.html': '/es/informacion-paciente.html',
+    '/wisdom-teeth-removal.html': '/tooth-extractions.html'
+  };
+  if (redirects[request.uri]) {
     return {
       statusCode: 301,
       statusDescription: 'Moved Permanently',
       headers: {
-        location: { value: 'https://springvalleydentistry.com/es/informacion-paciente.html' },
+        location: { value: 'https://springvalleydentistry.com' + redirects[request.uri] },
         'cache-control': { value: 'max-age=31536000' }
       }
     };

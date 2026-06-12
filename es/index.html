@@ -33,7 +33,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"/></noscript>
 <link rel="stylesheet" href="../css/styles.min.css"/>
 <!-- Hero slide 1 — preloaded for fast LCP -->
-<link rel="preload" as="image" href="../images/hero-slide-1.webp" imagesrcset="../images/hero-slide-1-640.webp 640w, ../images/hero-slide-1-960.webp 960w, ../images/hero-slide-1.webp 1408w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" href="../images/hero-slide-1.webp" imagesrcset="../images/hero-slide-1-640.avif 640w, ../images/hero-slide-1-960.avif 960w, ../images/hero-slide-1.avif 1408w" type="image/avif" imagesizes="100vw" fetchpriority="high">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dentist", "@id": "https://springvalleydentistry.com/#dentist", "name": "Spring Valley Dental Associates", "url": "https://springvalleydentistry.com", "telephone": "+1-972-852-2222", "email": "info@springvalleydentistry.com", "image": "https://springvalleydentistry.com/images/building_front_with_logo.jpg", "priceRange": "$$", "description": "Clínica dental familiar, cosmética y de emergencia en el norte de Dallas. Atención sin juicios. Sedación consciente disponible. Se habla español.", "address": {"@type": "PostalAddress", "streetAddress": "14228 Midway Rd, Suite 100", "addressLocality": "Dallas", "addressRegion": "TX", "postalCode": "75244", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": "32.9443", "longitude": "-96.8395"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "08:30", "closes": "16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "15:00"}], "areaServed": ["Dallas", "North Dallas", "Addison", "Farmers Branch", "Carrollton", "Irving", "Richardson"], "hasMap": "https://www.google.com/maps/place/Spring+Valley+Dental+Associates/@32.9436588,-96.8381082,17z", "employee": [{"@type": "Person", "name": "Dr. Shokooh Aletaha", "jobTitle": "Dentista — Odontología General y Cosmética", "hasCredential": ["DDS - Baylor College of Dentistry", "Miembro de la ADA", "Miembro de Texas Dental Association"]}, {"@type": "Person", "name": "Dr. Nicole Houshmand", "jobTitle": "Dentista — Sedación y Odontología Familiar", "hasCredential": ["DDS - Texas A&M College of Dentistry", "Sedación Consciente Certificada", "Miembro de la ADA"]}], "sameAs": ["https://www.instagram.com/springvalleydental_dallas", "https://www.facebook.com/share/16xP4Vjixk/"]}</script>
 <script type="application/ld+json">
 {
@@ -154,7 +154,7 @@
 
   <!-- Background image carousel — same 4 slides as English site -->
   <div class="hero-bg-carousel" aria-hidden="true">
-    <div class="hero-bg-slide hero-bg-slide-1 is-active"><img class="hero-lcp-img" src="../images/hero-slide-1.webp" srcset="../images/hero-slide-1-640.webp 640w, ../images/hero-slide-1-960.webp 960w, ../images/hero-slide-1.webp 1408w" sizes="100vw" width="1408" height="768" alt="Consultorio de Spring Valley Dental Associates en North Dallas" fetchpriority="high" decoding="async"/></div>
+    <div class="hero-bg-slide hero-bg-slide-1 is-active"><picture><source type="image/avif" srcset="../images/hero-slide-1-640.avif 640w, ../images/hero-slide-1-960.avif 960w, ../images/hero-slide-1.avif 1408w" sizes="100vw"/><img class="hero-lcp-img" src="../images/hero-slide-1.webp" srcset="../images/hero-slide-1-640.webp 640w, ../images/hero-slide-1-960.webp 960w, ../images/hero-slide-1.webp 1408w" sizes="100vw" width="1408" height="768" alt="Consultorio de Spring Valley Dental Associates en North Dallas" fetchpriority="high" decoding="async"/></picture></div>
     <div class="hero-bg-slide hero-bg-slide-2"></div>
     <div class="hero-bg-slide hero-bg-slide-3"></div>
     <div class="hero-bg-slide hero-bg-slide-4"></div>
@@ -552,7 +552,9 @@
       <div class="footer-col-heading">Pacientes</div>
       <ul><li><a href="informacion-paciente.html">Información del paciente</a></li><li><a href="financiamiento.html">Financiamiento</a></li>
       <li><a href="plan-de-membresia.html">Plan de membresía</a></li>
-      <li><a href="limpieza-dental.html">Limpieza dental</a></li><li><a href="informacion-paciente.html#documentos">Formularios y documentos</a></li><li><a href="contacto.html">Hacer una cita</a></li><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="aviso-hipaa.html">Aviso HIPAA</a></li></ul>
+      <li><a href="limpieza-dental.html">Limpieza dental</a></li>
+      <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+      <li><a href="resenas.html">Reseñas de pacientes</a></li><li><a href="informacion-paciente.html#documentos">Formularios y documentos</a></li><li><a href="contacto.html">Hacer una cita</a></li><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="aviso-hipaa.html">Aviso HIPAA</a></li></ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-heading">Contacto y Horario</div>
@@ -573,15 +575,15 @@
     <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Cómo llegar"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-map-pin"/></svg>Cómo llegar</a>
   </div>
 </nav>
-<script src="../js/site-config.js" defer></script>
-<script src="../js/core.js" defer></script>
-<script src="../js/analytics.js" defer></script>
+<script src="../js/site-config.min.js" defer></script>
+<script src="../js/core.min.js" defer></script>
+<script src="../js/analytics.min.js" defer></script>
 <div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
   <div class="cookie-inner">
     <p class="cookie-text" id="cookie-desc"><strong>Usamos cookies de análisis</strong> (Google Analytics 4) para entender el tráfico del sitio. No se recopila información de salud del paciente. Bajo la ley de privacidad de Texas puede rechazar en cualquier momento. <a href="privacidad.html">Política de privacidad</a></p>
     <div class="cookie-actions"><button class="cookie-btn-decline" id="cookie-decline">Rechazar</button><button class="cookie-btn-accept" id="cookie-accept">Aceptar análisis</button></div>
   </div>
 </div>
-<script src="../js/hero-carousel.js" defer></script>
+<script src="../js/hero-carousel.min.js" defer></script>
 </body>
 </html>

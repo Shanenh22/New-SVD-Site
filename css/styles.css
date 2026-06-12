@@ -3828,3 +3828,46 @@ textarea:focus-visible,
 /* ── v5 utilities (contact inline-style migration) ─────────────────────────── */
 .is-hidden { display: none; }
 .form-hint { margin-top: 8px; }
+
+/* ── OPEN-NOW BANNER (emergency pages, v6) ─────────────────────────────────── */
+.open-now {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  padding: 14px 18px; border-radius: var(--rl); margin: 18px 0;
+  border: 1px solid var(--border); background: var(--porcelain);
+  font-size: 16.5px; color: var(--navy); font-weight: 600;
+}
+.open-now-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+.open-now.is-open  .open-now-dot { background: #1B9E6B; box-shadow: 0 0 0 4px rgba(27,158,107,.18); }
+.open-now.is-closed .open-now-dot { background: var(--coral); box-shadow: 0 0 0 4px rgba(197,100,14,.15); }
+.open-now-msg { flex: 1 1 220px; }
+.open-now-btn { white-space: nowrap; }
+@media (max-width: 560px) {
+  .open-now { flex-direction: column; align-items: stretch; text-align: center; }
+  .open-now-btn { justify-content: center; }
+}
+
+/* ── RELATED READING (guide pages, v6) ─────────────────────────────────────── */
+.related-link-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; max-width: 860px; }
+.related-link-grid .related-link-card {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 14px 16px; color: var(--navy); font-weight: 600; font-size: 15.5px;
+  transition: border-color var(--ease), box-shadow var(--ease);
+}
+.related-link-grid .related-link-card:hover { border-color: var(--blue); box-shadow: var(--shadow-sm, 0 2px 8px rgba(14,54,90,.08)); }
+.related-link-grid .svgi { color: var(--blue); flex-shrink: 0; }
+@media (max-width: 640px) { .related-link-grid { grid-template-columns: 1fr; } }
+
+/* ── QUOTABLE FACT LINES (GEO, v6) ─────────────────────────────────────────── */
+.fact-line { font-size: 16.5px; color: var(--navy); background: var(--porcelain);
+  border-left: 3px solid var(--mint-dk, #1B7F6B); padding: 12px 16px; border-radius: 0 var(--r) var(--r) 0;
+  max-width: 760px; margin: 18px 0; }
+
+/* ── v6 UTILITIES (global inline-style migration) ──────────────────────────── */
+.t-body { font-size: 17px; color: var(--ink); line-height: 1.78; margin-bottom: 14px; }
+.t-muted { font-size: 17px; color: var(--gray); line-height: 1.75; margin-bottom: 16px; }
+.t-note { font-size: 13.5px; color: var(--mist); margin-top: 10px; }
+.li-row { display: flex; align-items: center; gap: 8px; font-size: 17.5px; color: var(--ink); padding: 4px 0; }
+.li-row-start { display: flex; align-items: flex-start; gap: 8px; font-size: 15px; color: var(--ink); padding: 6px 0; }
+.sidebar-card { background: var(--porcelain); border-radius: var(--rl); padding: 24px; border: 1px solid var(--border); position: sticky; top: calc(var(--nav-h) + 16px); }
+.svc-detail-img { width: 100%; border-radius: var(--rl); object-fit: cover; }

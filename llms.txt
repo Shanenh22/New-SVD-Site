@@ -35,7 +35,9 @@
 - [Root Canal Therapy](https://springvalleydentistry.com/root-canal-therapy.html): Pain-free root canals
 - [Gum Disease Treatment](https://springvalleydentistry.com/gum-disease-treatment.html): Periodontal care
 - [Dental Fillings](https://springvalleydentistry.com/dental-fillings.html): Tooth-colored fillings
-- [Wisdom Teeth Removal](https://springvalleydentistry.com/wisdom-teeth-removal.html): Extractions
+- [Tooth Extractions](https://springvalleydentistry.com/tooth-extractions.html): Gentle simple extractions; wisdom teeth referred to oral surgery specialists
+- [Dentures & Partials](https://springvalleydentistry.com/dentures-partials.html): Full and partial dentures, implant-supported options explained
+- [Night Guards](https://springvalleydentistry.com/night-guards-bruxism.html): Custom night guards for grinding and clenching (bruxism)
 - [Dental Anxiety](https://springvalleydentistry.com/dental-anxiety.html): Options for anxious patients
 - [Cracked Tooth](https://springvalleydentistry.com/cracked-tooth.html): Cracked tooth treatment
 - [Toothache](https://springvalleydentistry.com/toothache.html): Toothache relief and diagnosis
@@ -72,6 +74,12 @@
 - [Español — Financiamiento](https://springvalleydentistry.com/es/financiamiento.html): Dental financing options in Spanish
 - [Español — Plan de Membresía](https://springvalleydentistry.com/es/plan-de-membresia.html): In-house membership plan in Spanish
 - [Español — Limpieza Dental](https://springvalleydentistry.com/es/limpieza-dental.html): Cleanings and exams in Spanish
+- [Español — Extracciones Dentales](https://springvalleydentistry.com/es/extracciones-dentales.html): Tooth extractions in Spanish
+- [Español — Dentaduras y Parciales](https://springvalleydentistry.com/es/dentaduras-parciales.html): Dentures in Spanish
+- [Español — Guardas Nocturnas](https://springvalleydentistry.com/es/guardas-nocturnas.html): Night guards in Spanish
+- [Español — Preguntas Frecuentes](https://springvalleydentistry.com/es/preguntas-frecuentes.html): FAQ in Spanish
+- [Español — Acerca de Nosotros](https://springvalleydentistry.com/es/acerca-de.html): About the doctors in Spanish
+- [Español — Reseñas](https://springvalleydentistry.com/es/resenas.html): Patient reviews in Spanish
 - [Español — Invisalign](https://springvalleydentistry.com/es/invisalign.html): Invisalign in Spanish
 - [Español — Sedación Dental](https://springvalleydentistry.com/es/sedacion.html): Sedation dentistry in Spanish
 - [Español — Dentista en Addison](https://springvalleydentistry.com/es/dentista-en-addison-tx.html)

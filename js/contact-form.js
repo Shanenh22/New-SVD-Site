@@ -43,6 +43,11 @@
             // Show the success div — it lives OUTSIDE the form so hiding the form
             // doesn't affect it. Use display:block then rAF for the fade-in.
             success.style.display = 'block';
+            /* v6: redirect to a dedicated confirmation URL for clean,
+               URL-based GA4 conversion tracking (page_view of /thank-you.html). */
+            setTimeout(function () {
+              window.location.href = (location.pathname.indexOf('/es/') !== -1) ? 'gracias.html' : '/thank-you.html';
+            }, 1200);
             success.style.opacity = '0';
             requestAnimationFrame(function() {
               requestAnimationFrame(function() {

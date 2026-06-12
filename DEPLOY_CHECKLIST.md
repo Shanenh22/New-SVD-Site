@@ -1,3 +1,47 @@
+# v6 — June 2026 (wisdom-teeth removal + path-to-9 execution)
+
+## Service-scope correction
+- **wisdom-teeth-removal.html DELETED** — the practice does not perform wisdom
+  teeth extractions. New page tooth-extractions.html covers simple/routine
+  extractions and states honestly that wisdom teeth are referred to oral
+  surgeons. A 301 (old URL -> new) is in deploy-config/redirect-informacion-paciente.md
+  — APPLY IT AT CLOUDFRONT so old rankings/links transfer.
+- All wisdom-teeth claims purged site-wide (EN + ES), including es/servicios.
+
+## Layout fix
+- services.html grid had a doubled-up card (two anchors nested in one article,
+  breaking the last desktop row). Fixed; grid is now 15 cards = 5 even rows of 3.
+
+## New pages (10)
+EN: tooth-extractions, dentures-partials, night-guards-bruxism, thank-you (noindex)
+ES: extracciones-dentales, dentaduras-parciales, guardas-nocturnas,
+    preguntas-frecuentes, acerca-de, resenas, gracias (noindex)
+All indexable pages are in sitemap.xml (63 URLs), llms.txt, and hreflang-paired.
+
+## New logic & tooling
+- **build.py** — run `python3 build.py` before every deploy (QA gate:
+  links, schema, hreflang, sprite, sitemap parity, og dims, tag balance,
+  banned-claims scan including wisdom-teeth). `--fix` re-minifies + lastmod.
+- **Open-now banner** (js/open-now.min.js) on emergency + es/emergencia:
+  live open/closed status from SVD_HOURS with call/callback CTAs.
+- **Thank-you redirect**: form success now lands on /thank-you.html (EN) or
+  /es/gracias.html — mark a GA4 key event on that page_view for clean,
+  URL-based conversion counting. (Both pages are noindex.)
+- **UPDATE_REVIEW_COUNT.md** — 2-minute quarterly review-count procedure.
+
+## Performance
+- All JS minified (53 KB -> 25 KB), references switched to .min.js, SW v6 precache updated.
+- AVIF hero variants with <picture>/webp fallback (mobile hero: 40 KB AVIF / 53 KB webp).
+- ~241 repeated inline-style attrs migrated to utility classes (t-body, li-row,
+  sidebar-card, etc.). Remaining inline styles are one-off values — documented debt.
+
+## Reminders carried forward
+- Apply deploy-config/ (security headers + BOTH 301s) at CloudFront.
+- Resolve Web3Forms BAA; Turnstile site key still needed to enable the stub.
+- After deploy: PageSpeed check, GA4 DebugView, resubmit sitemap in Search Console.
+
+---
+
 # v5 — June 2026 audit implementation (prepend; older checklist below)
 
 ## What changed in this release

@@ -5,18 +5,20 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v5'; /* Bumped June 2026 — v5 audit implementation: SVG icon sprite (Tabler CDN retired), responsive hero LCP img, externalized hero/contact/page-extras scripts, schema cleanup, city-page differentiation, 6 new pages (EN cleanings + 5 ES) */
+const CACHE_VERSION = 'svd-v6'; /* v6 June 2026: wisdom-teeth removed (301), 10 new pages, minified JS, AVIF hero, open-now banner, thank-you pages, build.py tooling */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
 const PRECACHE_ASSETS = [
   '/css/styles.min.css',
-  '/js/core.js',
-  '/js/analytics.js',
-  '/js/site-config.js',
-  '/js/hero-carousel.js',
-  '/js/contact-form.js',
-  '/js/page-extras.js',
+  '/js/core.min.js',
+  '/js/analytics.min.js',
+  '/js/site-config.min.js',
+  '/js/hero-carousel.min.js',
+  '/js/contact-form.min.js',
+  '/js/page-extras.min.js',
+  '/js/open-now.min.js',
+  '/js/contacto-form.min.js',
   '/images/icons-sprite.svg',
   '/images/spring-valley-logo-desktop.svg',
   '/images/favicon.svg',
