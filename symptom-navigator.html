@@ -313,13 +313,15 @@
   text-transform: uppercase; color: var(--mist); white-space: nowrap;
 }
 .sn-prescreen-skip {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  width: 100%; min-height: 46px; margin-top: 12px;
-  background: transparent; border: none; border-radius: var(--r);
-  cursor: pointer; font: 500 14px var(--sans); color: var(--gray);
-  transition: color var(--ease); text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  width: auto; min-height: 38px; margin: 14px auto 0;
+  padding: 0 20px;
+  background: var(--cloud); border: 1.5px solid var(--border-mid);
+  border-radius: 999px;
+  cursor: pointer; font: 600 13.5px var(--sans); color: var(--navy);
+  transition: all var(--ease);
 }
-.sn-prescreen-skip:hover { color: var(--navy); }
+.sn-prescreen-skip:hover { background: var(--blue-pale); border-color: var(--blue); color: var(--blue); }
 .sn-prescreen-skip:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
 @media (max-width: 560px) {
   .sn-prescreen { padding-left: 18px; padding-right: 18px; }
@@ -469,10 +471,12 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="sn-prescreen-divider"><span>or</span></div>
+    <div style="text-align:center">
     <button type="button" class="sn-prescreen-skip" id="sn-prescreen-skip">
       None of these — continue to questions
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
+    </div>
   </div>
 
   <!-- STEP 1: LOCATION -->
