@@ -886,7 +886,7 @@
   };
 
   /* ── STATE ───────────────────────────────────────────────────────── */
-  const state = { fromPrescreen:false, step:1, zone:null, sensations:new Set(), severity:null, flags:new Set(), duration:null, impacts:new Set() };
+  const state = { step:1, zone:null, sensations:new Set(), severity:null, flags:new Set(), duration:null, impacts:new Set() };
   const TOTAL_STEPS = 6;
 
   /* ── HELPERS ─────────────────────────────────────────────────────── */
@@ -924,7 +924,9 @@
   });
 
   $('#sn-preflag-cta').addEventListener('click', () => {
-    preflags.forEach((f) => { if (f !== 'swallowing') state.flags.add(f); });
+    renderPrescreenResult();
+    track('prescreen-emergency-result', 'prescreen');
+  });
     if (preflags.has('swallowing')) state.flags.add('swelling');
     if (!state.zone) state.zone = 'front';
     if (!state.severity) state.severity = 5;
@@ -1018,9 +1020,93 @@
   }
   function fill(el, arr) { el.innerHTML = ''; arr.forEach((t) => { const p = document.createElement('p'); p.textContent = t; el.appendChild(p); }); }
 
-  function renderResult(fromPrescreen) {
-    state.fromPrescreen = !!fromPrescreen;
-    const key = fromPrescreen ? 'critical' : assess();
+
+  /* ── RESULTADO PRE-PANTALLA ──────────────────────────────────────── */
+  const PREFLAG_LABELS = {
+    swelling: 'Hinchazón',
+    fever: 'Fiebre',
+    taste: 'Sabor amargo',
+    swallowing: 'Dificultad para tragar'
+  };
+
+  function buildPrescreenChips() {
+    return Array.from(preflags).map((k) => ({ t: PREFLAG_LABELS[k] || k, flag: true }));
+  }
+
+  function prescreenFlagList() {
+    const items = Array.from(preflags).map((k) => PREFLAG_LABELS[k].toLowerCase());
+    if (items.length === 1) return items[0];
+    return items.slice(0,-1).join(', ') + ' y ' + items[items.length-1];
+  }
+
+  function prescreenAssessCopy() {
+    const singular = preflags.size === 1;
+    const intro = singular
+      ? 'El síntoma que indicó — ' + prescreenFlagList() + ' — es'
+      : 'Los síntomas que indicó — ' + prescreenFlagList() + ' — son';
+    const ps = [];
+    ps.push(intro + ' las señales que los dentistas asocian con una infección dental que se está extendiendo, no una contenida. Un problema contenido permanece en el diente. Estas señales indican que ha avanzado más allá del diente hacia el tejido circundante, y esa diferencia importa para el momento de actuar.');
+    ps.push('Las infecciones dentales no se resuelven solas. Siguen un camino predecible: la presión aumenta, el dolor se intensifica y el área afectada crece. Cuanto antes le veamos, más opciones tenemos y más sencillo será el tratamiento.');
+    if (preflags.has('swallowing')) {
+      ps.push('La dificultad para tragar o abrir la boca es la señal que tratamos con mayor urgencia — puede indicar que la infección está cerca de las vías respiratorias. Si ese síntoma es grave o empeora, vaya a la sala de emergencias más cercana en lugar de esperar una cita dental.');
+    }
+    return ps;
+  }
+
+  function renderPrescreenResult() {
+    const panel = $('[data-step="result"]');
+    panel.className = 'sn-result is-critical';
+
+    const badge = $('#sn-badge');
+    badge.className = 'sn-badge is-critical';
+    badge.innerHTML = ICONS.shield + '<span>Consulte un dentista hoy</span>';
+
+    $('#sn-result-title').textContent = 'Según lo que describe, esto requiere atención el mismo día';
+    $('#sn-h-assess').className = 'sn-block-h is-lead';
+
+    const recap = $('#sn-recap'); recap.innerHTML = '';
+    buildPrescreenChips().forEach((c) => {
+      const chip = document.createElement('span');
+      chip.className = 'sn-chip is-flag';
+      chip.textContent = c.t;
+      recap.appendChild(chip);
+    });
+
+    fill($('#sn-assess-body'), prescreenAssessCopy());
+
+    fill($('#sn-visit-body'), [
+      'Reservamos turnos del mismo día específicamente para situaciones como la suya. Cuando llame, mencione que tiene ' + prescreenFlagList() + ' — eso le coloca al frente de la lista.',
+      'En su visita haremos una radiografía digital enfocada, evaluaremos cuánto se ha extendido la infección y le daremos alivio. Si un tratamiento de conducto puede resolverlo, lo discutiremos de inmediato. Si una extracción es la decisión correcta, explicamos por qué antes de hacer nada. Si se necesitan antibióticos primero, los recetamos en el momento. No se irá sin un plan claro y sin estar fuera de dolor.'
+    ]);
+
+    fill($('#sn-timing-body'), [
+      'Un absceso dental sin tratar no se estabiliza — progresa. Lo que comienza como una infección localizada puede avanzar hacia la mandíbula, el cuello o, en casos raros, las vías respiratorias. Esos casos son emergencias médicas, no dentales.',
+      'No lo decimos para alarmarle — la mayoría de las personas que vemos en esta etapa se tratan con éxito en una sola visita. Lo decimos porque la diferencia entre una solución sencilla el mismo día y una complicada casi siempre depende de qué tan rápido llamó alguien.'
+    ]);
+
+    $('#sn-cta-head').textContent = 'Que le saquemos del dolor';
+    $('#sn-cta-sub').textContent = 'Reservamos tiempo todos los días para visitas urgentes. Llame ahora y mencione sus síntomas al hacer la cita.';
+    $('#sn-cta-foot').textContent = '¿Fuera de horario? Envíe el formulario y nos pondremos en contacto a primera hora.';
+
+    const ctaWrap = $('#sn-ctas'); ctaWrap.innerHTML = '';
+    [
+      { style:'sn-cta-primary', icon:'phone', label:'Llamar al (972) 852-2222', href:'tel:+19728522222' },
+      { style:'sn-cta-ghost',   icon:'mail',  label:'Contáctenos',           href: CONFIG.urls.emergency }
+    ].forEach((cta) => {
+      const a = document.createElement('a');
+      a.className = 'sn-cta ' + cta.style;
+      a.href = cta.href;
+      a.innerHTML = ICONS[cta.icon] + '<span>' + cta.label + '</span>';
+      ctaWrap.appendChild(a);
+    });
+
+    updateSchema('critical');
+    showStep('result');
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderResult() {
+    const key = assess();
     const r = RESULTS[key];
     const panel = $('[data-step="result"]');
     panel.className = 'sn-result ' + r.badgeClass;
@@ -1029,9 +1115,7 @@
     badge.className = 'sn-badge ' + r.badgeClass;
     badge.innerHTML = ICONS[r.icon] + '<span>' + r.badge + '</span>';
 
-    $('#sn-result-title').textContent = state.fromPrescreen
-      ? 'Según lo que describe, esto requiere atención el mismo día'
-      : r.title;
+    $('#sn-result-title').textContent = r.title;
     $('#sn-h-assess').className = 'sn-block-h' + (key === 'critical' ? ' is-lead' : '');
 
     const recap = $('#sn-recap'); recap.innerHTML = '';
@@ -1127,6 +1211,7 @@
 
   $('#sn-restart').addEventListener('click', () => {
     state.zone = null; state.severity = null; state.duration = null;
+    preflags.clear();
     $('#sn-selected').hidden = true;
     state.sensations.clear(); state.flags.clear(); state.impacts.clear();
     $$('[aria-pressed]').forEach((el) => el.setAttribute('aria-pressed','false'));

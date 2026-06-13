@@ -887,7 +887,7 @@
   };
 
   /* ── STATE ───────────────────────────────────────────────────────── */
-  const state = { step:1, zone:null, sensations:new Set(), severity:null, flags:new Set(), duration:null, impacts:new Set(), fromPrescreen:false };
+  const state = { step:1, zone:null, sensations:new Set(), severity:null, flags:new Set(), duration:null, impacts:new Set() };
   const TOTAL_STEPS = 6;
 
   /* ── HELPERS ─────────────────────────────────────────────────────── */
@@ -972,20 +972,8 @@
     });
   });
 
-  // Prescreen: direct to critical result page first, then call
-  // (shows the result so they also see the office details before dialing)
   $('#sn-preflag-cta').addEventListener('click', () => {
-    // Seed flags from prescreen into main state so result copy populates
-    preflags.forEach((f) => {
-      if (f !== 'swallowing') state.flags.add(f); // map to main flag keys
-    });
-    if (preflags.has('swallowing')) state.flags.add('swelling'); // treat as critical
-    // Give minimal defaults so assess() and buildChips() don't break
-    if (!state.zone) state.zone = 'front';
-    if (!state.severity) state.severity = 5;
-    if (!state.duration) state.duration = 'sudden';
-    state.sensations.add('throbbing');
-    renderResult(true);
+    renderPrescreenResult();
     track('prescreen-emergency-result', 'prescreen');
   });
 
@@ -1024,9 +1012,93 @@
   }
   function fill(el, arr) { el.innerHTML = ''; arr.forEach((t) => { const p = document.createElement('p'); p.textContent = t; el.appendChild(p); }); }
 
-  function renderResult(fromPrescreen) {
-    state.fromPrescreen = !!fromPrescreen;
-    const key = fromPrescreen ? 'critical' : assess();
+
+  /* ── PRESCREEN RESULT ────────────────────────────────────────────── */
+  const PREFLAG_LABELS = {
+    swelling: 'Swelling',
+    fever: 'Fever',
+    taste: 'Bad taste',
+    swallowing: 'Difficulty swallowing'
+  };
+
+  function buildPrescreenChips() {
+    return Array.from(preflags).map((k) => ({ t: PREFLAG_LABELS[k] || k, flag: true }));
+  }
+
+  function prescreenFlagList() {
+    const items = Array.from(preflags).map((k) => PREFLAG_LABELS[k].toLowerCase());
+    return items.length < 2 ? (items[0] || '') : items.slice(0,-1).join(', ') + ' and ' + items[items.length-1];
+  }
+
+  function prescreenAssessCopy() {
+    const singular = preflags.size === 1;
+    const intro = singular
+      ? 'The symptom you flagged — ' + prescreenFlagList() + ' — is'
+      : 'The symptoms you flagged — ' + prescreenFlagList() + ' — are';
+    const ps = [];
+    ps.push(intro + ' the signs dentists associate with a spreading dental infection, not a contained one. A contained problem stays in the tooth. These signs mean it has moved beyond the tooth into surrounding tissue, and that distinction matters for timing.');
+    ps.push('Dental infections don’t resolve on their own. They follow a predictable path: the pressure builds, the pain intensifies, and the area of involvement grows. The earlier we see you, the more options we have and the simpler the treatment.');
+    if (preflags.has('swallowing')) {
+      ps.push('Difficulty swallowing or opening your mouth is the one sign we treat as the most urgent — it can indicate the infection is near the airway. If that symptom is severe or worsening, go to the nearest emergency room rather than waiting for a dental appointment.');
+    }
+    return ps;
+  }
+
+  function renderPrescreenResult() {
+    const panel = $('[data-step="result"]');
+    panel.className = 'sn-result is-critical';
+
+    const badge = $('#sn-badge');
+    badge.className = 'sn-badge is-critical';
+    badge.innerHTML = ICONS.shield + '<span>See a dentist today</span>';
+
+    $('#sn-result-title').textContent = 'Based on what you’re describing, this needs same-day attention';
+    $('#sn-h-assess').className = 'sn-block-h is-lead';
+
+    // Chips — only what was selected on prescreen
+    const recap = $('#sn-recap'); recap.innerHTML = '';
+    buildPrescreenChips().forEach((c) => {
+      const chip = document.createElement('span');
+      chip.className = 'sn-chip is-flag';
+      chip.textContent = c.t;
+      recap.appendChild(chip);
+    });
+
+    fill($('#sn-assess-body'), prescreenAssessCopy());
+
+    fill($('#sn-visit-body'), [
+      'We reserve same-day slots specifically for situations like yours. When you call, mention that you have ' + prescreenFlagList() + ' — that moves you to the front of the line.',
+      'At your visit we’ll take a focused digital X-ray, assess how far the infection has spread, and get you comfortable. If a root canal can resolve it we’ll discuss that immediately. If an extraction is the right call, we explain why before we do anything. If antibiotics are needed first, we prescribe them on the spot. You won’t leave without a clear plan and without being out of pain.'
+    ]);
+
+    fill($('#sn-timing-body'), [
+      'A dental abscess left untreated doesn’t plateau — it progresses. What starts as a localized infection can move into the jaw, the neck, or in rare cases the airway. Those cases are medical emergencies, not dental ones.',
+      'We’re not saying that to alarm you — most people we see at this stage are treated successfully in one visit. We’re saying it because the difference between a straightforward same-day fix and a complicated one is almost always how quickly someone called.'
+    ]);
+
+    $('#sn-cta-head').textContent = 'Let’s get you out of pain';
+    $('#sn-cta-sub').textContent = 'We hold time every day for urgent visits. Call now and mention your symptoms when you book.';
+    $('#sn-cta-foot').textContent = 'After hours? Send the form and we’ll reach out first thing.';
+
+    const ctaWrap = $('#sn-ctas'); ctaWrap.innerHTML = '';
+    [
+      { style:'sn-cta-primary', icon:'phone', label:'Call (972) 852-2222', href:'tel:+19728522222' },
+      { style:'sn-cta-ghost',   icon:'mail',  label:'Contact Us',          href: CONFIG.urls.emergency }
+    ].forEach((cta) => {
+      const a = document.createElement('a');
+      a.className = 'sn-cta ' + cta.style;
+      a.href = cta.href;
+      a.innerHTML = ICONS[cta.icon] + '<span>' + cta.label + '</span>';
+      ctaWrap.appendChild(a);
+    });
+
+    updateSchema('critical');
+    showStep('result');
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderResult() {
+    const key = assess();
     const r = RESULTS[key];
     const panel = $('[data-step="result"]');
     panel.className = 'sn-result ' + r.badgeClass;
@@ -1035,9 +1107,7 @@
     badge.className = 'sn-badge ' + r.badgeClass;
     badge.innerHTML = ICONS[r.icon] + '<span>' + r.badge + '</span>';
 
-    $('#sn-result-title').textContent = state.fromPrescreen
-      ? 'Based on what you\'re describing, this needs same-day attention'
-      : r.title;
+    $('#sn-result-title').textContent = r.title;
     $('#sn-h-assess').className = 'sn-block-h' + (key === 'critical' ? ' is-lead' : '');
 
     const recap = $('#sn-recap'); recap.innerHTML = '';
@@ -1132,7 +1202,7 @@
   $('[data-next="' + TOTAL_STEPS + '"]').addEventListener('click', renderResult);
 
   $('#sn-restart').addEventListener('click', () => {
-    state.zone = null; state.severity = null; state.duration = null; state.fromPrescreen = false;
+    state.zone = null; state.severity = null; state.duration = null;
     $('#sn-selected').hidden = true;
     state.sensations.clear(); state.flags.clear(); state.impacts.clear();
     preflags.clear();
