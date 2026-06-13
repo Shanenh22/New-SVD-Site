@@ -905,7 +905,10 @@
     ps.hidden = false;
     $('#sn-progress').style.display = 'none';
     const heading = ps.querySelector('.sn-prescreen-q');
-    if (heading) { heading.setAttribute('tabindex','-1'); heading.focus(); }
+    if (heading) {
+      heading.setAttribute('tabindex','-1');
+      if (_hasInteracted) { heading.focus(); }
+    }
     if (typeof reportHeight === 'function') { requestAnimationFrame(reportHeight); }
   }
 
@@ -990,13 +993,17 @@
     $('#sn-step-name').textContent = CONFIG.stepNames[state.step - 1];
     $('#sn-fill').style.width = ((state.step - 1) / TOTAL_STEPS * 100 + (100 / TOTAL_STEPS) * 0.5) + '%';
   }
+  var _hasInteracted = false;
   function showStep(step) {
     state.step = step;
     $$('[data-step]').forEach((el) => { el.hidden = String(step) !== el.dataset.step; });
     renderProgress();
     const visible = $('[data-step="' + step + '"]');
     const heading = visible.querySelector('.sn-q, h3');
-    if (heading) { heading.setAttribute('tabindex','-1'); heading.focus(); }
+    if (heading) {
+      heading.setAttribute('tabindex','-1');
+      if (_hasInteracted) { heading.focus(); }
+    }
     if (typeof reportHeight === 'function') { requestAnimationFrame(reportHeight); }
   }
 
@@ -1102,7 +1109,11 @@
 
     updateSchema('critical');
     showStep('result');
-    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'svd-navigator-scroll-top' }, '*');
+    } else {
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   function renderResult() {
@@ -1144,7 +1155,11 @@
     track('navigator-result', key);
     updateSchema(key);
     showStep('result');
-    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'svd-navigator-scroll-top' }, '*');
+    } else {
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   /* ── SELECTION ───────────────────────────────────────────────────── */
@@ -1238,6 +1253,9 @@
   }
   var _started = false;
   root.addEventListener('click', function (e) {
+    if (e.target.closest('.sn-zone, .sn-opt, .sn-scale-btn, .sn-prescreen-skip, [data-preflag], .sn-back-to-prescreen, #sn-back-to-prescreen')) {
+      _hasInteracted = true;
+    }
     if (!_started && e.target.closest('.sn-zone, .sn-opt, .sn-scale-btn')) {
       _started = true;
       track('navigator-start', 'step-1-location');

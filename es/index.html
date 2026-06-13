@@ -297,7 +297,12 @@
   function pl(name,props){ if(window.plausible){ try{ window.plausible(name, props?{props:props}:undefined); }catch(e){} } }
   window.addEventListener('message',function(e){
     if(!e.data) return;
-    if(e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
+    if(e.data.type==='svd-navigator-scroll-top'){
+      var rect=f.getBoundingClientRect();
+      var scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+      var targetY=rect.top+scrollTop-80; // 80px offset clears the sticky nav
+      window.scrollTo({top:Math.max(0,targetY),behavior:'smooth'});
+    } else if(e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
       f.style.height=(e.data.height+2)+'px';
     } else if(e.data.type==='svd-navigator-track'){
       var ev=e.data.event, loc=e.data.location||'navigator';
