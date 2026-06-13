@@ -296,7 +296,10 @@
         </a>
       </div>
       <div>
-        <div class="sidebar-card">
+        <div class="sidebar-card" style="padding:0;overflow:hidden">
+          <iframe src="symptom-navigator.html" title="Navegador de S&iacute;ntomas Dentales" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;height:880px;overflow:hidden" id="symptom-navigator-frame"></iframe>
+        </div>
+        <div class="sidebar-card" style="margin-top:24px">
           <h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:16px">Cont&aacute;ctenos ahora</h3>
           <a href="tel:+19728522222" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222</a>
           <a href="contacto.html" class="btn btn-outline" style="width:100%;justify-content:center">Cita en l&iacute;nea</a>
@@ -487,5 +490,16 @@
     </div>
   </div>
 </div>
+<script>
+(function(){
+  var f=document.getElementById('symptom-navigator-frame');
+  if(!f) return;
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
+      f.style.height=(e.data.height+2)+'px';
+    }
+  });
+})();
+</script>
 </body>
 </html>

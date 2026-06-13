@@ -354,7 +354,10 @@
         <p style="margin-top:20px;font-size:18px;color:var(--gray)">These symptoms indicate a possible dental abscess or spreading infection &mdash; conditions that require same-day treatment. Do not wait.</p>
       </div>
       <div>
-        <div class="sidebar-widget sidebar-card" >
+        <div class="sidebar-widget sidebar-card" style="padding:0;overflow:hidden">
+          <iframe src="symptom-navigator.html" title="Dental Symptom Navigator" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;height:860px;overflow:hidden" id="symptom-navigator-frame"></iframe>
+        </div>
+        <div class="sidebar-widget sidebar-card" style="margin-top:24px" >
           <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--coral);margin-bottom:8px">Same-day relief available</div>
           <h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:16px">Call us now &mdash; we will get you in today.</h3>
           <a href="tel:+19728522222" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;background:var(--coral);border-color:var(--coral)">
@@ -568,5 +571,16 @@
     </div>
   </div>
 </div>
+<script>
+(function(){
+  var f=document.getElementById('symptom-navigator-frame');
+  if(!f) return;
+  window.addEventListener('message',function(e){
+    if(e.data&&e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
+      f.style.height=(e.data.height+2)+'px';
+    }
+  });
+})();
+</script>
 </body>
 </html>
