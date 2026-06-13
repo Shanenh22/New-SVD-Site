@@ -3417,8 +3417,11 @@ textarea:focus-visible,
    Mobile bar is 56px; add safe-area buffer too
    ────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
+  /* The global mobile-bar already pins Call/Book/Directions to the bottom on
+     mobile, so the coral emergency sticky bar is redundant here and stacking
+     two fixed call bars crowds the screen. Show it on desktop only. */
   .emergency-sticky-bar {
-    bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 6px);
+    display: none !important;
   }
 }
 

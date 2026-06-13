@@ -884,9 +884,14 @@
       a.className = 'sn-cta ' + cta.style;
       a.href = cta.hrefKey === 'tel' ? ('tel:' + CONFIG.phone) : CONFIG.urls[cta.hrefKey];
       a.innerHTML = ICONS[cta.icon] + '<span>' + cta.label + '</span>';
+      a.addEventListener('click', function () {
+        track(cta.hrefKey === 'tel' ? 'call' : (cta.hrefKey === 'emergency' ? 'appointment-emergency' : 'appointment'),
+              'navigator-result-' + key);
+      });
       ctaWrap.appendChild(a);
     });
 
+    track('navigator-result', key);
     updateSchema(key);
     showStep('result');
     root.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -974,6 +979,20 @@
       window.parent.postMessage({ type: 'svd-navigator-height', height: h }, '*');
     }
   }
+  /* ── Analytics: post tracking events to the host page ─────────────── */
+  function track(event, location) {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'svd-navigator-track', event: event, location: location }, '*');
+    }
+  }
+  var _started = false;
+  root.addEventListener('click', function (e) {
+    if (!_started && e.target.closest('.sn-zone, .sn-opt, .sn-scale-btn')) {
+      _started = true;
+      track('navigator-start', 'step-1-location');
+    }
+  });
+
   // Report after any step change, selection, or result render
   root.addEventListener('click', function () { requestAnimationFrame(reportHeight); });
   window.addEventListener('resize', reportHeight);

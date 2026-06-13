@@ -300,10 +300,7 @@
           <iframe src="symptom-navigator.html" title="Navegador de S&iacute;ntomas Dentales" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;height:880px;overflow:hidden" id="symptom-navigator-frame"></iframe>
         </div>
         <div class="sidebar-card" style="margin-top:24px">
-          <h3 style="font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:16px">Cont&aacute;ctenos ahora</h3>
-          <a href="tel:+19728522222" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:10px"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg> (972) 852-2222</a>
-          <a href="contacto.html" class="btn btn-outline" style="width:100%;justify-content:center">Cita en l&iacute;nea</a>
-          <div style="margin-top:16px;font-size:13px;color:var(--gray);line-height:1.8">
+          <div style="font-size:13px;color:var(--gray);line-height:1.8">
             <strong style="color:var(--navy);display:block;margin-bottom:6px">Horario (llame temprano)</strong>
             Lun y Mi&eacute;: 10am – 7pm<br>Mar: 8:30am – 4pm<br>Vie: 8am – 3pm<br>
             <span style="color:var(--coral);font-weight:500">Jue: Cerrado</span>
@@ -494,9 +491,19 @@
 (function(){
   var f=document.getElementById('symptom-navigator-frame');
   if(!f) return;
+  function ga(name,params){ if(window.gtag){ try{ window.gtag('event',name,params||{}); }catch(e){} } }
+  function pl(name,props){ if(window.plausible){ try{ window.plausible(name, props?{props:props}:undefined); }catch(e){} } }
   window.addEventListener('message',function(e){
-    if(e.data&&e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
+    if(!e.data) return;
+    if(e.data.type==='svd-navigator-height'&&typeof e.data.height==='number'){
       f.style.height=(e.data.height+2)+'px';
+    } else if(e.data.type==='svd-navigator-track'){
+      var ev=e.data.event, loc=e.data.location||'navigator';
+      if(ev==='navigator-start'){ pl('Navigator Start',{location:loc}); ga('navigator_start',{event_category:'engagement',event_label:loc}); }
+      else if(ev==='navigator-result'){ pl('Navigator Result',{result:loc}); ga('navigator_result',{event_category:'engagement',event_label:loc}); }
+      else if(ev==='call'){ pl('Phone Call',{location:loc}); ga('phone_call',{event_category:'conversion',event_label:loc,value:1}); }
+      else if(ev==='appointment-emergency'){ pl('Emergency Call',{location:loc}); ga('appointment_click',{event_category:'conversion',event_label:loc,value:5}); }
+      else if(ev==='appointment'){ pl('Appointment Click',{location:loc}); ga('appointment_click',{event_category:'conversion',event_label:loc,value:1}); }
     }
   });
 })();
