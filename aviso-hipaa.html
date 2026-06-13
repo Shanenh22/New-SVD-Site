@@ -223,6 +223,60 @@ ul li strong { color: #222; }
 </style>
 </head>
 <body data-page-category="legal">
+<nav class="site-nav" id="site-nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="es/index.html" class="nav-logo" aria-label="Spring Valley Dental Associates — inicio">
+      <picture>
+        <source media="(max-width:640px)" srcset="images/spring-valley-logo-mobile.svg" type="image/svg+xml"/>
+        <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
+      </picture>
+    </a>
+    <div class="nav-links">
+      <a href="es/index.html">Inicio</a>
+      <a href="es/servicios.html">Servicios</a>
+      <a href="es/emergencia.html">Emergencias</a>
+      <a href="es/informacion-paciente.html">Pacientes</a>
+      <a href="es/contacto.html" class="nav-cta" aria-label="Hacer una cita">
+        <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Cita
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+<div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación" hidden>
+  <div class="drawer-head"><span class="drawer-brand">Spring Valley Dental</span><button class="drawer-close" id="drawer-close" aria-label="Cerrar menú">&#x2715;</button></div>
+  <div class="drawer-quick">
+    <a href="tel:+19728522222" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Llamar</a>
+    <a href="es/contacto.html" class="drawer-quick-btn book"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Cita</a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Mapa</a>
+    <a href="es/emergencia.html" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgencia</a>
+  </div>
+  <div class="drawer-nav">
+    <div class="drawer-nav-section">
+      <div class="drawer-nav-title">Páginas</div>
+      <a href="es/index.html" class="drawer-nav-link">Inicio <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/servicios.html" class="drawer-nav-link">Servicios <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/informacion-paciente.html" class="drawer-nav-link">Información del paciente <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/contacto.html" class="drawer-nav-link">Hacer una cita <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+    </div>
+    <div class="drawer-nav-section">
+      <div class="drawer-nav-title">Horario</div>
+      <div class="drawer-hours-box">
+        <div id="drawer-hours"><div class="dhr" data-day="1"><span class="dd">Lunes</span><span class="dt">10:00 AM – 7:00 PM</span></div>
+<div class="dhr" data-day="2"><span class="dd">Martes</span><span class="dt">8:30 AM – 4:00 PM</span></div>
+<div class="dhr" data-day="3"><span class="dd">Miércoles</span><span class="dt">10:00 AM – 7:00 PM</span></div>
+<div class="dhr" data-day="4"><span class="dd">Jueves</span><span class="dt">Cerrado</span></div>
+<div class="dhr" data-day="5"><span class="dd">Viernes</span><span class="dt">8:00 AM – 3:00 PM</span></div>
+<div class="dhr" data-day="6"><span class="dd">Sábado</span><span class="dt">Con cita</span></div>
+<div class="dhr" data-day="0"><span class="dd">Domingo</span><span class="dt">Cerrado</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="no-print-bar no-print">
   <a href="informacion-paciente.html" class="back-link">&#8592; Volver a Información del Paciente</a>
