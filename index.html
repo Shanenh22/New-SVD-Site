@@ -58,6 +58,33 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://springvalleydentistry.com/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Spring Valley Dental Associates — North Dallas Family Dentist", "url": "https://springvalleydentistry.com/", "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".page-hero", "h1", ".section-h2"]}, "inLanguage": "en"}</script>
 <style>
+/* Doctor band — stack intro above cards full-width */
+.doctor-band-inner {
+  display: block !important;
+}
+.doctor-band-intro {
+  text-align: center !important;
+  max-width: 640px !important;
+  margin: 0 auto 36px !important;
+}
+.doctor-band-intro .section-label,
+.doctor-band-intro .doctor-band-h2,
+.doctor-band-intro .section-sub {
+  text-align: center !important;
+}
+.doctor-band-cards {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+}
+@media (max-width: 680px) {
+  .doctor-band-cards {
+    grid-template-columns: 1fr !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+}
+/* Card body padding */
 .doctor-band-card-body { padding: 20px 22px 24px !important; }
 .doctor-band-card { background: var(--porcelain) !important; border: 1px solid var(--border) !important; border-radius: var(--rl) !important; overflow: hidden !important; }
 </style>
