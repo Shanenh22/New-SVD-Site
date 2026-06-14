@@ -86,14 +86,14 @@
   </url>
   <url>
     <loc>https://springvalleydentistry.com/root-canal-therapy.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image><image:loc>https://springvalleydentistry.com/images/root_canal.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://springvalleydentistry.com/gum-disease-treatment.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image><image:loc>https://springvalleydentistry.com/images/stages-of-gum-disease.webp</image:loc></image:image>
@@ -112,19 +112,19 @@
   </url>
   <url>
     <loc>https://springvalleydentistry.com/toothache.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://springvalleydentistry.com/dental-anxiety.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://springvalleydentistry.com/dental-costs-dallas.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -172,7 +172,7 @@
   </url>
   <url>
     <loc>https://springvalleydentistry.com/reviews.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -206,13 +206,13 @@
   <!-- Spanish site -->
   <url>
     <loc>https://springvalleydentistry.com/es/index.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://springvalleydentistry.com/es/servicios.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -272,7 +272,7 @@
   <!-- Added 2026-06-03: long-tail content articles -->
   <url>
     <loc>https://springvalleydentistry.com/dental-implant-cost-dallas.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -284,7 +284,7 @@
   </url>
   <url>
     <loc>https://springvalleydentistry.com/invisalign-vs-braces-dallas.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -425,5 +425,41 @@
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/dolor-de-muelas.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/ansiedad-dental.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/costos-dentales-dallas.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/costo-implantes-dentales-dallas.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/tratamiento-de-conducto.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/tratamiento-de-encias.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -56,31 +56,31 @@
    TOKENS — mirrored from springvalleydentistry.com
    ════════════════════════════════════════════════════════════════════ */
 :root {
-  --navy:        #0E365A;
-  --navy-dk:     #0A2740;
-  --blue:        #0077B6;
-  --blue-pale:   #EBF5FB;
-  --porcelain:   #F8F6F1;
-  --cloud:       #EEF2F6;
-  --ink:         #24313A;
-  --gray:        #5A6D80;
-  --mist:        #8BA5B2;
-  --mint:        #8FD6C8;
-  --mint-dk:     #5BBFB0;
-  --mint-pale:   rgba(143,214,200,.16);
-  --coral:       #B55A0A;
-  --coral-dk:    #944808;
-  --white:       #fff;
-  --border:      rgba(14,54,90,.10);
-  --border-mid:  rgba(14,54,90,.18);
-  --shadow-sm:   0 1px 6px rgba(14,54,90,.07);
-  --shadow-md:   0 4px 24px rgba(14,54,90,.11);
-  --shadow-lg:   0 12px 40px rgba(14,54,90,.16);
-  --r:           10px;
-  --rl:          18px;
-  --rxl:         28px;
-  --sans:        'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --ease:        0.22s cubic-bezier(.4,0,.2,1);
+  --navy: #0E365A;
+  --navy-dk: #0A2740;
+  --blue: #0077B6;
+  --blue-pale: #EBF5FB;
+  --porcelain: #F8F6F1;
+  --cloud: #EEF2F6;
+  --ink: #24313A;
+  --gray: #5A6D80;
+  --mist: #8BA5B2;
+  --mint: #8FD6C8;
+  --mint-dk: #5BBFB0;
+  --mint-pale: rgba(143,214,200,.16);
+  --coral: #B55A0A;
+  --coral-dk: #944808;
+  --white: #fff;
+  --border: rgba(14,54,90,.10);
+  --border-mid: rgba(14,54,90,.18);
+  --shadow-sm: 0 1px 6px rgba(14,54,90,.07);
+  --shadow-md: 0 4px 24px rgba(14,54,90,.11);
+  --shadow-lg: 0 12px 40px rgba(14,54,90,.16);
+  --r: 10px;
+  --rl: 18px;
+  --rxl: 28px;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ease: 0.22s cubic-bezier(.4,0,.2,1);
 }
 
 #symptom-navigator, #symptom-navigator * { box-sizing: border-box; }
@@ -230,7 +230,7 @@
 }
 .sn-badge.is-critical { background: var(--coral); color: var(--white); }
 .sn-badge.is-moderate { background: var(--blue-pale); color: var(--blue); }
-.sn-badge.is-routine  { background: var(--mint-pale); color: var(--mint-dk); }
+.sn-badge.is-routine { background: var(--mint-pale); color: var(--mint-dk); }
 .sn-result h3 { font-size: clamp(20px, 5vw, 24px); font-weight: 700; color: var(--navy); line-height: 1.28; letter-spacing: -.015em; margin-bottom: 14px; }
 
 /* recap chips */
@@ -439,7 +439,7 @@
 
   <!-- PASO 0: PRE-PANTALLA — señales críticas -->
   <div class="sn-prescreen" data-step="0">
-    <p class="sn-prescreen-q">Antes de comenzar — ¿está experimentando alguno de estos síntomas ahora?</p>
+    <p class="sn-prescreen-q">Antes de comenzar, ¿está experimentando alguno de estos síntomas ahora?</p>
     <p class="sn-prescreen-hint">Estas son señales que tratamos como emergencias del mismo día. Seleccione todas las que apliquen.</p>
     <div class="sn-options" role="group" aria-label="Señales de emergencia — seleccione todas las que apliquen">
       <button type="button" class="sn-opt sn-opt-flag" data-preflag="swelling" aria-pressed="false">
@@ -470,7 +470,7 @@
     <div class="sn-prescreen-divider"><span>o</span></div>
     <div style="text-align:center">
     <button type="button" class="sn-prescreen-skip" id="sn-prescreen-skip">
-      Ninguno de estos — continuar a las preguntas
+      Ninguno de estos, continuar a las preguntas
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     </div>
@@ -540,7 +540,7 @@
   <!-- STEP 2: SENSATION -->
   <div class="sn-step" data-step="2" hidden>
     <p class="sn-q">¿Qué siente?</p>
-    <p class="sn-hint">Seleccione todo lo que corresponda — las combinaciones ayudan a precisar.</p>
+    <p class="sn-hint">Seleccione todo lo que corresponda, las combinaciones ayudan a precisar.</p>
     <div class="sn-options" role="group" aria-label="Sensaciones — seleccione todo lo que corresponda">
       <button type="button" class="sn-opt" data-sensation="cold" aria-pressed="false">
         <span class="sn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M4 6l16 12M20 6 4 18M12 5l-2.5-2M12 5l2.5-2M12 19l-2.5 2M12 19l2.5 2" stroke="#0077B6" stroke-width="1.8" stroke-linecap="round"/></svg></span>
@@ -664,7 +664,7 @@
   <!-- STEP 6: IMPACT -->
   <div class="sn-step" data-step="6" hidden>
     <p class="sn-q">¿Está afectando su vida diaria?</p>
-    <p class="sn-hint">Seleccione todo lo que corresponda — esto precisa la urgencia.</p>
+    <p class="sn-hint">Seleccione todo lo que corresponda, esto precisa la urgencia.</p>
     <div class="sn-options" role="group" aria-label="Impacto diario — seleccione todo lo que corresponda">
       <button type="button" class="sn-opt sn-opt-flag" data-impact="sleep" aria-pressed="false">
         <span class="sn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" stroke="#B55A0A" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
@@ -683,7 +683,7 @@
       </button>
       <button type="button" class="sn-opt" data-impact="none" aria-pressed="false">
         <span class="sn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#5BBFB0" stroke-width="1.8"/><path d="M8.5 13.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8M9 9.5h.01M15 9.5h.01" stroke="#5BBFB0" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        En realidad no — por ahora es manejable
+        En realidad no, por ahora es manejable
         <span class="sn-check"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5 5 9.5 10 3" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></span>
       </button>
     </div>
@@ -762,7 +762,7 @@
     phone: '+19728522222',
     phoneDisplay: '(972) 852-2222',
     urls: {
-      contact:   'https://springvalleydentistry.com/es/contacto.html?utm_source=symptom_navigator&utm_medium=widget&utm_campaign=triage_es',
+      contact: 'https://springvalleydentistry.com/es/contacto.html?utm_source=symptom_navigator&utm_medium=widget&utm_campaign=triage_es',
       emergency: 'https://springvalleydentistry.com/es/emergencia.html?utm_source=symptom_navigator&utm_medium=widget&utm_campaign=triage_emergency_es'
     },
     stepNames: ['Ubicaci\u00f3n', 'Sensaci\u00f3n', 'Intensidad', 'Se\u00f1ales de alarma', 'Duraci\u00f3n', 'Impacto diario'],
@@ -906,7 +906,7 @@
 
   /* ── HELPERS ─────────────────────────────────────────────────────── */
   const root = document.getElementById('symptom-navigator');
-  const $  = (s) => root.querySelector(s);
+  const $ = (s) => root.querySelector(s);
   const $$ = (s) => Array.from(root.querySelectorAll(s));
   const listJoin = (a) => a.length < 2 ? (a[0]||'') : a.slice(0,-1).join(', ') + ' y ' + a[a.length-1];
   const flagList = (s) => listJoin(Array.from(s.flags).filter(f=>f!=='none').map(f=>CONFIG.labels.flags[f].toLowerCase()));
@@ -1113,7 +1113,7 @@
     const ctaWrap = $('#sn-ctas'); ctaWrap.innerHTML = '';
     [
       { style:'sn-cta-primary', icon:'phone', label:'Llamar al (972) 852-2222', href:'tel:+19728522222' },
-      { style:'sn-cta-ghost',   icon:'mail',  label:'Contáctenos',           href: CONFIG.urls.emergency }
+      { style:'sn-cta-ghost', icon:'mail', label:'Contáctenos', href: CONFIG.urls.emergency }
     ].forEach((cta) => {
       const a = document.createElement('a');
       a.className = 'sn-cta ' + cta.style;
