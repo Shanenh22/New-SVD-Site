@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v8'; /* v8 June 2026: Spanish doctor order (Houshmand first) on index+about, Spanish Meet-the-doctors band, emergency open-now banner removed, contact page reordered (request form first) */
+const CACHE_VERSION = 'svd-v9'; /* v9 June 2026: patient forms consolidated to New Patient page (callout on contact), footer symptom-checker link added */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

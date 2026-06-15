@@ -499,56 +499,13 @@
 <!-- ═══ SEND US A MESSAGE ═══ -->
 <section class="section" style="background:var(--white)" aria-labelledby="forms-heading">
   <div class="section-inner">
-    <div class="section-label">Online patient forms</div>
-    <h2 class="section-h2 serif" id="forms-heading">Complete your forms before you arrive, save time in the office.</h2>
-    <p class="section-sub" style="max-width:600px">All forms are encrypted and HIPAA-compliant. Completing them in advance means less time in the waiting room and more time with your doctor.</p>
-
-    <div class="patient-forms-grid" style="margin-top:32px">
-      <!-- New Patient -->
-      <div class="patient-form-card new-patient">
-        <span class="pfc-badge new"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-plus"/></svg> New patient</span>
-        <svg class="svgi pfc-icon coral" style="font-size:36px" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clipboard-list"/></svg>
-        <h3>New Patient Registration</h3>
-        <p>First visit? Complete your comprehensive intake forms including medical history, insurance information, and consent before you arrive.</p>
-        <div class="pfc-meta">
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg> 8&ndash;10 minutes</span>
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-files"/></svg> 3 forms</span>
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-lock"/></svg> HIPAA-secure</span>
-        </div>
-        <a href="https://patientviewer.com/WebFormsGWT/GWT/WebForms/WebForms.html?DOID=20379&RKID=5353&WSDID=180392&NFID=180395&NFID=180398&NFID=180401&NFID=180404&NFID=180407" target="_blank" rel="noopener noreferrer"
-           class="btn btn-primary form-hint" 
-           aria-label="Start new patient registration forms — opens in new tab">
-          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-external-link"/></svg> Start New Patient Forms
-        </a>
+    <div style="background:var(--porcelain);border:1px solid var(--border);border-radius:var(--rl);padding:clamp(28px,4vw,40px);display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+      <div style="flex:1;min-width:280px">
+        <div class="section-label">Online patient forms</div>
+        <h2 class="section-h2 serif" id="forms-heading" style="margin-bottom:10px">Complete your forms before you arrive.</h2>
+        <p style="font-size:16px;color:var(--gray);line-height:1.7;margin:0">New or returning, complete your secure, HIPAA-compliant intake forms online and spend less time in the waiting room. You will find them on our New Patient page, along with what to bring and what to expect on your first visit.</p>
       </div>
-
-      <!-- Existing Patient -->
-      <div class="patient-form-card existing-patient">
-        <span class="pfc-badge exist"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-check"/></svg> Returning patient</span>
-        <svg class="svgi pfc-icon" style="font-size:36px" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-user-circle"/></svg>
-        <h3>Existing Patient Update</h3>
-        <p>Update your information, request an appointment, or complete forms for an upcoming visit. Quick and easy, usually 3&ndash;5 minutes.</p>
-        <div class="pfc-meta">
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clock"/></svg> 3&ndash;5 minutes</span>
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-files"/></svg> 1&ndash;2 forms</span>
-          <span><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-lock"/></svg> HIPAA-secure</span>
-        </div>
-        <a href="https://patientviewer.com/WebFormsGWT/GWT/WebForms/WebForms.html?DOID=20379&RKID=5353&WSDID=180389&NFID=180392" target="_blank" rel="noopener noreferrer"
-           class="btn btn-outline form-hint" 
-           aria-label="Update existing patient information — opens in new tab">
-          <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-external-link"/></svg> Update Existing Info
-        </a>
-      </div>
-    </div>
-
-    <div class="what-next-notice" style="margin-top:0">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-check"/></svg>
-      <p style="margin:0;font-size:15px"><strong>After you submit:</strong> Our team will contact you within 1 business hour to confirm your appointment time. If you need same-day care, call us directly at <a href="tel:+19728522222" style="color:var(--blue);font-weight:600">(972) 852-2222</a>.</p>
-    </div>
-
-    <div class="security-notice" style="margin-top:12px">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-shield-check"/></svg>
-      <div><strong>Your information is secure.</strong> All forms are encrypted and HIPAA-compliant. Your personal health information is protected with the highest security standards.</div>
+      <a href="patient-info.html#pi-docs-heading" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clipboard-list"/></svg> Complete your forms</a>
     </div>
   </div>
 </section>
@@ -589,7 +546,8 @@
     </div>
     <div class="footer-col">
       <div class="footer-col-heading">Patients</div>
-      <ul><li><a href="patient-info.html">New Patients</a></li>
+      <ul><li><a href="patient-info.html">New Patients</a>
+<a href="symptom-navigator.html">Symptom checker</a></li>
 <li><a href="financing.html" class="nav-secondary">Financing</a></li>
 <li><a href="membership.html">Membership plan</a></li>
 <li><a href="smile-gallery.html">Smile gallery</a></li>
