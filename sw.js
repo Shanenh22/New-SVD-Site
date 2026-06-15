@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v7'; /* v7 June 2026: real Google reviews site-wide, noscript review-count fallback, symptom-navigator H1, Dentist schema on cost pages, expanded dental-costs-dallas, em-dash tone cleanup, 6 new Spanish high-intent pages */
+const CACHE_VERSION = 'svd-v8'; /* v8 June 2026: Spanish doctor order (Houshmand first) on index+about, Spanish Meet-the-doctors band, emergency open-now banner removed, contact page reordered (request form first) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
