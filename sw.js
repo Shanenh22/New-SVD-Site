@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v11'; /* v11 June 2026: New Patient page booking CTA moved to page end (closing ask), financing link demoted to secondary */
+const CACHE_VERSION = 'svd-v13'; /* v13 June 2026: membership plan repriced — Adult $950 retail save $625, Perio $1470 retail save $870, fluoride dropped from Adult+Perio, table+cards+schema updated EN+ES */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
