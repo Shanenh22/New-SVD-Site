@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v9'; /* v9 June 2026: patient forms consolidated to New Patient page (callout on contact), footer symptom-checker link added */
+const CACHE_VERSION = 'svd-v10'; /* v10 June 2026: restored Update Patient Information form on New Patient page, forms above FAQ, contact form +patient-type +preferred-time fields, footer symptom-link spacing fix, backup page removed */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

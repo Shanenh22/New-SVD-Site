@@ -296,6 +296,27 @@
             </div>
           </div>
 
+          <div>
+            <label for="patient_type" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">¿Es paciente nuevo o existente?</label>
+            <select id="patient_type" name="patient_type" style="width:100%;padding:10px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:14px;font-family:var(--sans);color:var(--ink);background:var(--white)">
+              <option value="">Seleccione...</option>
+              <option value="new">Paciente nuevo</option>
+              <option value="existing">Paciente existente</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="preferred_time" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">Día y hora preferidos <span style="color:var(--mist);font-weight:400">(opcional)</span></label>
+            <select id="preferred_time" name="preferred_time" style="width:100%;padding:10px 14px;border:1.5px solid var(--border-mid);border-radius:var(--r);font-size:14px;font-family:var(--sans);color:var(--ink);background:var(--white)">
+              <option value="">Sin preferencia</option>
+              <option value="weekday-morning">Mañanas entre semana</option>
+              <option value="weekday-afternoon">Tardes entre semana</option>
+              <option value="mon-wed-evening">Lunes o miércoles por la tarde</option>
+              <option value="saturday">Sábado (primero del mes)</option>
+              <option value="asap">Lo antes posible</option>
+            </select>
+          </div>
+
           <!-- Message field — always visible, required when "Otro" is selected -->
           <div id="message-wrap">
             <label for="message" style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:5px">
@@ -428,8 +449,8 @@
     <div class="footer-col">
       <div class="footer-col-heading">Pacientes</div>
       <ul>
-        <li><a href="informacion-paciente.html">Información del paciente</a>
-<a href="symptom-navigator.html">Verificador de síntomas</a></li>
+        <li><a href="informacion-paciente.html">Información del paciente</a></li>
+<li><a href="symptom-navigator.html">Verificador de síntomas</a></li>
         <li><a href="financiamiento.html">Financiamiento</a></li>
       <li><a href="plan-de-membresia.html">Plan de membresía</a></li>
       <li><a href="limpieza-dental.html">Limpieza dental</a></li>
