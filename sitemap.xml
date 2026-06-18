@@ -202,6 +202,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://springvalleydentistry.com/symptom-navigator.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Spanish site -->
   <url>
@@ -458,6 +464,12 @@
   </url>
   <url>
     <loc>https://springvalleydentistry.com/es/tratamiento-de-encias.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://springvalleydentistry.com/es/symptom-navigator.html</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
