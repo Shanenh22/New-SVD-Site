@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Scan to Review — Staff Screen | Spring Valley Dental</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml"/>
+<style>
+  :root{
+    --navy:#0E365A; --mint:#8FD6C8; --cloud:#EEF2F6; --ink:#24313A; --gray:#5A6D80; --gold:#FBBC05; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:linear-gradient(160deg,#0E365A 0%,#13496f 100%);
+    color:var(--white);
+    display:flex;align-items:center;justify-content:center;
+    min-height:100vh;padding:24px;text-align:center;
+  }
+  .card{
+    background:var(--white);
+    border-radius:28px;
+    padding:48px 44px 40px;
+    max-width:520px;width:100%;
+    box-shadow:0 24px 60px rgba(0,0,0,.28);
+    color:var(--ink);
+  }
+  .stars{color:var(--gold);font-size:30px;letter-spacing:4px;margin-bottom:14px}
+  h1{
+    font-family:'DM Serif Display',Georgia,serif;
+    font-size:34px;line-height:1.15;color:var(--navy);margin-bottom:10px;font-weight:400;
+  }
+  .sub{font-size:18px;color:var(--gray);margin-bottom:30px;line-height:1.5}
+  .qr-wrap{
+    background:var(--white);border:3px solid var(--cloud);border-radius:20px;
+    padding:18px;display:inline-block;margin-bottom:28px;
+  }
+  .qr-wrap img{display:block;width:300px;height:300px;max-width:62vw}
+  .scan-line{
+    font-size:21px;font-weight:600;color:var(--navy);margin-bottom:8px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .scan-line .cam{font-size:24px}
+  .steps{font-size:16px;color:var(--gray);line-height:1.7;margin-top:4px}
+  .gword{font-weight:700}
+  .gword .b{color:#4285F4}.gword .r{color:#EA4335}.gword .y{color:#FBBC05}
+  .gword .g{color:#34A853}
+  .footer-note{
+    margin-top:30px;padding-top:20px;border-top:1px solid var(--cloud);
+    font-size:13px;color:var(--gray);line-height:1.5;
+  }
+  .practice{font-weight:600;color:var(--navy)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="stars" aria-hidden="true">★★★★★</div>
+    <h1>Enjoyed your visit?</h1>
+    <p class="sub">Scan the code to leave us a quick review on
+      <span class="gword"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span>.
+      It takes about 30 seconds and means the world to us.</p>
+
+    <div class="qr-wrap">
+      <img src="images/review-qr.png" alt="QR code linking to Spring Valley Dental's Google review page"/>
+    </div>
+
+    <div class="scan-line"><span class="cam" aria-hidden="true">📷</span> Point your phone camera at the code</div>
+    <p class="steps">Tap the link that appears, then tap the stars and add a few words.</p>
+
+    <div class="footer-note">
+      <span class="practice">Spring Valley Dental Associates</span><br/>
+      Staff screen — face this toward the patient at checkout.<br/>
+      QR opens the Google review box directly. If the review link changes, regenerate this QR to match <code>SITE_CONFIG.REVIEW_URL</code>.
+    </div>
+  </div>
+</body>
+</html>

@@ -524,3 +524,30 @@
   }
 
 })();
+
+/* ============================================================
+   Review link wiring (v11)
+   Any element with [data-review-link] gets its href from
+   SITE_CONFIG.REVIEW_URL and fires analytics on click.
+   Single source of truth = js/site-config.js -> REVIEW_URL.
+   ============================================================ */
+(function(){
+  function wire(){
+    var cfg = window.SITE_CONFIG || {};
+    var url = cfg.REVIEW_URL || '';
+    if (!url) return;
+    var els = document.querySelectorAll('[data-review-link]');
+    for (var i=0; i<els.length; i++){
+      els[i].setAttribute('href', url);
+      els[i].setAttribute('target', '_blank');
+      els[i].setAttribute('rel', 'noopener noreferrer');
+      els[i].addEventListener('click', function(e){
+        var loc = e.currentTarget.getAttribute('data-track-location') || 'unknown';
+        if (window.plausible){ try{ window.plausible('Review Click',{props:{location:loc}}); }catch(x){} }
+        if (window.gtag){ try{ window.gtag('event','review_click',{event_category:'engagement',event_label:loc}); }catch(x){} }
+      });
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wire);
+  else wire();
+})();

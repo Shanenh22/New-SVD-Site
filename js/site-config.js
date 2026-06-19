@@ -6,6 +6,18 @@ window.SITE_CONFIG = {
      Replace with your actual API Gateway URL once deployed. */
   CONTACT_API_URL: ""  /* Contact form currently uses Web3Forms (see contact.html action attr). Set this if switching to a custom backend. */,
 
+  /* ============================================================
+     GOOGLE REVIEW LINK  —  one source of truth for all review CTAs
+     ------------------------------------------------------------
+     Direct "write a review" deep link built from the practice Place ID.
+     Opens the Google star/text box directly (not the listing).
+     Place ID: ChIJJxpAIykhTIYRfFDapveAaOQ
+     If you ever need to rebuild it:
+       https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID
+     After changing this, regenerate images/review-qr.png to match.
+     ============================================================ */
+  REVIEW_URL: "https://search.google.com/local/writereview?placeid=ChIJJxpAIykhTIYRfFDapveAaOQ",
+
   /* Cloudflare Turnstile (CAPTCHA alternative).
      Set ENABLE_TURNSTILE: true and add your site key to activate. */
   ENABLE_TURNSTILE: false,
