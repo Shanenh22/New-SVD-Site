@@ -3685,6 +3685,43 @@ textarea:focus-visible,
   font-style: italic;
 }
 
+/* ── REVIEWED-BY (compact reviewer line, below hero) ── */
+.reviewed-by {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.4;
+  margin: 14px 0 0;
+}
+.reviewed-by a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.reviewed-by a:hover { text-decoration: underline; }
+.reviewed-by .svgi { color: var(--blue); flex-shrink: 0; }
+.reviewed-by .rb-date { color: var(--gray); }
+
+/* ── REVIEWED-FOOT (richer reviewer credit at end of long guides) ── */
+.reviewed-foot {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: var(--cloud);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px 18px;
+  margin: 28px auto 0;
+  max-width: 760px;
+}
+.reviewed-foot img {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.reviewed-foot .rf-name { font-size: 14px; font-weight: 700; color: var(--navy); display: block; }
+.reviewed-foot .rf-desc { font-size: 13px; color: var(--gray); line-height: 1.55; margin-top: 2px; display: block; }
+
 /* ── EMERGENCY INLINE CTA (toothache, cracked-tooth) ── */
 .emergency-inline-cta {
   background: #FFF3EE;
