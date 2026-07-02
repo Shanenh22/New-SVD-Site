@@ -58,11 +58,12 @@
     <a href="index.html" class="nav-logo" aria-label="Spring Valley Dental Associates — home">
       <picture>
         <source media="(max-width:640px)" srcset="images/spring-valley-logo-mobile.svg" type="image/svg+xml"/>
-        <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="184" height="46" loading="eager" fetchpriority="high"/>
+        <img src="images/spring-valley-logo-desktop.svg" alt="Spring Valley Dental Associates" width="208" height="52" loading="eager" fetchpriority="high"/>
       </picture>
     </a>
     <div class="nav-links">
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="services.html">Services</a>
 <a href="emergency.html">Emergency</a>
 <a href="patient-info.html">New Patients</a>
@@ -79,9 +80,8 @@
     <li><a href="reviews.html">Patient Reviews</a></li>
   </ul>
 </div>
-      
-      <a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
-      <a href="contact.html" class="nav-cta btn-book" aria-label="Book an appointment online">
+<a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
+      <a href="contact.html" class="nav-cta" id="cta-header-book" data-track="appointment" data-track-location="header" aria-label="Book an appointment">
         <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
     </div>
@@ -95,55 +95,62 @@
 <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
   <div class="drawer-head">
     <span class="drawer-brand">Spring Valley Dental</span>
-    <button class="drawer-close" id="drawer-close" aria-label="Close navigation menu">&#x2715;</button>
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">&#x2715;</button>
   </div>
   <div class="drawer-quick">
     <a href="tel:+19728522222" class="drawer-quick-btn">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call us
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
     </a>
     <a href="contact.html" class="drawer-quick-btn book">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book now
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
     </a>
     <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
     </a>
     <a href="emergency.html" class="drawer-quick-btn">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Emergency
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent
     </a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
-      <div class="drawer-nav-title">Pages</div>
+      <div class="drawer-nav-title">Quick links</div>
       <a href="index.html" class="drawer-nav-link">Home <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
       <a href="about.html" class="drawer-nav-link">About us <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+    </div>
+    <div class="drawer-nav-section">
+      <div class="drawer-nav-title">Services</div>
+      <a href="dental-implants.html" class="drawer-nav-link">Dental implants <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="invisalign.html" class="drawer-nav-link">Invisalign <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="sedation.html" class="drawer-nav-link">Sedation dentistry <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="porcelain-veneers.html" class="drawer-nav-link">Porcelain veneers <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="teeth-whitening.html" class="drawer-nav-link">Teeth whitening <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
       <a href="services.html" class="drawer-nav-link">All services <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="smile-gallery.html" class="drawer-nav-link">Gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="patient-info.html" class="drawer-nav-link">New Patients <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="financing.html" class="drawer-nav-link">Financing <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="membership.html" class="drawer-nav-link">Membership plan <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      
-      <a href="es/index.html" class="drawer-nav-link" lang="es" hreflang="es">Español <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-    
-      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a></div>
+    </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Tools</div>
       <a href="index.html#symptom-navigator-section" class="drawer-nav-link">Symptom Checker <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
       <a href="services.html#smile-planner-section" class="drawer-nav-link">Smile Planner <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
     </div>
     <div class="drawer-nav-section">
+      <div class="drawer-nav-title">For patients</div>
+      <a href="patient-info.html" class="drawer-nav-link drawer-nav-link-highlight">New Patients <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="financing.html" class="drawer-nav-link">Financing options <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="membership.html" class="drawer-nav-link">Membership plan <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
+      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
+    </div>
+    <div class="drawer-nav-section">
       <div class="drawer-nav-title">Office hours</div>
       <div class="drawer-hours-box">
-        <div id="drawer-hours">
-          <div class="dhr" data-day="1"><span class="dd">Monday</span><span class="dt">10:00 AM – 7:00 PM</span></div>
+        <div id="drawer-hours"><div class="dhr" data-day="1"><span class="dd">Monday</span><span class="dt">10:00 AM – 7:00 PM</span></div>
 <div class="dhr" data-day="2"><span class="dd">Tuesday</span><span class="dt">8:30 AM – 4:00 PM</span></div>
 <div class="dhr" data-day="3"><span class="dd">Wednesday</span><span class="dt">10:00 AM – 7:00 PM</span></div>
 <div class="dhr" data-day="4"><span class="dd">Thursday</span><span class="dt">Closed</span></div>
 <div class="dhr" data-day="5"><span class="dd">Friday</span><span class="dt">8:00 AM – 3:00 PM</span></div>
 <div class="dhr" data-day="6"><span class="dd">Saturday</span><span class="dt">1st Sat only, by appt</span></div>
-<div class="dhr" data-day="0"><span class="dd">Sunday</span><span class="dt">Closed</span></div>
-        </div>
+<div class="dhr" data-day="0"><span class="dd">Sunday</span><span class="dt">Closed</span></div></div>
       </div>
     </div>
   </div>

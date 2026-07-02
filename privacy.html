@@ -101,7 +101,7 @@
   </ul>
 </div>
 <a href="es/index.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
-      <a href="contact.html" class="nav-cta" aria-label="Book an appointment">
+      <a href="contact.html" class="nav-cta" id="cta-header-book" data-track="appointment" data-track-location="header" aria-label="Book an appointment">
         <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
     </div>
@@ -110,6 +110,7 @@
     </button>
   </div>
 </nav>
+
 <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
 <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
   <div class="drawer-head">
@@ -117,10 +118,18 @@
     <button class="drawer-close" id="drawer-close" aria-label="Close menu">&#x2715;</button>
   </div>
   <div class="drawer-quick">
-    <a href="tel:+19728522222" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call</a>
-    <a href="contact.html" class="drawer-quick-btn book"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book</a>
-    <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map</a>
-    <a href="emergency.html" class="drawer-quick-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent</a>
+    <a href="tel:+19728522222" class="drawer-quick-btn">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
+    </a>
+    <a href="contact.html" class="drawer-quick-btn book">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
+    </a>
+    <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
+    </a>
+    <a href="emergency.html" class="drawer-quick-btn">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-alert-circle"/></svg>Urgent
+    </a>
   </div>
   <div class="drawer-nav">
     <div class="drawer-nav-section">
@@ -166,7 +175,6 @@
     </div>
   </div>
 </div>
-
 <main id="main">
 
 <div class="legal-hero">

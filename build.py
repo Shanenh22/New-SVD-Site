@@ -176,6 +176,67 @@ def sync_footer():
         changed += 1
     return changed
 
+# ── chrome (header nav + mobile drawer) sync ─────────────────────────────
+# Same contract as FOOTER SYNC: the chrome markup lives in
+#   templates/chrome_en.html / templates/chrome_es.html
+# Edit ONE of those, then `python3 build.py --fix`. Never edit nav/drawer
+# markup on individual pages.
+#
+# One per-page value is preserved: the language-switch target (desktop
+# .lang-toggle and drawer .drawer-lang-row both point at the page's own
+# translation twin). The template holds {{LANG_TARGET}}; the stamp fills it
+# from whatever the page currently uses, falling back to the other
+# language's homepage. aria-current is deliberately ABSENT from the
+# template — js/core.js sets it at runtime so templates stay byte-identical
+# across pages.
+CHROME_RE = re.compile(r'<nav class="site-nav".*?(?=<main[\s>])', re.DOTALL)
+
+TPL_CH_EN = _tpl('chrome_en.html')
+TPL_CH_ES = _tpl('chrome_es.html')
+
+def _chrome_for_page(fname, existing_block, template):
+    m = re.search(r'<a href="([^"]+)"[^>]*class="(?:lang-toggle|drawer-lang-row)"',
+                  existing_block)
+    if m:
+        target = m.group(1)
+    else:
+        target = '../index.html' if fname.startswith('es/') else 'es/index.html'
+    return template.replace('{{LANG_TARGET}}', target)
+
+def check_chrome_drift():
+    if TPL_CH_EN is None or TPL_CH_ES is None:
+        warn('CHROME SYNC: templates/chrome_en.html or chrome_es.html missing — skipping chrome check')
+        return
+    for p in pages():
+        h = read(p)
+        m = CHROME_RE.search(h)
+        if not m:
+            continue
+        tpl = TPL_CH_ES if p.startswith('es/') else TPL_CH_EN
+        wanted = _chrome_for_page(p, m.group(0), tpl)
+        got = re.sub(r'\s*aria-current="page"', '', m.group(0))
+        if _normalize(got) != _normalize(wanted):
+            err(f'CHROME DRIFT  {p} nav/drawer differs from template (run --fix to re-sync)')
+
+def sync_chrome():
+    changed = 0
+    if TPL_CH_EN is None or TPL_CH_ES is None:
+        return changed
+    for p in pages():
+        h = read(p)
+        m = CHROME_RE.search(h)
+        if not m:
+            continue
+        tpl = TPL_CH_ES if p.startswith('es/') else TPL_CH_EN
+        wanted = _chrome_for_page(p, m.group(0), tpl)
+        got = re.sub(r'\s*aria-current="page"', '', m.group(0))
+        if _normalize(got) == _normalize(wanted):
+            continue
+        new_h = h[:m.start()] + wanted + h[m.end():]
+        open(p, 'w', encoding='utf-8').write(new_h)
+        changed += 1
+    return changed
+
 # 1 ── links
 for p in all_html():
     h = read(p); base = os.path.dirname(p)
@@ -299,6 +360,7 @@ for p in pages():
 
 # 11 ── footer drift (does any page's footer no longer match the template?)
 check_footer_drift()
+check_chrome_drift()
 
 # ── --fix actions ────────────────────────────────────────────────────────────
 if FIX:
@@ -340,6 +402,8 @@ if FIX:
     # footer sync: re-stamp templates/footer_en.html & footer_es.html
     n = sync_footer()
     print(f'footer sync: {n} file(s) updated to match templates/')
+    n = sync_chrome()
+    print(f'chrome sync: {n} file(s) updated to match templates/')
 
 # ── report ───────────────────────────────────────────────────────────────────
 print(f'\n{"="*60}\nbuild.py QA — {len(ERRORS)} errors, {len(WARNINGS)} warnings')

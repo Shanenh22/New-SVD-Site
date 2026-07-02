@@ -551,3 +551,21 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wire);
   else wire();
 })();
+
+/* aria-current: set at runtime so nav/drawer chrome templates stay
+   byte-identical across pages (see build.py CHROME SYNC). Hash-only or
+   anchored links (e.g. index.html#section) are never marked. */
+(function () {
+  function mark() {
+    var here = location.pathname.split('/').pop() || 'index.html';
+    var links = document.querySelectorAll('.nav-links a, .nav-more-menu a, .drawer-nav-link');
+    for (var i = 0; i < links.length; i++) {
+      var href = links[i].getAttribute('href') || '';
+      if (href.indexOf('#') !== -1) continue;
+      if (href.split('/').pop() === here) links[i].setAttribute('aria-current', 'page');
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mark);
+  } else { mark(); }
+})();
