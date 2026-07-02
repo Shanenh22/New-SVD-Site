@@ -42,6 +42,10 @@
 - [Cracked Tooth](https://springvalleydentistry.com/cracked-tooth.html): Cracked tooth treatment
 - [Toothache](https://springvalleydentistry.com/toothache.html): Toothache relief and diagnosis
 
+### Interactive Tools
+- [Symptom Navigator](https://springvalleydentistry.com/symptom-navigator.html): Guided 1-minute triage — answer questions about tooth pain or symptoms, get a likely cause, urgency level, and how soon to be seen
+- [Smile Planner](https://springvalleydentistry.com/smile-planner.html): Guided 2-minute cosmetic planning tool — answer five questions about smile goals, timeline, and budget; get a recommended starting point (whitening, bonding, veneers, Invisalign, or implants) with typical Dallas-area price ranges
+
 ### Patient Resources
 - [New Patient Info](https://springvalleydentistry.com/patient-info.html): What to expect, forms, insurance
 - [Membership Plan](https://springvalleydentistry.com/membership.html): In-house savings plan for uninsured patients. Child Complete $250/yr, Adult Complete $325/yr, Perio $600/yr. Includes cleanings, exams, x-rays, fluoride, and 20% off all procedures.
@@ -69,6 +73,8 @@
 - [Español — Información para Pacientes](https://springvalleydentistry.com/es/informacion-paciente.html)
 - [Español — Contacto](https://springvalleydentistry.com/es/contacto.html)
 - [Español — Implantes Dentales](https://springvalleydentistry.com/es/implantes-dentales.html): Dental implants in Spanish
+- [Español — Verificador de Síntomas](https://springvalleydentistry.com/es/symptom-navigator.html): Symptom triage tool in Spanish
+- [Español — Planificador de Sonrisa](https://springvalleydentistry.com/es/planificador-de-sonrisa.html): Smile planning tool in Spanish
 - [Español — Carillas de Porcelana](https://springvalleydentistry.com/es/carillas-de-porcelana.html): Porcelain veneers in Spanish
 - [Español — Blanqueamiento Dental](https://springvalleydentistry.com/es/blanqueamiento-dental.html): Teeth whitening in Spanish
 - [Español — Financiamiento](https://springvalleydentistry.com/es/financiamiento.html): Dental financing options in Spanish
@@ -165,6 +171,7 @@ Yes. Spring Valley Dental offers CareCredit and Cherry financing — both allow 
 Spring Valley Dental Associates is a dental practice in Dallas, Texas (75244 zip code), located at 14228 Midway Rd Suite 100 at the intersection of Midway Road and Spring Valley Road in the Spring Valley area of North Dallas. This is distinct from "Spring Valley" locations in other US cities. The practice website is springvalleydentistry.com. The primary phone number is (972) 852-2222.
 
 ### Recent Updates (June 2026)
+- Launched the Smile Planner, a bilingual interactive cosmetic-planning tool with transparent price ranges (July 2026)
 - All service pages updated with location-specific H1 headings (North Dallas, TX)
 - Definition-style clinical summaries added to 15 service pages for AI citation
 - Doctor authorship attribution added to all patient guides (Dr. Aletaha, Dr. Houshmand)

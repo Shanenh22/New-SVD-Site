@@ -490,6 +490,42 @@
   </div>
 </section>
 
+<!-- ══ SMILE PLANNER ═══════════════════════════════════════════════════════ -->
+<section class="section reveal" id="smile-planner-section" style="background:var(--porcelain)" aria-label="Smile Planner interactive tool">
+  <div class="section-inner" style="max-width:860px">
+    <div class="planner-embed" style="max-width:640px;margin:0 auto">
+      <iframe src="smile-planner.html" title="Smile Planner" loading="lazy" scrolling="no" style="width:100%;border:0;display:block;height:640px;overflow:hidden" id="smile-planner-frame"></iframe>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var f=document.getElementById('smile-planner-frame');
+  if(!f) return;
+  function ga(name,params){ if(window.gtag){ try{ window.gtag('event',name,params||{}); }catch(e){} } }
+  function pl(name,props){ if(window.plausible){ try{ window.plausible(name, props?{props:props}:undefined); }catch(e){} } }
+  window.addEventListener('message',function(e){
+    if(!e.data) return;
+    if(e.data.type==='svd-planner-scroll-top'){
+      var rect=f.getBoundingClientRect();
+      var scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+      var targetY=rect.top+scrollTop-80; // 80px offset clears the sticky nav
+      window.scrollTo({top:Math.max(0,targetY),behavior:'smooth'});
+    } else if(e.data.type==='svd-planner-height'&&typeof e.data.height==='number'){
+      f.style.height=(e.data.height+2)+'px';
+    } else if(e.data.type==='svd-planner-track'){
+      var ev=e.data.event, loc=e.data.location||'planner';
+      if(ev==='planner-start'){ pl('Planner Start',{location:loc}); ga('planner_start',{event_category:'engagement',event_label:loc}); }
+      else if(ev==='planner-result'){ pl('Planner Result',{result:loc}); ga('planner_result',{event_category:'engagement',event_label:loc}); }
+      else if(ev==='prescreen-pain-redirect'){ pl('Planner Pain Redirect',{location:loc}); ga('planner_pain_redirect',{event_category:'engagement',event_label:loc}); }
+      else if(ev==='email-capture'){ pl('Planner Email Capture',{location:loc}); ga('planner_email_capture',{event_category:'conversion',event_label:loc,value:1}); }
+      else if(ev==='call'){ pl('Phone Call',{location:loc}); ga('phone_call',{event_category:'conversion',event_label:loc,value:1}); }
+      else if(ev==='appointment'){ pl('Appointment Click',{location:loc}); ga('appointment_click',{event_category:'conversion',event_label:loc,value:1}); }
+    }
+  });
+})();
+</script>
+
 </main>
 
 <footer class="site-footer" role="contentinfo">
@@ -528,6 +564,7 @@
       <div class="footer-col-heading">Patients</div>
       <ul><li><a href="patient-info.html">New Patients</a></li>
 <li><a href="symptom-navigator.html">Symptom checker</a></li>
+<li><a href="smile-planner.html">Smile Planner</a></li>
 <li><a href="financing.html" class="nav-secondary">Financing</a></li>
 <li><a href="membership.html">Membership plan</a></li>
 <li><a href="smile-gallery.html">Smile gallery</a></li>
@@ -570,6 +607,7 @@
     </div>
   </div>
 </footer>
+
 
 
 
