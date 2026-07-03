@@ -490,10 +490,10 @@ html, body { margin: 0; padding: 0; background: transparent; }
     title: 'Planificador de Sonrisa',
     sub: 'Cinco preguntas r\u00e1pidas sobre lo que le gustar\u00eda cambiar \u2014 reciba un punto de partida honesto con rangos de precios reales. Sin presi\u00f3n, sin juicios.',
 
-    preQ: 'Una verificaci\u00f3n r\u00e1pida antes de comenzar:',
-    preSub: '\u00bfAlgo en su boca le duele, est\u00e1 inflamado o roto en este momento?',
+    preQ: 'Revisi\u00f3n r\u00e1pida: \u00bfalgo le duele, est\u00e1 inflamado o roto en este momento?',
+    preSub: 'La salud es primero \u2014 planificamos la sonrisa sobre una boca sin dolor.',
     preYes: { icon: 'pulse', label: 'S\u00ed \u2014 algo me duele o se siente mal', sub: 'Atendamos eso primero' },
-    preNo:  { icon: 'smile', label: 'No \u2014 estoy c\u00f3modo, solo explorando', sub: 'Perfecto \u2014 planifiquemos su sonrisa' },
+    preNo:  { icon: 'smile', label: 'No \u2014 nada me duele en este momento', sub: 'Perfecto \u2014 planifiquemos su sonrisa' },
 
     redirTitle: 'Primero resolvamos la molestia.',
     redirBody: 'La planificaci\u00f3n cosm\u00e9tica funciona mejor con una boca sana y sin dolor. Nuestro Verificador de S\u00edntomas le ayudar\u00e1 a entender qu\u00e9 est\u00e1 pasando y qu\u00e9 tan pronto debe ser atendido \u2014 toma alrededor de un minuto.',
@@ -725,7 +725,19 @@ html, body { margin: 0; padding: 0; background: transparent; }
 
   /* ── postMessage bridge (mirrors symptom navigator) ─────────────── */
   function post(msg) { try { if (window.parent !== window) window.parent.postMessage(msg, '*'); } catch (e) {} }
-  function track(event, location) { post({ type: 'svd-planner-track', event: event, location: location }); }
+  var GA_MAP = { 'planner-start':'planner_start', 'planner-result':'planner_result',
+    'prescreen-pain-redirect':'planner_pain_redirect', 'call':'phone_call',
+    'appointment':'appointment_click', 'email-capture':'planner_email_capture' };
+  function track(event, location) {
+    if (window.parent !== window) {
+      post({ type: 'svd-planner-track', event: event, location: location });
+      return;
+    }
+    /* standalone: fire directly, mirroring the host-page listener mapping */
+    var ga = GA_MAP[event] || event.replace(/-/g, '_');
+    try { if (window.gtag) window.gtag('event', ga, { event_category: 'engagement', event_label: location }); } catch (e) {}
+    try { if (window.plausible) window.plausible(ga.replace(/_/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); }), { props: { location: location } }); } catch (e) {}
+  }
   function scrollTop() { post({ type: 'svd-planner-scroll-top' }); }
   function reportHeight() {
     var h = document.getElementById('smile-planner').offsetHeight + 8;
@@ -996,6 +1008,23 @@ html, body { margin: 0; padding: 0; background: transparent; }
   });
 
 })();
+</script>
+
+<nav id="standalone-sitebar" aria-label="Navegación del sitio" hidden
+     style="max-width:620px;margin:14px auto 0;padding:14px 18px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:center;border-top:1px solid rgba(14,54,90,.10);font-family:'DM Sans',-apple-system,sans-serif">
+  <span style="font-weight:700;color:#0E365A;font-size:14px">Spring Valley Dental Associates</span>
+    <a href="index.html" data-track="exit-bar" style="color:var(--blue);font-weight:600;text-decoration:none;font-size:14px">Inicio</a>
+    <a href="servicios.html" data-track="exit-bar" style="color:var(--blue);font-weight:600;text-decoration:none;font-size:14px">Todos los servicios</a>
+    <a href="contacto.html" data-track="exit-bar" style="color:var(--blue);font-weight:600;text-decoration:none;font-size:14px">Hacer una cita</a>
+    <a href="tel:+19728522222" data-track="exit-bar" style="color:var(--blue);font-weight:600;text-decoration:none;font-size:14px">(972) 852-2222</a>
+</nav>
+<script>
+(function(){try{if(window.parent===window){var b=document.getElementById('standalone-sitebar');if(b)b.hidden=false;}}catch(e){}})();
+</script>
+<script>
+/* Standalone analytics: only when NOT embedded (embeds report via the
+   postMessage bridge to the host page, which has its own analytics). */
+(function(){try{if(window.parent===window){var s=document.createElement('script');s.defer=true;s.src='../js/analytics.min.js';document.head.appendChild(s);}}catch(e){}})();
 </script>
 </body>
 </html>

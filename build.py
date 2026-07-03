@@ -194,13 +194,22 @@ CHROME_RE = re.compile(r'<nav class="site-nav".*?(?=<main[\s>])', re.DOTALL)
 TPL_CH_EN = _tpl('chrome_en.html')
 TPL_CH_ES = _tpl('chrome_es.html')
 
-def _chrome_for_page(fname, existing_block, template):
-    m = re.search(r'<a href="([^"]+)"[^>]*class="(?:lang-toggle|drawer-lang-row)"',
-                  existing_block)
+def _chrome_for_page(fname, page_html, existing_block, template):
+    # 1st choice: the page's own hreflang twin (always present on indexable pages)
+    other = 'en' if fname.startswith('es/') else 'es'
+    m = re.search(r'hreflang="%s" href="https://springvalleydentistry\.com/([^"]*)"' % other,
+                  page_html)
     if m:
-        target = m.group(1)
+        path = m.group(1) or 'index.html'
+        target = ('../' + path) if fname.startswith('es/') else path
     else:
-        target = '../index.html' if fname.startswith('es/') else 'es/index.html'
+        # 2nd choice: whatever the page used before; last resort: other homepage
+        m2 = re.search(r'<a href="([^"]+)"[^>]*class="(?:lang-toggle|drawer-lang-row)"',
+                       existing_block)
+        if m2:
+            target = m2.group(1)
+        else:
+            target = '../index.html' if fname.startswith('es/') else 'es/index.html'
     return template.replace('{{LANG_TARGET}}', target)
 
 def check_chrome_drift():
@@ -213,7 +222,7 @@ def check_chrome_drift():
         if not m:
             continue
         tpl = TPL_CH_ES if p.startswith('es/') else TPL_CH_EN
-        wanted = _chrome_for_page(p, m.group(0), tpl)
+        wanted = _chrome_for_page(p, h, m.group(0), tpl)
         got = re.sub(r'\s*aria-current="page"', '', m.group(0))
         if _normalize(got) != _normalize(wanted):
             err(f'CHROME DRIFT  {p} nav/drawer differs from template (run --fix to re-sync)')
@@ -228,7 +237,7 @@ def sync_chrome():
         if not m:
             continue
         tpl = TPL_CH_ES if p.startswith('es/') else TPL_CH_EN
-        wanted = _chrome_for_page(p, m.group(0), tpl)
+        wanted = _chrome_for_page(p, h, m.group(0), tpl)
         got = re.sub(r'\s*aria-current="page"', '', m.group(0))
         if _normalize(got) == _normalize(wanted):
             continue

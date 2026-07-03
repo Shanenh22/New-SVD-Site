@@ -276,11 +276,11 @@
 
     <div class="gallery-filters" role="group" aria-label="Filter gallery by procedure" style="margin-top:28px">
       <button class="gf-btn active" data-filter="all">All</button>
-      <button class="gf-btn" data-filter="veneers">Veneers</button>
-      <button class="gf-btn" data-filter="invisalign">Invisalign</button>
-      <button class="gf-btn" data-filter="whitening">Whitening</button>
-      <button class="gf-btn" data-filter="implants">Implants</button>
-      <button class="gf-btn" data-filter="bonding">Bonding</button>
+      <button class="gf-btn" id="veneers" data-filter="veneers">Veneers</button>
+      <button class="gf-btn" id="invisalign" data-filter="invisalign">Invisalign</button>
+      <button class="gf-btn" id="whitening" data-filter="whitening">Whitening</button>
+      <button class="gf-btn" id="implants" data-filter="implants">Implants</button>
+      <button class="gf-btn" id="bonding" data-filter="bonding">Bonding</button>
     </div>
 
     <!-- =====================================================================
@@ -458,6 +458,15 @@
       });
     });
   });
+  /* deep link: smile-gallery.html#veneers etc. auto-applies that filter */
+  function applyHash() {
+    var f = (location.hash || '').replace('#', '');
+    if (!f) return;
+    var b = document.getElementById(f);
+    if (b && b.classList.contains('gf-btn')) b.click();
+  }
+  window.addEventListener('hashchange', applyHash);
+  applyHash();
 })();
 </script>
 

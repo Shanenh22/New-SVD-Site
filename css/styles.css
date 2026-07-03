@@ -3927,3 +3927,16 @@ textarea:focus-visible,
     max-width: 220px !important; margin: 0 auto !important; display: block !important;
   }
 }
+
+/* ── Interior photo strip (why section) ─────────────────────────────
+   EN: mobile/tablet only — desktop keeps the sticky .why-visual image.
+   ES (.why-strip-all): all widths — ES homepage has no desktop visual. */
+.why-strip { display: none; }
+.why-strip-all { display: block; margin-top: 26px; }
+.why-strip-row { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+.why-strip-row::-webkit-scrollbar { display: none; }
+.why-strip-row img { flex: 0 0 78%; max-width: 340px; height: 200px; object-fit: cover; border-radius: var(--rl); scroll-snap-align: start; }
+.why-strip-cap { font-size: 13px; color: var(--gray); text-align: center; margin-top: 10px; line-height: 1.5; }
+@media (max-width: 1024px) {
+  .why-strip { display: block; margin-top: 22px; }
+}
