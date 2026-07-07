@@ -73,3 +73,15 @@ When updating nav, footer, or mobile bar: use a text editor's Find in Files
 - The CSS file is 2876 lines. When adding new components, append at the bottom
   under the "AUDIT FIXES 2026" section
 - Before deploy, consider running PurgeCSS to remove unused rules
+
+## Chrome sync (header nav + drawer + mobile bar + cookie banner)
+Same contract as the footer: the entire "chrome" (site-nav, mobile drawer, mobile
+action bar, cookie banner) lives in `templates/chrome_en.html` / `templates/chrome_es.html`.
+Edit a template, run `python3 build.py --fix`. NEVER edit nav/drawer/bar/banner markup on
+individual pages — the CHROME DRIFT check will fail the build if you do.
+Per-page dynamic values: the language-switch target is filled from each page's hreflang
+twin automatically; the active-page `aria-current` is set at runtime by js/core.js.
+Coverage requires a `<main>` tag on the page — a page with site-nav but no `<main>` is
+invisible to the sync (this bit us on the HIPAA pages once). The status ribbon in the
+mobile bar is populated by js/page-extras.js (bilingual), currently loaded on the two
+homepages only.

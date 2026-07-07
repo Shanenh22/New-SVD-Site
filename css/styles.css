@@ -3940,3 +3940,19 @@ textarea:focus-visible,
 @media (max-width: 1024px) {
   .why-strip { display: block; margin-top: 22px; }
 }
+
+/* ── Click-to-text (dark-launched; see js/site-config.js ENABLE_SMS) ── */
+.mobile-bar .mb-btn[hidden] { display: none; }
+.mobile-bar.has-sms .mobile-bar-inner { grid-template-columns: 1fr 1fr 1.3fr 1fr; }
+
+/* ── Contact form open/closed reply-expectation note ── */
+.form-hours-note { font-size: 13.5px; color: var(--navy); background: var(--blue-pale); border-left: 3px solid var(--blue); border-radius: 0 var(--r) var(--r) 0; padding: 10px 14px; line-height: 1.55; }
+/* ── Language suggestion toast ── */
+.lang-toast { position: fixed; left: 50%; transform: translateX(-50%); z-index: 900;
+  display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 24px);
+  background: var(--navy); color: #fff; border-radius: 12px; padding: 11px 14px;
+  box-shadow: 0 8px 30px rgba(14,54,90,.3); font-size: 14px; }
+.lang-toast a { color: var(--mint); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.lang-toast a:hover { text-decoration: underline; }
+.lang-toast-x { background: none; border: none; color: rgba(255,255,255,.7); font-size: 20px; line-height: 1; cursor: pointer; padding: 2px 6px; }
+.lang-toast-x:hover { color: #fff; }

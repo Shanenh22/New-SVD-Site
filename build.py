@@ -251,7 +251,7 @@ for p in all_html():
     h = read(p); base = os.path.dirname(p)
     for m in re.finditer(r'(?:href|src)="([^"]+)"', h):
         u = m.group(1).split('#')[0].split('?')[0].strip()
-        if not u or u.startswith(('http', 'mailto:', 'tel:', 'data:', '//', "'", 'javascript:')):
+        if not u or u.startswith(('http', 'mailto:', 'tel:', 'sms:', 'data:', '//', "'", 'javascript:')):
             continue
         t = u.lstrip('/') if u.startswith('/') else os.path.normpath(os.path.join(base, u))
         if t in ('', '.'): t = 'index.html'

@@ -18,6 +18,18 @@ window.SITE_CONFIG = {
      ============================================================ */
   REVIEW_URL: "https://search.google.com/local/writereview?placeid=ChIJJxpAIykhTIYRfFDapveAaOQ",
 
+  /* ============================================================
+     CLICK-TO-TEXT (dark-launched — built but hidden)
+     ------------------------------------------------------------
+     Adds a "Text" button to the mobile action bar.
+     BEFORE ENABLING: confirm the practice number can RECEIVE texts
+     (Weave / PMS texting). A dead-end SMS button is worse than none.
+     Activate: set ENABLE_SMS: true, run `python3 build.py --fix`, deploy.
+     Preview on the live site without enabling: append ?sms=1 to any URL.
+     ============================================================ */
+  ENABLE_SMS: false,
+  SMS_NUMBER: "+19728522222",
+
   /* Cloudflare Turnstile (CAPTCHA alternative).
      Set ENABLE_TURNSTILE: true and add your site key to activate. */
   ENABLE_TURNSTILE: false,

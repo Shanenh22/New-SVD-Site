@@ -177,6 +177,34 @@
     </div>
   </div>
 </div>
+<nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions" id="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office" id="cta-mobile-call" data-track="call" data-track-location="mobile-bar">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>
+      <span id="mb-call-label">Call</span>
+    </a>
+    <a href="sms:+19728522222" class="mb-btn mb-btn-sms" id="cta-mobile-sms" hidden data-track="sms" data-track-location="mobile-bar" aria-label="Text our office">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-message-circle"/></svg>Text
+    </a>
+    <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
+    </a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
+    </a>
+  </div>
+  <!-- Status ribbon above bar -->
+  <div class="mb-status-ribbon" id="mb-status-ribbon" aria-live="polite" aria-label="Office open status"></div>
+</nav>
+<div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie and analytics consent" aria-describedby="cookie-desc">
+  <div class="cookie-inner">
+    <p class="cookie-text" id="cookie-desc"><strong>We use analytics cookies</strong> (Google Analytics 4) to understand site traffic. No patient health information is collected. Under Texas privacy law you may opt out. <a href="privacy.html">Privacy policy</a></p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-decline" id="cookie-decline" aria-label="Opt out of analytics tracking">Opt out</button>
+      <button class="cookie-btn-accept" id="cookie-accept" aria-label="Accept analytics cookies">Accept analytics</button>
+    </div>
+  </div>
+</div>
 <main id="main">
 <div class="page-hero">
   <h1>About Spring Valley Dental</h1>
@@ -379,19 +407,7 @@
 
 
 
-<nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions">
-  <div class="mobile-bar-inner">
-    <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>Call
-    </a>
-    <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
-    </a>
-    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
-      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
-    </a>
-  </div>
-</nav>
+
 <!-- Core JS -->
 <script src="js/site-config.min.js" defer></script>
 <script src="js/core.min.js" defer></script>
@@ -399,25 +415,6 @@
 <script src="js/analytics.min.js" defer></script>
 
 <!-- Cookie consent banner — TDPSA / Texas privacy compliant -->
-<div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite"
-     aria-label="Cookie and analytics consent" aria-describedby="cookie-desc">
-  <div class="cookie-inner">
-    <p class="cookie-text" id="cookie-desc">
-      <strong>We use analytics cookies</strong> (Google Analytics 4 + Plausible) to understand how
-      visitors use our site, page views, referral sources, and device type. No patient health
-      information is collected through analytics. Under Texas privacy law (TDPSA) you have the right
-      to opt out of analytics tracking.
-      <a href="privacy.html">Privacy policy</a>
-    </p>
-    <div class="cookie-actions">
-      <button class="cookie-btn-decline" id="cookie-decline" aria-label="Decline analytics cookies">
-        Opt out
-      </button>
-      <button class="cookie-btn-accept" id="cookie-accept" aria-label="Accept analytics cookies">
-        Accept analytics
-      </button>
-    </div>
-  </div>
-</div>
+
 </body>
 </html>

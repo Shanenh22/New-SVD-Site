@@ -51,6 +51,19 @@
 <a href="emergencia.html">Emergencias</a>
 <a href="informacion-paciente.html">Pacientes</a>
 <a href="contacto.html">Contacto</a>
+<div class="nav-more-wrap">
+  <button class="nav-more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more-menu" id="nav-more-trigger">
+    Más <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-down"/></svg>
+  </button>
+  <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="index.html#symptom-navigator-section">Verificador de Síntomas</a></li>
+    <li><a href="servicios.html#smile-planner-section">Planificador de Sonrisa</a></li>
+    <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+    <li><a href="financiamiento.html">Financiamiento</a></li>
+    <li><a href="galeria-de-sonrisas.html">Galería de sonrisas</a></li>
+    <li><a href="resenas.html">Reseñas de pacientes</a></li>
+  </ul>
+</div>
 <a href="../root-canal-therapy.html" class="lang-toggle" lang="en" hreflang="en" aria-label="Switch to English"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-language"/></svg><span class="lt-label">English</span></a>
       <a href="contacto.html" class="nav-cta" id="cta-header-book" data-track="appointment" data-track-location="header" aria-label="Hacer una cita">
         <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg> Hacer una cita
@@ -101,6 +114,30 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<nav class="mobile-bar" role="navigation" aria-label="Acciones rápidas móvil" id="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a href="tel:+19728522222" class="mb-btn" aria-label="Llamar a nuestra oficina" id="cta-mobile-call" data-track="call" data-track-location="mobile-bar">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg>
+      <span id="mb-call-label">Llamar</span>
+    </a>
+    <a href="sms:+19728522222" class="mb-btn mb-btn-sms" id="cta-mobile-sms" hidden data-track="sms" data-track-location="mobile-bar" aria-label="Envíenos un mensaje de texto">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-message-circle"/></svg>Texto
+    </a>
+    <a href="contacto.html" class="mb-btn book" aria-label="Hacer una cita">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg>Cita
+    </a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Cómo llegar">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-map-pin"/></svg>Cómo llegar
+    </a>
+  </div>
+  <div class="mb-status-ribbon" id="mb-status-ribbon" aria-live="polite" aria-label="Estado de apertura"></div>
+</nav>
+<div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
+  <div class="cookie-inner">
+    <p class="cookie-text" id="cookie-desc"><strong>Usamos cookies de análisis</strong> (Google Analytics 4) para entender el tráfico del sitio. No se recopila información de salud del paciente. Bajo la ley de privacidad de Texas puede rechazar en cualquier momento. <a href="privacidad.html">Política de privacidad</a></p>
+    <div class="cookie-actions"><button class="cookie-btn-decline" id="cookie-decline">Rechazar</button><button class="cookie-btn-accept" id="cookie-accept">Aceptar análisis</button></div>
   </div>
 </div>
 <main id="main">
@@ -230,24 +267,10 @@
 </footer>
 
 
-<nav class="mobile-bar" role="navigation" aria-label="Acciones rápidas móvil">
-  <div class="mobile-bar-inner">
-    <a href="tel:+19728522222" class="mb-btn" aria-label="Llamar a la clínica"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-phone"/></svg>Llamar</a>
-    <a href="contacto.html" class="mb-btn book" aria-label="Hacer una cita"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-calendar"/></svg>Cita</a>
-    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Cómo llegar"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-map-pin"/></svg>Cómo llegar</a>
-  </div>
-</nav>
+
 <script src="../js/site-config.min.js" defer></script>
 <script src="../js/core.min.js" defer></script>
 <script src="../js/analytics.min.js" defer></script>
-<div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies" aria-describedby="cookie-desc">
-  <div class="cookie-inner">
-    <p class="cookie-text" id="cookie-desc"><strong>Usamos cookies de análisis</strong> (Google Analytics 4) para entender el tráfico del sitio. No se recopila información de salud del paciente. Bajo la ley de privacidad de Texas puede rechazar. <a href="privacidad.html">Política de privacidad</a></p>
-    <div class="cookie-actions">
-      <button class="cookie-btn-decline" id="cookie-decline">Rechazar</button>
-      <button class="cookie-btn-accept" id="cookie-accept">Aceptar análisis</button>
-    </div>
-  </div>
-</div>
+
 </body>
 </html>

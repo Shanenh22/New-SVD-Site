@@ -569,3 +569,132 @@
     document.addEventListener('DOMContentLoaded', mark);
   } else { mark(); }
 })();
+
+
+/* Click-to-text activation (dark-launched).
+   Enabled by SITE_CONFIG.ENABLE_SMS, or previewed via ?sms=1 on any URL.
+   The button ships in the chrome hidden; this only reveals it. */
+(function () {
+  var cfg = window.SITE_CONFIG || {};
+  var on = cfg.ENABLE_SMS === true || /[?&]sms=1(&|$)/.test(window.location.search);
+  if (!on) return;
+  var b = document.getElementById('cta-mobile-sms');
+  if (!b) return;
+  if (cfg.SMS_NUMBER) b.setAttribute('href', 'sms:' + cfg.SMS_NUMBER);
+  b.hidden = false;
+  var bar = document.getElementById('mobile-bar') || document.querySelector('.mobile-bar');
+  if (bar) bar.classList.add('has-sms');
+})();
+
+
+/* ── STATUS RIBBON + CALL LABEL (mobile bar, sitewide) ─────────────────────
+   Single source of truth: HOURS above (window.SVD_HOURS).
+   Bilingual via <html lang>. Absorbed from page-extras.js (now removed). */
+(function () {
+  var ribbon = document.getElementById('mb-status-ribbon');
+  var callLabel = document.getElementById('mb-call-label');
+  var H = window.SVD_HOURS || {};
+  var ES = (document.documentElement.lang || '').indexOf('es') === 0;
+  var DAY_ES = { 0:'domingo',1:'lunes',2:'martes',3:'mi\u00e9rcoles',4:'jueves',5:'viernes',6:'s\u00e1bado' };
+  function fmt(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60, ap = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + (m ? ':' + (m < 10 ? '0' : '') + m : ':00') + ' ' + ap;
+  }
+  function openNow() {
+    var now = new Date(), h = H[now.getDay()];
+    if (!h || h.open === null || h.open == null) return false;
+    var tm = now.getHours() * 60 + now.getMinutes();
+    return tm >= h.open && tm < h.close;
+  }
+  function nextOpenText() {
+    var day = new Date().getDay();
+    for (var i = 1; i <= 7; i++) {
+      var d = (day + i) % 7, h = H[d];
+      if (h && h.open != null) {
+        return ES ? ('el ' + DAY_ES[d] + ' a las ' + fmt(h.open))
+                  : ((h.label || DAY_ES[d]) + ' at ' + fmt(h.open));
+      }
+    }
+    return ES ? 'el lunes' : 'Monday';
+  }
+  window.SVD_OPEN_NOW = openNow;      /* shared with the form note below */
+  window.SVD_NEXT_OPEN = nextOpenText;
+  if (!ribbon) return;
+  if (openNow()) {
+    ribbon.textContent = ES ? '\u25cf Abierto ahora \u2014 ll\u00e1menos directamente'
+                            : '\u25cf Open now \u2014 call us directly';
+    ribbon.style.cssText = 'background:#0F6E56;color:#fff;font-size:11px;font-weight:600;text-align:center;padding:4px 0;letter-spacing:.04em;display:block';
+    if (callLabel) callLabel.textContent = ES ? 'Llamar ahora' : 'Call now';
+  } else {
+    ribbon.textContent = ES ? ('\u25cb Cerrado \u2014 abre ' + nextOpenText() + ' \u00b7 Env\u00edenos un mensaje')
+                            : ('\u25cb Closed \u2014 next open ' + nextOpenText() + ' \u00b7 Send a message anytime');
+    ribbon.style.cssText = 'background:#1A4D6B;color:rgba(255,255,255,.82);font-size:11px;font-weight:500;text-align:center;padding:4px 8px;display:block';
+    if (callLabel) callLabel.textContent = ES ? 'Dejar msj' : 'Leave msg';
+  }
+})();
+
+/* ── BACK TO TOP (absorbed from page-extras.js) ────────────────────────── */
+(function () {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('main') && document.getElementById('main').focus();
+  });
+})();
+
+/* ── CONTACT FORM HOURS NOTE ───────────────────────────────────────────────
+   Fills #form-hours-note (contact pages) with an honest reply expectation. */
+(function () {
+  var el = document.getElementById('form-hours-note');
+  if (!el || !window.SVD_OPEN_NOW) return;
+  var ES = (document.documentElement.lang || '').indexOf('es') === 0;
+  if (window.SVD_OPEN_NOW()) {
+    el.textContent = ES ? 'Estamos abiertos ahora \u2014 para la respuesta m\u00e1s r\u00e1pida, ll\u00e1menos al (972) 852-2222.'
+                        : 'We\u2019re open now \u2014 for the fastest response, call us at (972) 852-2222.';
+  } else {
+    el.textContent = ES ? ('Estamos cerrados en este momento \u2014 env\u00ede su solicitud y le responderemos cuando abramos ' + window.SVD_NEXT_OPEN() + '.')
+                        : ('We\u2019re closed right now \u2014 send your request and we\u2019ll reply when we open ' + window.SVD_NEXT_OPEN() + '.');
+  }
+  el.hidden = false;
+})();
+
+/* ── LANGUAGE SUGGEST TOAST ────────────────────────────────────────────────
+   Spanish-preference browser lands on an English page from OUTSIDE the site
+   \u2192 one dismissible suggestion linking the page's own Spanish twin.
+   One-directional by design: ES pages never nag toward English.
+   Internal referrals are excluded so a deliberate language toggle never
+   triggers it. Dismissal (or click-through) is remembered in localStorage. */
+(function () {
+  try {
+    if ((document.documentElement.lang || '').indexOf('es') === 0) return;
+    var langs = navigator.languages || [navigator.language || ''];
+    var wantsEs = false;
+    for (var i = 0; i < langs.length; i++) if ((langs[i] || '').toLowerCase().indexOf('es') === 0) wantsEs = true;
+    if (!wantsEs) return;
+    if (localStorage.getItem('svd-lang-suggest')) return;
+    if (document.referrer && document.referrer.indexOf(location.host) !== -1) return;
+    var link = document.querySelector('link[rel="alternate"][hreflang="es"]');
+    if (!link || !link.href) return;
+    var toast = document.createElement('div');
+    toast.className = 'lang-toast';
+    toast.setAttribute('role', 'region');
+    toast.setAttribute('aria-label', 'Sugerencia de idioma');
+    toast.innerHTML = '<strong>\u00bfPrefiere espa\u00f1ol?</strong>' +
+      '<a href="' + link.href + '" data-track="lang-suggest" data-track-location="toast">Ver esta p\u00e1gina en espa\u00f1ol \u2192</a>' +
+      '<button type="button" class="lang-toast-x" aria-label="Cerrar">\u00d7</button>';
+    function remember() { try { localStorage.setItem('svd-lang-suggest', '1'); } catch (e) {} }
+    toast.querySelector('a').addEventListener('click', remember);
+    toast.querySelector('button').addEventListener('click', function () { remember(); toast.remove(); });
+    setTimeout(function () {
+      var bar = document.querySelector('.mobile-bar');
+      var barShown = bar && window.getComputedStyle(bar).display !== 'none';
+      toast.style.bottom = (barShown ? bar.offsetHeight + 10 : 16) + 'px';
+      document.body.appendChild(toast);
+    }, 800);
+  } catch (e) {}
+})();

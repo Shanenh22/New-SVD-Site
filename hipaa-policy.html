@@ -252,6 +252,8 @@ ul li strong { color: #222; }
   .doc-footer { flex-direction: column; align-items: flex-start; }
 }
 </style>
+<link rel="alternate" hreflang="en" href="https://springvalleydentistry.com/hipaa-policy.html"/>
+<link rel="alternate" hreflang="es" href="https://springvalleydentistry.com/es/aviso-hipaa.html"/>
 </head>
 <body data-page-category="legal">
 <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
@@ -268,6 +270,20 @@ ul li strong { color: #222; }
 <a href="services.html">Services</a>
 <a href="emergency.html">Emergency</a>
 <a href="patient-info.html">New Patients</a>
+<div class="nav-more-wrap">
+  <button class="nav-more-btn" aria-expanded="false" aria-haspopup="true" aria-controls="nav-more-menu" id="nav-more-trigger">
+    More <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>
+  </button>
+  <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="index.html#symptom-navigator-section">Symptom Checker</a></li>
+    <li><a href="services.html#smile-planner-section">Smile Planner</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="financing.html">Financing</a></li>
+    <li><a href="smile-gallery.html">Smile Gallery</a></li>
+    <li><a href="reviews.html">Patient Reviews</a></li>
+  </ul>
+</div>
+<a href="es/aviso-hipaa.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
       <a href="contact.html" class="nav-cta" id="cta-header-book" data-track="appointment" data-track-location="header" aria-label="Book an appointment">
         <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg> Book Online
       </a>
@@ -277,6 +293,7 @@ ul li strong { color: #222; }
     </button>
   </div>
 </nav>
+
 <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
 <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
   <div class="drawer-head">
@@ -290,7 +307,7 @@ ul li strong { color: #222; }
     <a href="contact.html" class="drawer-quick-btn book">
       <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book
     </a>
-    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
+    <a id="cta-directions" href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn">
       <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Map
     </a>
     <a href="emergency.html" class="drawer-quick-btn">
@@ -325,7 +342,7 @@ ul li strong { color: #222; }
       <a href="faq.html" class="drawer-nav-link">FAQ <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
       <a href="reviews.html" class="drawer-nav-link">Patient reviews <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
       <a href="smile-gallery.html" class="drawer-nav-link">Smile gallery <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-right"/></svg></a>
-      <a href="es/index.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
+      <a href="es/aviso-hipaa.html" class="drawer-lang-row" lang="es" hreflang="es"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg> Ver en Espa&ntilde;ol</a>
     </div>
     <div class="drawer-nav-section">
       <div class="drawer-nav-title">Office hours</div>
@@ -341,17 +358,35 @@ ul li strong { color: #222; }
     </div>
   </div>
 </div>
-
-
-<div class="no-print-bar no-print">
-  <a href="patient-info.html" class="back-link">&#8592; Back to Patient Info</a>
-  <button class="print-btn" onclick="window.print()" aria-label="Print this notice or save as PDF">
-    &#x1F5A8;&nbsp; Print / Save as PDF
-  </button>
+<nav class="mobile-bar" role="navigation" aria-label="Quick mobile actions" id="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a href="tel:+19728522222" class="mb-btn" aria-label="Call our office" id="cta-mobile-call" data-track="call" data-track-location="mobile-bar">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-phone"/></svg>
+      <span id="mb-call-label">Call</span>
+    </a>
+    <a href="sms:+19728522222" class="mb-btn mb-btn-sms" id="cta-mobile-sms" hidden data-track="sms" data-track-location="mobile-bar" aria-label="Text our office">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-message-circle"/></svg>Text
+    </a>
+    <a href="contact.html" class="mb-btn book" aria-label="Book an appointment">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-calendar"/></svg>Book Now
+    </a>
+    <a href="https://www.google.com/maps/place/14228+Midway+Rd+%23100,+Dallas,+TX+75244" target="_blank" rel="noopener noreferrer" class="mb-btn" aria-label="Get directions">
+      <svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-map-pin"/></svg>Directions
+    </a>
+  </div>
+  <!-- Status ribbon above bar -->
+  <div class="mb-status-ribbon" id="mb-status-ribbon" aria-live="polite" aria-label="Office open status"></div>
+</nav>
+<div class="cookie-banner hidden" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie and analytics consent" aria-describedby="cookie-desc">
+  <div class="cookie-inner">
+    <p class="cookie-text" id="cookie-desc"><strong>We use analytics cookies</strong> (Google Analytics 4) to understand site traffic. No patient health information is collected. Under Texas privacy law you may opt out. <a href="privacy.html">Privacy policy</a></p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-decline" id="cookie-decline" aria-label="Opt out of analytics tracking">Opt out</button>
+      <button class="cookie-btn-accept" id="cookie-accept" aria-label="Accept analytics cookies">Accept analytics</button>
+    </div>
+  </div>
 </div>
-
-<div class="hipaa-wrap">
-
+<main id="main">
   <div class="doc-header">
     <div class="compliance-label">Compliance Solutions &nbsp;&bull;&nbsp; 11441 v001 02/2026</div>
     <h1>Omnibus Rule<br>HIPAA Notice of Privacy Practices</h1>
@@ -474,7 +509,8 @@ ul li strong { color: #222; }
     <span>11441 v001 02/2026</span>
   </div>
 
-</div>
+
+</main>
 
 </body>
 </html>
