@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v15'; /* v15 June 2026: New Patient Registration button promoted to primary, FAQ links to dental anxiety/sedation page added EN+ES */
+const CACHE_VERSION = 'svd-v16'; /* v16 June 2026: New Patient Registration button promoted to primary, FAQ links to dental anxiety/sedation page added EN+ES */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
