@@ -15,9 +15,9 @@ homepage stats, the reviews pages in both languages — reads from **one file**:
 {
   "aggregate": {
     "rating": "5.0",
-    "count": 214,
+    "count": 218,
     "source": "google",
-    "lastChecked": "2026-06-11"
+    "lastChecked": "2026-07-09"
   }
 }
 ```
