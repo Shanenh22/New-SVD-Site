@@ -2270,11 +2270,11 @@ button:disabled { opacity: .75; cursor: not-allowed; }
   display: block;
 }
 /* Positions tuned July 2026: wide desktop hero (~2.6:1) and tall mobile hero (~0.65:1)
-   crop these ~1.8:1 images differently. Slide 2: 45% keeps the smile in the desktop crop
-   (vertical position has no effect on mobile). Slide 4: 80% keeps both patients in the
+   crop these ~1.8:1 images differently. Slide 2: 60% keeps the smile in the desktop crop
+   at real-world widths incl. 1920px (vertical position has no effect on mobile). Slide 4: 80% keeps both patients in the
    mobile crop (horizontal position has no effect on desktop). Slide 3 is a macro close-up;
    30% is the least-bad desktop crop — a wider replacement image is the real fix. */
-.hero-bg-slide-2 { background-image: url('../images/hero-slide-2.webp'); background-position: center 45%; }
+.hero-bg-slide-2 { background-image: url('../images/hero-slide-2.webp'); background-position: center 60%; }
 .hero-bg-slide-3 { background-image: url('../images/hero-slide-3.webp'); background-position: center 30%; }
 .hero-bg-slide-4 { background-image: url('../images/hero-slide-4.webp'); background-position: 80% top; }
 
