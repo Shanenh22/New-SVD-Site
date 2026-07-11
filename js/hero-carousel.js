@@ -11,8 +11,8 @@
 
   var PREFIX = location.pathname.indexOf('/es/') !== -1 ? '../' : '';
   var slideLabels = PREFIX
-    ? ['Exterior de la clínica dental', 'Sala de tratamiento moderna', 'Equipo dental amable', 'Atención al paciente']
-    : ['Dental office exterior', 'Modern treatment room', 'Friendly dental team', 'Patient care'];
+    ? ['Familia sonriente en un pícnic en el parque', 'Paciente sonriente en nuestro consultorio', 'Primer plano de una sonrisa saludable', 'Dos pacientes jóvenes en la sala de tratamiento']
+    : ['Smiling family at a park picnic', 'Smiling patient in our office', 'Close-up of a healthy smile', 'Two young patients in a treatment room'];
   var current = 0;
   var INTERVAL = 5500;
   var timer = null;

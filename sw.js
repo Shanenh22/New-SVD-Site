@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v20'; /* v20 July 2026: Updated contact information, new testimonials added */
+const CACHE_VERSION = 'svd-v21'; /* v21 July 2026: hero image crop positions + carousel labels/alt text */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
