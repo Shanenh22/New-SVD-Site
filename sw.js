@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v17'; /* v17 July 2026: Updated contact information, new emergency services page added EN+ES */
+const CACHE_VERSION = 'svd-v18'; /* v18 July 2026: Updated contact information, new testimonials added */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
