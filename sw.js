@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v21'; /* v21 July 2026: hero image crop positions + carousel labels/alt text */
+const CACHE_VERSION = 'svd-v22'; /* v22 July 2026: mobile hero carousel ends above card stack */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
