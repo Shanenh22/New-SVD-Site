@@ -19,16 +19,15 @@ window.SITE_CONFIG = {
   REVIEW_URL: "https://search.google.com/local/writereview?placeid=ChIJJxpAIykhTIYRfFDapveAaOQ",
 
   /* ============================================================
-     CLICK-TO-TEXT (dark-launched — built but hidden)
+     CLICK-TO-TEXT (ACTIVE since July 2026)
      ------------------------------------------------------------
      Adds a "Text" button to the mobile action bar.
-     BEFORE ENABLING: confirm the practice number can RECEIVE texts
-     (Weave / PMS texting). A dead-end SMS button is worse than none.
-     Activate: set ENABLE_SMS: true, run `python3 build.py --fix`, deploy.
-     Preview on the live site without enabling: append ?sms=1 to any URL.
+     SMS_NUMBER is the practice TEXTING line (972-787-1618) — never
+     the main voice line, and never displayed as visible text on the
+     site. To disable, set ENABLE_SMS: false and run build.py --fix.
      ============================================================ */
-  ENABLE_SMS: false,
-  SMS_NUMBER: "+19728522222",
+  ENABLE_SMS: true,
+  SMS_NUMBER: "+19727871618",
 
   /* Cloudflare Turnstile (CAPTCHA alternative).
      Set ENABLE_TURNSTILE: true and add your site key to activate. */
