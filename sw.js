@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v23'; /* v23 July 2026: hero slide 2 desktop position 60% (smile visible at wide viewports) */
+const CACHE_VERSION = 'svd-v25'; /* v25 July 2026: Archy patient portal replaces Open Dental forms; portal in nav */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
