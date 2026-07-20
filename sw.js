@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v29'; /* v29 January 2027: contact portal CTA + text button; footer/More reorder */
+const CACHE_VERSION = 'svd-v30'; /* v30 July 2026: contact portal CTA + text button; footer/More reorder */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
