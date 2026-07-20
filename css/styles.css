@@ -3967,3 +3967,12 @@ textarea:focus-visible,
 .lang-toast a:hover { text-decoration: underline; }
 .lang-toast-x { background: none; border: none; color: rgba(255,255,255,.7); font-size: 20px; line-height: 1; cursor: pointer; padding: 2px 6px; }
 .lang-toast-x:hover { color: #fff; }
+
+/* ── Responsive CTA visibility (membership enroll buttons, July 2026) ──
+   .m-only shows on mobile/tablet (<=768px), .d-only on desktop. Used where a
+   tap-to-call CTA is right on a phone but a link is right on desktop. */
+.m-only { display: none !important; }
+@media (max-width: 768px) {
+  .m-only { display: inline-flex !important; }
+  .d-only { display: none !important; }
+}
