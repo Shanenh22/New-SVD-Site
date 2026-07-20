@@ -175,13 +175,14 @@
     Más <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-chevron-down"/></svg>
   </button>
   <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="nav-more">Portal del Paciente</a></li>
+    <li><a href="plan-de-membresia.html">Plan de Membresía</a></li>
+    <li><a href="financiamiento.html">Financiamiento</a></li>
+    <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
     <li><a href="index.html#symptom-navigator-section">Verificador de Síntomas</a></li>
     <li><a href="servicios.html#smile-planner-section">Planificador de Sonrisa</a></li>
-    <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-    <li><a href="financiamiento.html">Financiamiento</a></li>
-    <li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="nav-more">Portal del Paciente</a></li>
-    <li><a href="galeria-de-sonrisas.html">Galería de sonrisas</a></li>
     <li><a href="resenas.html">Reseñas de pacientes</a></li>
+    <li><a href="galeria-de-sonrisas.html">Galería de sonrisas</a></li>
   </ul>
 </div>
 <a href="../contact.html" class="lang-toggle" lang="en" hreflang="en" aria-label="Switch to English"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-language"/></svg><span class="lt-label">English</span></a>
@@ -444,6 +445,7 @@
             <a href="mailto:info@springvalleydentistry.com" style="color:var(--blue)">info@springvalleydentistry.com</a><br>
             <strong style="color:var(--navy)">Se habla español</strong>
           </address>
+          <a data-sms-cta hidden href="sms:+19727871618" class="btn btn-outline" style="margin-top:14px;font-size:14px;padding:9px 18px" data-track="sms" data-track-location="contact-info" aria-label="Envíenos un mensaje de texto"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-message-circle"/></svg> &iquest;Prefiere textear? Escr&iacute;banos</a>
         </div>
         <div style="background:var(--porcelain);border-radius:var(--rl);padding:24px;border:1px solid var(--border);margin-bottom:18px">
           <h3 style="font-family:var(--serif);font-size:17px;color:var(--navy);margin-bottom:12px">Horario de atención</h3>
@@ -477,11 +479,14 @@
   <div class="section-inner">
     <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--rl);padding:clamp(28px,4vw,40px);display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between">
       <div style="flex:1;min-width:280px">
-        <div class="section-label">Formularios del paciente</div>
+        <div class="section-label">Portal del paciente</div>
         <h2 class="section-h2 serif" id="forms-heading-es" style="margin-bottom:10px">Complete sus formularios antes de su cita.</h2>
         <p style="font-size:16px;color:var(--gray);line-height:1.7;margin:0">Sea paciente nuevo o de regreso, use nuestro portal seguro del paciente para completar los formularios que le enviamos, actualizar su información y pagar sus facturas — y pase menos tiempo en la sala de espera. Encontrará el portal en nuestra página de Información del paciente, junto con qué traer y qué esperar en su primera visita.</p>
       </div>
-      <a href="informacion-paciente.html#documentos" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-clipboard-list"/></svg> Complete sus formularios</a>
+      <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;align-items:stretch">
+        <a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space:nowrap" data-track="portal" data-track-location="contact-forms" aria-label="Iniciar sesión en el portal del paciente — se abre en una pestaña nueva"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-clipboard-list"/></svg> Iniciar Sesión en el Portal</a>
+        <a href="informacion-paciente.html" style="font-size:13px;color:var(--blue);text-align:center;text-decoration:none">&iquest;Paciente nuevo? Vea qu&eacute; esperar &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
@@ -509,11 +514,19 @@
     <div class="footer-col">
       <div class="footer-col-heading">Pacientes</div>
       <ul><li><a href="informacion-paciente.html">Información del paciente</a></li>
-<li><a href="symptom-navigator.html">Verificador de síntomas</a></li><li><a href="planificador-de-sonrisa.html">Planificador de sonrisa</a></li><li><a href="financiamiento.html">Financiamiento</a></li>
-      <li><a href="plan-de-membresia.html">Plan de membresía</a></li>
-      <li><a href="limpieza-dental.html">Limpieza dental</a></li>
-      <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-      <li><a href="resenas.html">Reseñas de pacientes</a></li><li><a href="#" data-review-link data-track-location="footer-es">Dejar una reseña en Google</a></li><li><a href="informacion-paciente.html#documentos">Formularios y documentos</a></li><li><a href="contacto.html">Hacer una cita</a></li><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="aviso-hipaa.html">Aviso HIPAA</a></li></ul>
+<li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="footer-es">Portal del Paciente</a></li>
+<li><a href="contacto.html">Hacer una cita</a></li>
+<li><a href="financiamiento.html">Financiamiento</a></li>
+<li><a href="plan-de-membresia.html">Plan de membresía</a></li>
+<li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+<li><a href="symptom-navigator.html">Verificador de síntomas</a></li>
+<li><a href="planificador-de-sonrisa.html">Planificador de sonrisa</a></li>
+<li><a href="limpieza-dental.html">Limpieza dental</a></li>
+<li><a href="informacion-paciente.html#documentos">Formularios y documentos</a></li>
+<li><a href="resenas.html">Reseñas de pacientes</a></li>
+<li><a href="#" data-review-link data-track-location="footer-es">Dejar una reseña en Google</a></li>
+<li><a href="privacidad.html">Política de privacidad</a></li>
+<li><a href="aviso-hipaa.html">Aviso HIPAA</a></li></ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-heading">Contacto y Horario</div>
@@ -527,6 +540,7 @@
     <div class="footer-legal-links"><a href="privacidad.html">Política de privacidad</a><a href="aviso-hipaa.html">HIPAA</a></div>
   </div>
 </footer>
+
 
 
 

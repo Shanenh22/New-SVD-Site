@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v26'; /* v26 July 2026: click-to-text activated (texting line 972-787-1618) */
+const CACHE_VERSION = 'svd-v27'; /* v27 July 2026: contact portal CTA + text button; footer/More reorder */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

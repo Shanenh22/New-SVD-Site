@@ -579,11 +579,18 @@
   var on = cfg.ENABLE_SMS === true || /[?&]sms=1(&|$)/.test(window.location.search);
   if (!on) return;
   var b = document.getElementById('cta-mobile-sms');
-  if (!b) return;
-  if (cfg.SMS_NUMBER) b.setAttribute('href', 'sms:' + cfg.SMS_NUMBER);
-  b.hidden = false;
-  var bar = document.getElementById('mobile-bar') || document.querySelector('.mobile-bar');
-  if (bar) bar.classList.add('has-sms');
+  if (b) {
+    if (cfg.SMS_NUMBER) b.setAttribute('href', 'sms:' + cfg.SMS_NUMBER);
+    b.hidden = false;
+    var bar = document.getElementById('mobile-bar') || document.querySelector('.mobile-bar');
+    if (bar) bar.classList.add('has-sms');
+  }
+  /* Additional on-page text CTAs (e.g., contact page) share the same flag. */
+  var extras = document.querySelectorAll('[data-sms-cta]');
+  for (var i = 0; i < extras.length; i++) {
+    if (cfg.SMS_NUMBER) extras[i].setAttribute('href', 'sms:' + cfg.SMS_NUMBER);
+    extras[i].hidden = false;
+  }
 })();
 
 

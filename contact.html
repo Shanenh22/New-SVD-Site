@@ -183,13 +183,14 @@
     More <svg class="svgi nav-more-chevron" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-chevron-down"/></svg>
   </button>
   <ul class="nav-more-menu" id="nav-more-menu" aria-labelledby="nav-more-trigger">
+    <li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="nav-more">Patient Portal</a></li>
+    <li><a href="membership.html">Membership Plan</a></li>
+    <li><a href="financing.html">Financing</a></li>
+    <li><a href="faq.html">FAQ</a></li>
     <li><a href="index.html#symptom-navigator-section">Symptom Checker</a></li>
     <li><a href="services.html#smile-planner-section">Smile Planner</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="financing.html">Financing</a></li>
-    <li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="nav-more">Patient Portal</a></li>
-    <li><a href="smile-gallery.html">Smile Gallery</a></li>
     <li><a href="reviews.html">Patient Reviews</a></li>
+    <li><a href="smile-gallery.html">Smile Gallery</a></li>
   </ul>
 </div>
 <a href="es/contacto.html" class="lang-toggle" lang="es" hreflang="es" aria-label="Ver sitio en espa&ntilde;ol"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-language"/></svg><span class="lt-label">Espa&ntilde;ol</span></a>
@@ -299,7 +300,7 @@
 <main id="main">
 <div class="page-hero">
   <h1>Book Your Appointment</h1>
-  <p>Complete patient forms online, call us directly, or send a message, we confirm within one hour.</p>
+  <p>Sign in to our patient portal, call or text us, or send a message &mdash; we confirm within one hour.</p>
 </div>
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="index.html">Home</a> <span aria-hidden="true">&rsaquo;</span>
@@ -534,6 +535,7 @@
             <a href="mailto:info@springvalleydentistry.com" style="color:var(--blue)">info@springvalleydentistry.com</a><br>
             <strong style="color:var(--navy)">Se habla espa&ntilde;ol</strong>
           </address>
+          <a data-sms-cta hidden href="sms:+19727871618" class="btn btn-outline" style="margin-top:14px;font-size:14px;padding:9px 18px" data-track="sms" data-track-location="contact-info" aria-label="Text our office"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-message-circle"/></svg> Prefer to text? Text us</a>
         </div>
         <div style="background:var(--white);border-radius:var(--rl);padding:28px;border:1px solid var(--border);margin-bottom:20px">
           <h3 style="font-family:var(--serif);font-size:19px;color:var(--navy);margin-bottom:14px">Office hours</h3>
@@ -565,11 +567,14 @@
   <div class="section-inner">
     <div style="background:var(--porcelain);border:1px solid var(--border);border-radius:var(--rl);padding:clamp(28px,4vw,40px);display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between">
       <div style="flex:1;min-width:280px">
-        <div class="section-label">Online patient forms</div>
+        <div class="section-label">Patient portal</div>
         <h2 class="section-h2 serif" id="forms-heading" style="margin-bottom:10px">Complete your forms before you arrive.</h2>
         <p style="font-size:16px;color:var(--gray);line-height:1.7;margin:0">New or returning, use our secure patient portal to complete the forms we send you, update your information, and pay invoices &mdash; and spend less time in the waiting room. Find the portal on our New Patient page, along with what to bring and what to expect on your first visit.</p>
       </div>
-      <a href="patient-info.html#pi-docs-heading" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clipboard-list"/></svg> Complete your forms</a>
+      <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;align-items:stretch">
+        <a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space:nowrap" data-track="portal" data-track-location="contact-forms" aria-label="Sign in to the patient portal — opens in new tab"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-clipboard-list"/></svg> Sign in to Patient Portal</a>
+        <a href="patient-info.html" style="font-size:13px;color:var(--blue);text-align:center;text-decoration:none">New patient? See what to expect &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
@@ -631,14 +636,15 @@
     <div class="footer-col">
       <div class="footer-col-heading">Patients</div>
       <ul><li><a href="patient-info.html">New Patients</a></li>
-<li><a href="symptom-navigator.html">Symptom checker</a></li>
-<li><a href="smile-planner.html">Smile Planner</a></li>
+<li><a href="https://patient.portal.archy.com/signIn?returnUrl=%2F" target="_blank" rel="noopener noreferrer" data-track="portal" data-track-location="footer">Patient Portal</a></li>
 <li><a href="financing.html" class="nav-secondary">Financing</a></li>
 <li><a href="membership.html">Membership plan</a></li>
+<li><a href="faq.html" class="nav-secondary">FAQ</a></li>
+<li><a href="symptom-navigator.html">Symptom checker</a></li>
+<li><a href="smile-planner.html">Smile Planner</a></li>
 <li><a href="smile-gallery.html">Smile gallery</a></li>
 <li><a href="reviews.html">Patient reviews</a></li>
-<li><a href="#" data-review-link data-track-location="footer">Leave a Google review</a></li>
-<li><a href="faq.html" class="nav-secondary">FAQ</a></li></ul>
+<li><a href="#" data-review-link data-track-location="footer">Leave a Google review</a></li></ul>
     </div>
     <div class="footer-col">
       <div class="footer-col-heading">Contact &amp; Hours</div>
@@ -675,6 +681,7 @@
     </div>
   </div>
 </footer>
+
 
 
 
