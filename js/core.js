@@ -705,3 +705,33 @@
     }, 800);
   } catch (e) {}
 })();
+
+/* ── MORE DROPDOWN: close after the pointer leaves the area ────────────────
+   Complements initMoreDropdown() in core.js (which closes on Escape, outside
+   click, and Tab-past-last-item). Grace period of 350ms so brief pointer
+   excursions don't slam the menu shut; re-entering the area cancels the close.
+   Hover-capable devices only — touch and keyboard behavior are unchanged
+   (a menu must never close while a keyboard user is tabbing through it). */
+(function () {
+  var wrap    = document.querySelector('.nav-more-wrap');
+  var trigger = document.getElementById('nav-more-trigger');
+  var menu    = document.getElementById('nav-more-menu');
+  if (!wrap || !trigger || !menu) return;
+  if (!(window.matchMedia && window.matchMedia('(hover: hover)').matches)) return;
+  var closeTimer = null;
+  wrap.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
+  wrap.addEventListener('mouseleave', function () {
+    if (trigger.getAttribute('aria-expanded') !== 'true') return;
+    closeTimer = setTimeout(function () {
+      var a = document.activeElement;
+      var keyboardUser = false;
+      if (a && menu.contains(a)) {
+        try { keyboardUser = a.matches(':focus-visible'); } catch (e) { keyboardUser = true; }
+      }
+      if (keyboardUser) return;               /* never close under a keyboard user */
+      if (a && menu.contains(a)) a.blur();    /* don't strand focus in a hidden menu */
+      trigger.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('is-open');
+    }, 350);
+  });
+})();

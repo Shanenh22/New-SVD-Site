@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v27'; /* v27 July 2026: contact portal CTA + text button; footer/More reorder */
+const CACHE_VERSION = 'svd-v28'; /* v28 July 2026: More dropdown closes on mouse-leave (350ms grace) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
