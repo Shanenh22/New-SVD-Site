@@ -1,5 +1,5 @@
 # robots.txt — Spring Valley Dental Associates
-# https://springvalleydentistry.com
+# https://www.springvalleydentistry.com
 # Cleaned June 2026 (v5): removed phantom paths, deduped bots, reorganized blocks.
 
 # ── All standard crawlers ────────────────────────────────────────────────────
@@ -69,4 +69,4 @@ User-agent: YouBot
 Allow: /
 
 # ── Sitemap ──────────────────────────────────────────────────────────────────
-Sitemap: https://springvalleydentistry.com/sitemap.xml
+Sitemap: https://www.springvalleydentistry.com/sitemap.xml

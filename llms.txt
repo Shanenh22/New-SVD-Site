@@ -16,83 +16,83 @@
 ## Key Pages
 
 ### Core
-- [Home](https://springvalleydentistry.com/): Overview of practice, services, and patient experience
-- [About](https://springvalleydentistry.com/about.html): Doctors, staff, and practice philosophy
-- [Contact / Book](https://springvalleydentistry.com/contact.html): Appointment booking and office info
-- [FAQ](https://springvalleydentistry.com/faq.html): Common patient questions answered
+- [Home](https://www.springvalleydentistry.com/): Overview of practice, services, and patient experience
+- [About](https://www.springvalleydentistry.com/about.html): Doctors, staff, and practice philosophy
+- [Contact / Book](https://www.springvalleydentistry.com/contact.html): Appointment booking and office info
+- [FAQ](https://www.springvalleydentistry.com/faq.html): Common patient questions answered
 
 ### Services
-- [Dental Cleanings & Exams](https://springvalleydentistry.com/dental-cleanings-exams.html): Professional cleanings, comprehensive exams, judgment-free preventive care
-- [All Services](https://springvalleydentistry.com/services.html): Complete list of treatments offered
-- [Emergency Dentistry](https://springvalleydentistry.com/emergency.html): Same-day urgent dental care
-- [Dental Implants](https://springvalleydentistry.com/dental-implants.html): Permanent tooth replacement
-- [Invisalign](https://springvalleydentistry.com/invisalign.html): Clear aligner orthodontics
-- [Porcelain Veneers](https://springvalleydentistry.com/porcelain-veneers.html): Smile makeover veneers
-- [Teeth Whitening](https://springvalleydentistry.com/teeth-whitening.html): Professional whitening
-- [Sedation Dentistry](https://springvalleydentistry.com/sedation.html): Anxiety-free dental care
-- [Crowns & Bridges](https://springvalleydentistry.com/crowns-bridges.html): Restorative crowns and bridges
-- [Dental Bonding](https://springvalleydentistry.com/dental-bonding.html): Composite bonding repairs
-- [Root Canal Therapy](https://springvalleydentistry.com/root-canal-therapy.html): Pain-free root canals
-- [Gum Disease Treatment](https://springvalleydentistry.com/gum-disease-treatment.html): Periodontal care
-- [Dental Fillings](https://springvalleydentistry.com/dental-fillings.html): Tooth-colored fillings
-- [Tooth Extractions](https://springvalleydentistry.com/tooth-extractions.html): Gentle simple extractions; wisdom teeth referred to oral surgery specialists
-- [Dentures & Partials](https://springvalleydentistry.com/dentures-partials.html): Full and partial dentures, implant-supported options explained
-- [Night Guards](https://springvalleydentistry.com/night-guards-bruxism.html): Custom night guards for grinding and clenching (bruxism)
-- [Dental Anxiety](https://springvalleydentistry.com/dental-anxiety.html): Options for anxious patients
-- [Cracked Tooth](https://springvalleydentistry.com/cracked-tooth.html): Cracked tooth treatment
-- [Toothache](https://springvalleydentistry.com/toothache.html): Toothache relief and diagnosis
+- [Dental Cleanings & Exams](https://www.springvalleydentistry.com/dental-cleanings-exams.html): Professional cleanings, comprehensive exams, judgment-free preventive care
+- [All Services](https://www.springvalleydentistry.com/services.html): Complete list of treatments offered
+- [Emergency Dentistry](https://www.springvalleydentistry.com/emergency.html): Same-day urgent dental care
+- [Dental Implants](https://www.springvalleydentistry.com/dental-implants.html): Permanent tooth replacement
+- [Invisalign](https://www.springvalleydentistry.com/invisalign.html): Clear aligner orthodontics
+- [Porcelain Veneers](https://www.springvalleydentistry.com/porcelain-veneers.html): Smile makeover veneers
+- [Teeth Whitening](https://www.springvalleydentistry.com/teeth-whitening.html): Professional whitening
+- [Sedation Dentistry](https://www.springvalleydentistry.com/sedation.html): Anxiety-free dental care
+- [Crowns & Bridges](https://www.springvalleydentistry.com/crowns-bridges.html): Restorative crowns and bridges
+- [Dental Bonding](https://www.springvalleydentistry.com/dental-bonding.html): Composite bonding repairs
+- [Root Canal Therapy](https://www.springvalleydentistry.com/root-canal-therapy.html): Pain-free root canals
+- [Gum Disease Treatment](https://www.springvalleydentistry.com/gum-disease-treatment.html): Periodontal care
+- [Dental Fillings](https://www.springvalleydentistry.com/dental-fillings.html): Tooth-colored fillings
+- [Tooth Extractions](https://www.springvalleydentistry.com/tooth-extractions.html): Gentle simple extractions; wisdom teeth referred to oral surgery specialists
+- [Dentures & Partials](https://www.springvalleydentistry.com/dentures-partials.html): Full and partial dentures, implant-supported options explained
+- [Night Guards](https://www.springvalleydentistry.com/night-guards-bruxism.html): Custom night guards for grinding and clenching (bruxism)
+- [Dental Anxiety](https://www.springvalleydentistry.com/dental-anxiety.html): Options for anxious patients
+- [Cracked Tooth](https://www.springvalleydentistry.com/cracked-tooth.html): Cracked tooth treatment
+- [Toothache](https://www.springvalleydentistry.com/toothache.html): Toothache relief and diagnosis
 
 ### Interactive Tools
-- [Symptom Navigator](https://springvalleydentistry.com/symptom-navigator.html): Guided 1-minute triage — answer questions about tooth pain or symptoms, get a likely cause, urgency level, and how soon to be seen
-- [Smile Planner](https://springvalleydentistry.com/smile-planner.html): Guided 2-minute cosmetic planning tool — answer five questions about smile goals, timeline, and budget; get a recommended starting point (whitening, bonding, veneers, Invisalign, or implants) with typical Dallas-area price ranges
+- [Symptom Navigator](https://www.springvalleydentistry.com/symptom-navigator.html): Guided 1-minute triage — answer questions about tooth pain or symptoms, get a likely cause, urgency level, and how soon to be seen
+- [Smile Planner](https://www.springvalleydentistry.com/smile-planner.html): Guided 2-minute cosmetic planning tool — answer five questions about smile goals, timeline, and budget; get a recommended starting point (whitening, bonding, veneers, Invisalign, or implants) with typical Dallas-area price ranges
 
 ### Patient Resources
-- [New Patient Info](https://springvalleydentistry.com/patient-info.html): What to expect, forms, insurance
-- [Membership Plan](https://springvalleydentistry.com/membership.html): In-house savings plan for uninsured patients. Child Complete $250/yr, Adult Complete $325/yr, Perio $600/yr. Includes cleanings, exams, x-rays, fluoride, and 20% off all procedures.
-- [Financing](https://springvalleydentistry.com/financing.html): CareCredit, Cherry Financing options
-- [Smile Gallery](https://springvalleydentistry.com/smile-gallery.html): Before & after patient photos
-- [Patient Reviews](https://springvalleydentistry.com/reviews.html): 5-star patient testimonials
-- [Dental Costs Guide](https://springvalleydentistry.com/dental-costs-dallas.html): Pricing transparency guide
+- [New Patient Info](https://www.springvalleydentistry.com/patient-info.html): What to expect, forms, insurance
+- [Membership Plan](https://www.springvalleydentistry.com/membership.html): In-house savings plan for uninsured patients. Child Complete $250/yr, Adult Complete $325/yr, Perio $600/yr. Includes cleanings, exams, x-rays, fluoride, and 20% off all procedures.
+- [Financing](https://www.springvalleydentistry.com/financing.html): CareCredit, Cherry Financing options
+- [Smile Gallery](https://www.springvalleydentistry.com/smile-gallery.html): Before & after patient photos
+- [Patient Reviews](https://www.springvalleydentistry.com/reviews.html): 5-star patient testimonials
+- [Dental Costs Guide](https://www.springvalleydentistry.com/dental-costs-dallas.html): Pricing transparency guide
 
 ### Local Area Pages
-- [Dentist Addison TX](https://springvalleydentistry.com/dentist-addison-tx.html)
-- [Dentist Carrollton TX](https://springvalleydentistry.com/dentist-carrollton-tx.html)
-- [Dentist Farmers Branch TX](https://springvalleydentistry.com/dentist-farmers-branch-tx.html)
-- [Dentist Irving TX](https://springvalleydentistry.com/dentist-irving-tx.html): Serving Irving and Las Colinas
-- [Dentist Richardson TX](https://springvalleydentistry.com/dentist-richardson-tx.html): Serving Richardson and the Telecom Corridor
+- [Dentist Addison TX](https://www.springvalleydentistry.com/dentist-addison-tx.html)
+- [Dentist Carrollton TX](https://www.springvalleydentistry.com/dentist-carrollton-tx.html)
+- [Dentist Farmers Branch TX](https://www.springvalleydentistry.com/dentist-farmers-branch-tx.html)
+- [Dentist Irving TX](https://www.springvalleydentistry.com/dentist-irving-tx.html): Serving Irving and Las Colinas
+- [Dentist Richardson TX](https://www.springvalleydentistry.com/dentist-richardson-tx.html): Serving Richardson and the Telecom Corridor
 
 ### Guides & Articles
-- [Dental Implant Cost in Dallas (2026 Guide)](https://springvalleydentistry.com/dental-implant-cost-dallas.html): Transparent implant pricing, what affects cost, insurance, and financing. A single implant typically costs $3,000–$5,000.
-- [What Happens During a Root Canal](https://springvalleydentistry.com/patient-guide-root-canal.html): Step-by-step patient guide; modern root canals are comfortable and relieve pain.
-- [Invisalign vs Braces for Adults in Dallas](https://springvalleydentistry.com/invisalign-vs-braces-dallas.html): Honest comparison of cost, lifestyle, and candidacy.
+- [Dental Implant Cost in Dallas (2026 Guide)](https://www.springvalleydentistry.com/dental-implant-cost-dallas.html): Transparent implant pricing, what affects cost, insurance, and financing. A single implant typically costs $3,000–$5,000.
+- [What Happens During a Root Canal](https://www.springvalleydentistry.com/patient-guide-root-canal.html): Step-by-step patient guide; modern root canals are comfortable and relieve pain.
+- [Invisalign vs Braces for Adults in Dallas](https://www.springvalleydentistry.com/invisalign-vs-braces-dallas.html): Honest comparison of cost, lifestyle, and candidacy.
 
 ### Spanish Language
-- [Español — Inicio](https://springvalleydentistry.com/es/index.html): Spanish homepage
-- [Español — Servicios](https://springvalleydentistry.com/es/servicios.html)
-- [Español — Emergencia](https://springvalleydentistry.com/es/emergencia.html)
-- [Español — Información para Pacientes](https://springvalleydentistry.com/es/informacion-paciente.html)
-- [Español — Contacto](https://springvalleydentistry.com/es/contacto.html)
-- [Español — Implantes Dentales](https://springvalleydentistry.com/es/implantes-dentales.html): Dental implants in Spanish
-- [Español — Verificador de Síntomas](https://springvalleydentistry.com/es/symptom-navigator.html): Symptom triage tool in Spanish
-- [Español — Planificador de Sonrisa](https://springvalleydentistry.com/es/planificador-de-sonrisa.html): Smile planning tool in Spanish
-- [Español — Carillas de Porcelana](https://springvalleydentistry.com/es/carillas-de-porcelana.html): Porcelain veneers in Spanish
-- [Español — Blanqueamiento Dental](https://springvalleydentistry.com/es/blanqueamiento-dental.html): Teeth whitening in Spanish
-- [Español — Financiamiento](https://springvalleydentistry.com/es/financiamiento.html): Dental financing options in Spanish
-- [Español — Plan de Membresía](https://springvalleydentistry.com/es/plan-de-membresia.html): In-house membership plan in Spanish
-- [Español — Limpieza Dental](https://springvalleydentistry.com/es/limpieza-dental.html): Cleanings and exams in Spanish
-- [Español — Extracciones Dentales](https://springvalleydentistry.com/es/extracciones-dentales.html): Tooth extractions in Spanish
-- [Español — Dentaduras y Parciales](https://springvalleydentistry.com/es/dentaduras-parciales.html): Dentures in Spanish
-- [Español — Guardas Nocturnas](https://springvalleydentistry.com/es/guardas-nocturnas.html): Night guards in Spanish
-- [Español — Preguntas Frecuentes](https://springvalleydentistry.com/es/preguntas-frecuentes.html): FAQ in Spanish
-- [Español — Acerca de Nosotros](https://springvalleydentistry.com/es/acerca-de.html): About the doctors in Spanish
-- [Español — Reseñas](https://springvalleydentistry.com/es/resenas.html): Patient reviews in Spanish
-- [Español — Invisalign](https://springvalleydentistry.com/es/invisalign.html): Invisalign in Spanish
-- [Español — Sedación Dental](https://springvalleydentistry.com/es/sedacion.html): Sedation dentistry in Spanish
-- [Español — Dentista en Addison](https://springvalleydentistry.com/es/dentista-en-addison-tx.html)
-- [Español — Dentista en Carrollton](https://springvalleydentistry.com/es/dentista-en-carrollton-tx.html)
-- [Español — Dentista en Farmers Branch](https://springvalleydentistry.com/es/dentista-en-farmers-branch-tx.html)
-- [Español — Dentista en Irving](https://springvalleydentistry.com/es/dentista-en-irving-tx.html)
-- [Español — Dentista en Richardson](https://springvalleydentistry.com/es/dentista-en-richardson-tx.html)
+- [Español — Inicio](https://www.springvalleydentistry.com/es/index.html): Spanish homepage
+- [Español — Servicios](https://www.springvalleydentistry.com/es/servicios.html)
+- [Español — Emergencia](https://www.springvalleydentistry.com/es/emergencia.html)
+- [Español — Información para Pacientes](https://www.springvalleydentistry.com/es/informacion-paciente.html)
+- [Español — Contacto](https://www.springvalleydentistry.com/es/contacto.html)
+- [Español — Implantes Dentales](https://www.springvalleydentistry.com/es/implantes-dentales.html): Dental implants in Spanish
+- [Español — Verificador de Síntomas](https://www.springvalleydentistry.com/es/symptom-navigator.html): Symptom triage tool in Spanish
+- [Español — Planificador de Sonrisa](https://www.springvalleydentistry.com/es/planificador-de-sonrisa.html): Smile planning tool in Spanish
+- [Español — Carillas de Porcelana](https://www.springvalleydentistry.com/es/carillas-de-porcelana.html): Porcelain veneers in Spanish
+- [Español — Blanqueamiento Dental](https://www.springvalleydentistry.com/es/blanqueamiento-dental.html): Teeth whitening in Spanish
+- [Español — Financiamiento](https://www.springvalleydentistry.com/es/financiamiento.html): Dental financing options in Spanish
+- [Español — Plan de Membresía](https://www.springvalleydentistry.com/es/plan-de-membresia.html): In-house membership plan in Spanish
+- [Español — Limpieza Dental](https://www.springvalleydentistry.com/es/limpieza-dental.html): Cleanings and exams in Spanish
+- [Español — Extracciones Dentales](https://www.springvalleydentistry.com/es/extracciones-dentales.html): Tooth extractions in Spanish
+- [Español — Dentaduras y Parciales](https://www.springvalleydentistry.com/es/dentaduras-parciales.html): Dentures in Spanish
+- [Español — Guardas Nocturnas](https://www.springvalleydentistry.com/es/guardas-nocturnas.html): Night guards in Spanish
+- [Español — Preguntas Frecuentes](https://www.springvalleydentistry.com/es/preguntas-frecuentes.html): FAQ in Spanish
+- [Español — Acerca de Nosotros](https://www.springvalleydentistry.com/es/acerca-de.html): About the doctors in Spanish
+- [Español — Reseñas](https://www.springvalleydentistry.com/es/resenas.html): Patient reviews in Spanish
+- [Español — Invisalign](https://www.springvalleydentistry.com/es/invisalign.html): Invisalign in Spanish
+- [Español — Sedación Dental](https://www.springvalleydentistry.com/es/sedacion.html): Sedation dentistry in Spanish
+- [Español — Dentista en Addison](https://www.springvalleydentistry.com/es/dentista-en-addison-tx.html)
+- [Español — Dentista en Carrollton](https://www.springvalleydentistry.com/es/dentista-en-carrollton-tx.html)
+- [Español — Dentista en Farmers Branch](https://www.springvalleydentistry.com/es/dentista-en-farmers-branch-tx.html)
+- [Español — Dentista en Irving](https://www.springvalleydentistry.com/es/dentista-en-irving-tx.html)
+- [Español — Dentista en Richardson](https://www.springvalleydentistry.com/es/dentista-en-richardson-tx.html)
 
 ## Doctors
 
@@ -183,9 +183,9 @@ Spring Valley Dental Associates is a dental practice in Dallas, Texas (75244 zip
 - Standalone Person schemas added for Dr. Houshmand and Dr. Aletaha with @id
 
 ### Schema Entity Graph Summary
-- Primary entity: Dentist @id https://springvalleydentistry.com/#dentist
-- Dr. Houshmand: Person @id https://springvalleydentistry.com/#dr-houshmand
-- Dr. Aletaha: Person @id https://springvalleydentistry.com/#dr-aletaha
+- Primary entity: Dentist @id https://www.springvalleydentistry.com/#dentist
+- Dr. Houshmand: Person @id https://www.springvalleydentistry.com/#dr-houshmand
+- Dr. Aletaha: Person @id https://www.springvalleydentistry.com/#dr-aletaha
 - All service pages: MedicalProcedure + Service + FAQPage schemas
 - Patient guides: Article + FAQPage + HowTo (root canal) schemas
 - Smile gallery: CollectionPage + ImageGallery schemas

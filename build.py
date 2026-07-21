@@ -197,7 +197,7 @@ TPL_CH_ES = _tpl('chrome_es.html')
 def _chrome_for_page(fname, page_html, existing_block, template):
     # 1st choice: the page's own hreflang twin (always present on indexable pages)
     other = 'en' if fname.startswith('es/') else 'es'
-    m = re.search(r'hreflang="%s" href="https://springvalleydentistry\.com/([^"]*)"' % other,
+    m = re.search(r'hreflang="%s" href="https://www.springvalleydentistry\.com/([^"]*)"' % other,
                   page_html)
     if m:
         path = m.group(1) or 'index.html'
@@ -270,7 +270,7 @@ for p in all_html():
 for p in pages():
     h = read(p)
     for lang, target in re.findall(
-            r'<link rel="alternate" hreflang="(\w+(?:-\w+)?)" href="https://springvalleydentistry\.com/([^"]*)"/>', h):
+            r'<link rel="alternate" hreflang="(\w+(?:-\w+)?)" href="https://www.springvalleydentistry\.com/([^"]*)"/>', h):
         if lang == 'x-default':
             continue
         tfile = target or 'index.html'
@@ -279,7 +279,7 @@ for p in pages():
             continue
         if tfile == p:
             continue
-        back = f'href="https://springvalleydentistry.com/{"" if p == "index.html" else p}"'
+        back = f'href="https://www.springvalleydentistry.com/{"" if p == "index.html" else p}"'
         th = read(tfile)
         if 'rel="alternate"' in th and back not in th:
             err(f'HREFLANG NOT RECIPROCAL  {p} <-> {tfile}')
@@ -301,7 +301,7 @@ if unused:
     warn(f'sprite symbols defined but unreferenced ({len(unused)}): {sorted(unused)[:8]}…')
 
 # 5 ── sitemap parity
-locs = set(re.findall(r'<loc>https://springvalleydentistry\.com/?([^<]*)</loc>', read('sitemap.xml')))
+locs = set(re.findall(r'<loc>https://www.springvalleydentistry\.com/?([^<]*)</loc>', read('sitemap.xml')))
 idx = {('' if p == 'index.html' else p) for p in pages() if 'noindex' not in read(p)}
 for x in sorted(locs - idx): err(f'SITEMAP ORPHAN (no indexable file)  {x or "/"}')
 for x in sorted(idx - locs): err(f'NOT IN SITEMAP  {x or "/"}')
@@ -313,7 +313,7 @@ except Exception as e:
 # 6 ── Spanish parity (informational)
 es_twins = set()
 for p in pages():
-    m = re.search(r'hreflang="es" href="https://springvalleydentistry\.com/(es/[^"]*)"', read(p))
+    m = re.search(r'hreflang="es" href="https://www.springvalleydentistry\.com/(es/[^"]*)"', read(p))
     if m: es_twins.add(p)
 en_unpaired = [p for p in pages()
                if not p.startswith('es/') and 'noindex' not in read(p) and p not in es_twins]
@@ -325,7 +325,7 @@ try:
     from PIL import Image
     for p in all_html():
         h = read(p)
-        m = re.search(r'property="og:image" content="https://springvalleydentistry\.com/(images/[^"]*)"', h)
+        m = re.search(r'property="og:image" content="https://www.springvalleydentistry\.com/(images/[^"]*)"', h)
         if not m: continue
         img = m.group(1)
         if not os.path.exists(img):
@@ -404,7 +404,7 @@ if FIX:
         if not os.path.exists(f): return m.group(0)
         fd = datetime.date.fromtimestamp(os.path.getmtime(f)).isoformat()
         return m.group(0).replace(lm, max(lm, fd))
-    s = re.sub(r'<loc>https://springvalleydentistry\.com/?([^<]*)</loc>\s*<lastmod>([^<]+)</lastmod>',
+    s = re.sub(r'<loc>https://www.springvalleydentistry\.com/?([^<]*)</loc>\s*<lastmod>([^<]+)</lastmod>',
                bump, s)
     open('sitemap.xml', 'w', encoding='utf-8').write(s)
     print('sitemap lastmod refreshed')

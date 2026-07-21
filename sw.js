@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v30'; /* v30 July 2026: PHI privacy notice added to Spanish contact form */
+const CACHE_VERSION = 'svd-v32'; /* v32 July 2026: primary domain switched to www (canonical, sitemap, hreflang, schema) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
