@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v35'; /* v35 July 2026: symptom navigator share uses Web Share API (native sheet) w/ clipboard+print fallback */
+const CACHE_VERSION = 'svd-v36'; /* v36 July 2026: removed 39 orphaned duplicate images from root (all assets served from /images) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
