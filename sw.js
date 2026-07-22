@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v33'; /* v33 July 2026: fixed missing main stylesheet on HIPAA notice pages (EN + ES) */
+const CACHE_VERSION = 'svd-v34'; /* v34 July 2026: HIPAA pages — add print/PDF button, document wrap for clearance, clean print output */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

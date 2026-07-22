@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="css/styles.min.css"/>
 <style>
 @media print {
-  .no-print { display: none !important; }
+  .no-print, .no-print-bar, .site-nav, .mobile-bar, .mobile-drawer, .drawer-overlay, .site-footer, .cookie-banner { display: none !important; }
   body { margin: 0; background: white; font-size: 10pt; }
   .hipaa-wrap { max-width: 100%; padding: 0.25in 0; }
   h2 { page-break-after: avoid; }
@@ -396,6 +396,11 @@ ul li strong { color: #222; }
   </div>
 </div>
 <main id="main">
+  <div class="no-print-bar">
+    <a href="index.html" class="back-link">‹ Back to site</a>
+    <button type="button" class="print-btn" onclick="window.print()"><svg class="svgi" aria-hidden="true" focusable="false"><use href="images/icons-sprite.svg#i-file-text"/></svg> Print / Save as PDF</button>
+  </div>
+  <div class="hipaa-wrap">
   <div class="doc-header">
     <div class="compliance-label">Compliance Solutions &nbsp;&bull;&nbsp; 11441 v001 02/2026</div>
     <h1>Omnibus Rule<br>HIPAA Notice of Privacy Practices</h1>
@@ -519,6 +524,7 @@ ul li strong { color: #222; }
   </div>
 
 
+  </div>
 </main>
 
 </body>
