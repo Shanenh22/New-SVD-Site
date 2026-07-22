@@ -50,16 +50,30 @@
 
   // ── Load GA4 script (only if enabled and ID is set) ───────────────────────
   if (A.ENABLE_GA && ID) {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ID);
-    document.head.appendChild(s);
-
+    /* Queue config immediately (these buffer in dataLayer); defer the heavy
+       gtag.js download until the visitor interacts or the page has been idle
+       ~4s. Keeps ~159 KB of third-party JS out of the initial/LCP path
+       without losing analytics for real sessions. */
     gtag('js', new Date());
     gtag('config', ID, {
       anonymize_ip:   true,
       transport_type: 'beacon'
     });
+    var gaLoaded = false;
+    function loadGA() {
+      if (gaLoaded) return; gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ID);
+      document.head.appendChild(s);
+    }
+    var gaEvents = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+    function gaKick() {
+      loadGA();
+      gaEvents.forEach(function (e) { window.removeEventListener(e, gaKick); });
+    }
+    gaEvents.forEach(function (e) { window.addEventListener(e, gaKick, { passive: true, once: true }); });
+    setTimeout(loadGA, 4000);
   }
 
   // ── Load Plausible (optional, privacy-friendly) ───────────────────────────

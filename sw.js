@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v39'; /* v39 July 2026: sw.js made pure-ASCII (charset-proof); see deploy note: set Content-Type text/javascript on S3 */
+const CACHE_VERSION = 'svd-v40'; /* v40 July 2026: defer GA4 gtag.js load to interaction/idle (perf) */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 

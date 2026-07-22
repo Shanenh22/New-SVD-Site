@@ -340,7 +340,7 @@ ul li strong { color: #222; }
 <main id="main">
   <div class="no-print-bar">
     <a href="index.html" class="back-link">‹ Volver al sitio</a>
-    <button type="button" class="print-btn" onclick="window.print()"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-file-text"/></svg> Imprimir / Guardar como PDF</button>
+    <button type="button" class="print-btn" id="hipaa-save-btn"><svg class="svgi" aria-hidden="true" focusable="false"><use href="../images/icons-sprite.svg#i-file-text"/></svg> Imprimir / Guardar como PDF</button>
   </div>
   <div class="hipaa-wrap">
   <div class="doc-header">
@@ -467,5 +467,24 @@ ul li strong { color: #222; }
 
   </div>
 </main>
+<script src="../js/site-config.min.js" defer></script>
+<script src="../js/core.min.js" defer></script>
+<script src="../js/analytics.min.js" defer></script>
+<script>
+/* HIPAA save/print: on touch devices open the native share sheet (Save to Files,
+   Mail, Messages, Print all live there — no printer required); on desktop print. */
+(function () {
+  var b = document.getElementById('hipaa-save-btn');
+  if (!b) return;
+  b.addEventListener('click', async function () {
+    var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (navigator.share && coarse) {
+      try { await navigator.share({ title: document.title, url: location.href.split('#')[0] }); return; }
+      catch (e) { if (e && e.name === 'AbortError') return; }
+    }
+    window.print();
+  });
+})();
+</script>
 </body>
 </html>
