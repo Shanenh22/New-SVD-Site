@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v40'; /* v40 July 2026: defer GA4 gtag.js load to interaction/idle (perf) */
+const CACHE_VERSION = 'svd-v41'; /* v41 July 2026: softened absolute claims (billing/same-day/referrals/outcomes/response-time), EN+ES parity */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
