@@ -969,8 +969,28 @@
   }
 
   /* ── COMPARTIR / IMPRIMIR ───────────────────────────────────────── */
-  $('#sn-share').addEventListener('click', () => {
+  $('#sn-share').addEventListener('click', async () => {
     track('share-result', 'result');
+    var title = (($('#sn-result-title') || {}).textContent || 'Mi resultado de s\u00edntomas dentales').trim();
+    var recap = (($('#sn-recap') || {}).textContent || '').replace(/\s+/g, ' ').trim();
+    var url = location.href.split('#')[0];
+    var text = 'Spring Valley Dental \u2014 Verificador de S\u00edntomas\n\n' + title +
+      (recap ? '\n\nReportado: ' + recap : '') +
+      '\n\n\u00bfPreguntas? Llame a Spring Valley Dental al (972) 852-2222.';
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Spring Valley Dental \u2014 Verificador de S\u00edntomas', text: text, url: url }); return; }
+      catch (e) { if (e && e.name === 'AbortError') return; }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(text + '\n' + url);
+        var b = $('#sn-share');
+        var prev = b.innerHTML;
+        b.innerHTML = 'Copiado al portapapeles \u2713';
+        setTimeout(function () { b.innerHTML = prev; }, 2200);
+        return;
+      } catch (e) {}
+    }
     window.print();
   });
 
