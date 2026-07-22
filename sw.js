@@ -1,11 +1,11 @@
-/* Spring Valley Dental — Service Worker v2
+/* Spring Valley Dental - Service Worker v2
  * HTML: network-first (always fresh when online; offline fallback).
  * Assets (CSS/JS/img): stale-while-revalidate (fast, and self-updates each
  *   visit so a code change is never permanently stuck in cache).
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v36'; /* v36 July 2026: removed 39 orphaned duplicate images from root (all assets served from /images) */
+const CACHE_VERSION = 'svd-v39'; /* v39 July 2026: sw.js made pure-ASCII (charset-proof); see deploy note: set Content-Type text/javascript on S3 */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
