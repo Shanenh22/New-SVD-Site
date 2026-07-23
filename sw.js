@@ -5,7 +5,7 @@
  * IMPORTANT: bump CACHE_VERSION on every release so old caches are purged.
  */
 
-const CACHE_VERSION = 'svd-v42'; /* v42 July 2026: response-time claims consistently qualified (typically/normalmente), EN+ES */
+const CACHE_VERSION = 'svd-v43'; /* v43 July 2026: hero We capitalization (EN+ES), softened remaining billing/sedation claims, spelling/double-word sweep */
 const STATIC_CACHE  = CACHE_VERSION + '-static';
 const PAGE_CACHE    = CACHE_VERSION + '-pages';
 
